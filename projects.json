@@ -1,0 +1,73 @@
+[ 
+     {
+        "num":"01.",
+        "name": "ChessBot",
+        "description": "An advanced motion planning system for a 6-DOF Franka Panda robotic arm, enabling autonomous chess play using Goal-Bias RRT* and the Stockfish chess engine.",
+        "skills": ["Python", "C++", "ROS1", "Moveit", "Motion Planning", "OMPL", "Goal-Bias RRT*", "Rviz2"],
+        "image": "/images/chessbot.webp"
+  },
+  {
+        "num":"02.",
+        "name": "JARVIS",
+        "description": "Turtle-shaped robot equipped with sensing tenchnology (LiDAR + Intel Realsense), chatbot capabilities (OpenAI API) and facial emotions. Jarvis also has SLAM capabilties: it can navigate, localize itself and avoid obtsacles, while recognizing faces and objects.",
+        "skills": ["Python", "C++", "ROS2", "SLAM", "Sensor Fusion", "Human-Robot Interaction", "OpenCV", "Rviz2"],
+        "image": "/images/jarvis.webp"
+  },
+    {
+        "num":"03.",
+        "name": "The 'John'",
+        "description": "This robot features a Mecanum Drive with four wheels, enabling it to perform Simultaneous Localization and Mapping (SLAM), identify and follow targets, and shoot using a dual flywheel mechanism. It is also equipped with an automated docking system for ammunition replenishment.",
+        "skills": ["SLAM", "Python", "April Tags", "C++", "SOLIDWORKS", "Kalman Filter", "OpenCV", "PCB Design"],
+        "image": "/images/John.webp"
+  },
+    {
+        "num":"04.",
+        "name": "Semantic Segmentation Model",
+        "description":  "Lightweight Semantic Segmentation Model built using an Enocder-Decoder architecture while integrating Multi-Scale Attention Convolutional (MSCA) blocks and Convolutional Attention modules (MCA) to refine and improve feature extraction.",
+        "skills": ["Python", "Semantic Segmentation", "Pytorch", "Keras", "Kaggle"],
+        "image": "/images/semantic.webp"
+       },
+    {
+        "num":"05.",
+        "name": "A.I.P.D",
+        "description": "A.I.P.D or A.I. Pesticide Drone is an octocopter that is capable of spraying pesticide over agricultural areas by following automatically optimized flight paths between user defined waypoints. The drone also has a 'return to base' feature for automatic pesticide refill.",
+        "skills": ["Python", "MavLink", "ArduPilot"],
+        "image": "/images/Drone.webp"
+  },
+    {
+        "num":"06.",
+        "name": "Steel Inspection Robot",
+        "description": "This steel inspection robot is designed to magnetically ascend complex steel structures while conducting simultaneous inspections, pinpointing rusty or imminent failure-prone components. Equipped with a camera, this system has been trained to identify potential structural weaknesses.",
+        "skills": ["Python", "Jetson Nano", "SOLIDWORKS", "Keras", "OpenCV", "C++"],
+        "image": "/images/Steel.webp"
+  },
+       {
+        "num":"07.",
+        "name": "Financial Market Analysis",
+        "description": "Development of a Python based financial market analysis tool, which leverages signal analysis and filtering techniques. A Flask-based webapp was developed to serve as the front-end for the tool.",
+        "skills": ["Python", "Flask", "Signal Filtering", "Signal Analysis", "Keras", "Deep Learning"],
+        "image": "/images/stock.webp"
+  },
+       
+      {
+        "num":"08.",
+        "name": "Owl Tracking Robot",
+        "description": "This robotic owl plush was designed to mimic the appearance of a real owl. It possesses the ability to peer and track individuals, objects, and animals of interest, making it ideal for discreet wildlife monitoring purposes.",
+        "skills": ["Python", "OpenCV", "Object Detection", "Histogram of Oriented Gradients"],
+        "image": "/images/owl.webp"
+       },
+       {
+         "num":"09.",
+        "name": "Monocular Depth Estimation Model",
+        "description":  "Lightweight Depth Estimation Model built using an Enocder-Decoder architecture while integrating Multi-Scale Attention Convolutional (MSCA) blocks and Dual Attention Transformer (DAT) Modules to enhance global and local feature analysis.",
+        "skills": ["Python", "Depth Estimation", "Pytorch", "Keras", "Kaggle"],
+        "image": "/images/depth.webp"
+       },
+    {
+        "num":"10.",
+        "name": "Portfolio Wesbite",
+        "description": "A portfolio website designed using HTML, CSS and JavaScript to showcase projects.",
+        "skills": ["HTML", "CSS", "Javascript", "Adobe After Effects"],
+        "image": "/images/portfolio.webp"
+       }
+]
