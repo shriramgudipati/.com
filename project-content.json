@@ -1,0 +1,29 @@
+[
+	{
+		"id": "1",
+		"title": "Project 1",
+		"subtitle": "Subtitle for Project 1",
+		"description": "This is a large description for Project 1. You can add as much text as you want here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur euismod, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.",
+		"image": "img/project1-detail.png",
+		"pdf": "docs/project1-paper.pdf",
+		"youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+	},
+	{
+		"id": "2",
+		"title": "Project 2",
+		"subtitle": "Subtitle for Project 2",
+		"description": "This is a large description for Project 2. You can add as much text as you want here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur euismod, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.",
+		"image": "img/project2-detail.png",
+		"pdf": "docs/project2-paper.pdf",
+		"youtube": "https://www.youtube.com/embed/9bZkp7q19f0"
+	},
+	{
+		"id": "3",
+		"title": "Project 3",
+		"subtitle": "Subtitle for Project 3",
+		"description": "This is a large description for Project 3. You can add as much text as you want here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur euismod, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.",
+		"image": "img/project3-detail.png",
+		"pdf": "docs/project3-paper.pdf",
+		"youtube": "https://www.youtube.com/embed/3JZ_D3ELwOQ"
+	}
+]
