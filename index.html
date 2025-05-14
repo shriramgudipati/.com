@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,400italic' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<!-- Added Swiper CSS for blog slider -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Squeezebox Portfolio Template | CodyHouse</title>
+</head>
+<body>
+<div id="particles-js" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;"></div>
+	<div class="cd-intro-block">
+		<div id="particles-intro"></div> <!-- Unique id for intro block -->
+		<div class="content-wrapper">
+			<div class="container_top">
+				<div class="text-container">
+					<p>
+						My name is
+						<span class="name">
+							Shri Ram
+						</span>
+					</p>
+				</div>
+				<div class="subtext">
+					<p>
+						I design, code, and manufacture
+						<span id="anib">
+						</span>
+					</p>
+				</div>
+			</div>
+			<a href="#0" class='cd-btn' data-action="show-projects">Show projects</a>
+		</div>
+	</div> <!-- .cd-intro-block -->
+
+	<div class="cd-projects-wrapper">
+		<div id="particles-projects"></div> <!-- Unique id for projects wrapper -->
+		<!-- Keep original select hidden for compatibility -->
+		<div class="category-selector" style="display: none;">
+			<label for="category">Select Category:</label>
+			<select id="category">
+				<option value="category1">Certifications</option>
+				<option value="category2">Projects</option>
+				<option value="category3">Research Publications</option>
+			</select>
+		</div>
+
+		<!-- New category carousel -->
+		<div class="category-carousel-container">
+			<div class="category-carousel">
+				<ul class="category-carousel__list" id="category-carousel-content">
+					<li class="category-carousel__item" data-value="category1" data-pos="-1">Certifications</li>
+					<li class="category-carousel__item active" data-value="category2" data-pos="0">Projects</li>
+					<li class="category-carousel__item" data-value="category3" data-pos="1">Research Publications</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="blog-slider">
+			<div class="blog-slider__wrp swiper-wrapper" id="slider-content">
+				<!-- Slider content will be dynamically loaded here -->
+			</div>
+			<div class="blog-slider__pagination"></div>
+		</div>
+
+		<!-- Carousel container placed directly below the blog slider -->
+		<div class="carousel-container">
+			<div class="carousel">
+				<ul class="carousel__list" id="carousel-content">
+					<!-- Carousel items will be dynamically loaded here with images -->
+				</ul>
+			</div>
+		</div>
+	</div> <!-- .cd-projects-wrapper -->
+
+	<div class="cd-project-content">
+		<div id="particles-content"></div> <!-- Unique id for project content -->
+		<div id="project-content-container">
+			<!-- Project content will be loaded dynamically -->
+		</div>
+		<a href="#0" class="close cd-img-replace">Close</a>
+	</div> <!-- .cd-project-content -->
+	
+	<script src="js/jquery-2.1.4.js"></script>
+	<script src="js/jquery.mobile.custom.min.js"></script>
+	<!-- Added Swiper JS for blog slider -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+	<!-- Added new script files -->
+	<script src="js/slider.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/category-carousel.js"></script>
+	<script src="js/integration.js"></script>
+	<script src="js/project-content.js"></script> <!-- Added project content loader -->
+	<script src="js/particles.min.js"></script>
+	<script>
+		// Main background particles
+		particlesJS("particles-js", {
+			"particles": {
+				"number": {
+					"value": 120,
+					"density": {
+						"enable": true,
+						"value_area": 800
+					}
+				},
+				"color": { "value": "#e87464" },
+				"shape": {
+					"type": "circle",
+					"stroke": { "width": 0, "color": "#000000" },
+					"polygon": { "nb_sides": 5 }
+				},
+				"opacity": {
+					"value": 0.5,
+					"random": false,
+					"anim": { "enable": false }
+				},
+				"size": {
+					"value": 3,
+					"random": true,
+					"anim": { "enable": false }
+				},
+				"line_linked": {
+					"enable": true,
+					"distance": 150,
+					"color": "#000000",
+					"opacity": 0.4,
+					"width": 1
+				},
+				"move": {
+					"enable": true,
+					"speed": 6,
+					"direction": "none",
+					"random": false,
+					"straight": false,
+					"out_mode": "out",
+					"bounce": false
+				}
+			},
+			"interactivity": {
+				"detect_on": "canvas",
+				"events": {
+					"onhover": { "enable": true, "mode": "repulse" },
+					"onclick": { "enable": true, "mode": "push" },
+					"resize": true
+				},
+				"modes": {
+					"repulse": { "distance": 100, "duration": 0.4 },
+					"push": { "particles_nb": 4 }
+				}
+			},
+			"retina_detect": true
+		});
+		
+		// Intro section particles
+		particlesJS("particles-intro", {
+			"particles": {
+				"number": {
+					"value": 80,
+					"density": {
+						"enable": true,
+						"value_area": 800
+					}
+				},
+				"color": { "value": "#ffffff" },
+				"shape": {
+					"type": "circle",
+					"stroke": { "width": 0, "color": "#e87464" },
+					"polygon": { "nb_sides": 5 }
+				},
+				"opacity": {
+					"value": 0.7,
+					"random": true,
+					"anim": { 
+						"enable": true,
+						"speed": 1,
+						"opacity_min": 0.1,
+						"sync": false
+					}
+				},
+				"size": {
+					"value": 5,
+					"random": true,
+					"anim": { 
+						"enable": true,
+						"speed": 4,
+						"size_min": 0.3,
+						"sync": false
+					}
+				},
+				"line_linked": {
+					"enable": true,
+					"distance": 120,
+					"color": "#ffffff",
+					"opacity": 0.2,
+					"width": 1
+				},
+				"move": {
+					"enable": true,
+					"speed": 3,
+					"direction": "none",
+					"random": true,
+					"straight": false,
+					"out_mode": "bounce",
+					"bounce": false
+				}
+			},
+			"interactivity": {
+				"detect_on": "canvas",
+				"events": {
+					"onhover": { "enable": true, "mode": "grab" },
+					"onclick": { "enable": true, "mode": "push" },
+					"resize": true
+				},
+				"modes": {
+					"grab": {
+						"distance": 140,
+						"line_linked": { "opacity": 1 }
+					},
+					"push": { "particles_nb": 4 }
+				}
+			},
+			"retina_detect": true
+		});
+		
+		// Projects section particles
+		particlesJS("particles-projects", {
+			"particles": {
+				"number": {
+					"value": 60,
+					"density": {
+						"enable": true,
+						"value_area": 900
+					}
+				},
+				"color": { "value": "#e67e22" },
+				"shape": {
+					"type": "polygon",
+					"stroke": { "width": 0, "color": "#000" },
+					"polygon": { "nb_sides": 6 },
+				},
+				"opacity": {
+					"value": 0.3,
+					"random": true,
+					"anim": { "enable": false }
+				},
+				"size": {
+					"value": 4,
+					"random": true,
+					"anim": { "enable": false }
+				},
+				"line_linked": {
+					"enable": true,
+					"distance": 160,
+					"color": "#e67e22",
+					"opacity": 0.15,
+					"width": 1
+				},
+				"move": {
+					"enable": true,
+					"speed": 2,
+					"direction": "none",
+					"random": true,
+					"straight": false,
+					"out_mode": "out",
+					"bounce": false
+				}
+			},
+			"interactivity": {
+				"detect_on": "canvas",
+				"events": {
+					"onhover": { "enable": true, "mode": "bubble" },
+					"onclick": { "enable": true, "mode": "repulse" },
+					"resize": true
+				},
+				"modes": {
+					"bubble": {
+						"distance": 200,
+						"size": 6,
+						"duration": 2,
+						"opacity": 0.8,
+						"speed": 3
+					},
+					"repulse": { "distance": 200, "duration": 0.4 }
+				}
+			},
+			"retina_detect": true
+		});
+		
+		// Content section particles
+		particlesJS("particles-content", {
+			"particles": {
+				"number": {
+					"value": 30,
+					"density": {
+						"enable": true,
+						"value_area": 800
+					}
+				},
+				"color": { "value": "#0f1926" },
+				"shape": {
+					"type": "circle",
+					"stroke": { "width": 0, "color": "#000000" },
+					"polygon": { "nb_sides": 5 }
+				},
+				"opacity": {
+					"value": 0.2,
+					"random": false,
+					"anim": { "enable": false }
+				},
+				"size": {
+					"value": 8,
+					"random": true,
+					"anim": { 
+						"enable": true,
+						"speed": 2,
+						"size_min": 0.1,
+						"sync": false
+					}
+				},
+				"line_linked": {
+					"enable": false
+				},
+				"move": {
+					"enable": true,
+					"speed": 1,
+					"direction": "top",
+					"random": true,
+					"straight": false,
+					"out_mode": "out",
+					"bounce": false
+				}
+			},
+			"interactivity": {
+				"detect_on": "canvas",
+				"events": {
+					"onhover": { "enable": true, "mode": "connect" },
+					"onclick": { "enable": true, "mode": "push" },
+					"resize": true
+				},
+				"modes": {
+					"connect": {
+						"distance": 150,
+						"line_linked": { 
+							"opacity": 0.2 
+						},
+						"radius": 100
+					},
+					"push": { "particles_nb": 1 }
+				}
+			},
+			"retina_detect": true
+		});
+	</script>
+</body>
+</html>
