@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "3D Visualization",
+    "description": "Architectural visualization and 3D modeling for real estate.",
+    "image": "https://via.placeholder.com/400x300?text=3D+Visualization",
+    "text": "High-quality 3D renderings and virtual walkthroughs for architectural and real estate projects."
+  },
+  {
+    "id": 2,
+    "title": "Video Production",
+    "description": "Corporate video production with motion graphics.",
+    "image": "https://via.placeholder.com/400x300?text=Video+Production",
+    "text": "Professional video production services including scriptwriting, filming, editing, and motion graphics."
+  },
+  {
+    "id": 3,
+    "title": "Interactive Installation",
+    "description": "Interactive digital art installation for public spaces.",
+    "image": "https://via.placeholder.com/400x300?text=Interactive+Art",
+    "text": "A digital art installation that responds to viewer movement and interaction, creating a unique experience."
+  }
+]

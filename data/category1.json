@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Web Design Project",
+    "description": "A modern responsive website design with focus on user experience and performance.",
+    "image": "/img/img1.png",
+    "text": "This project showcases modern web design techniques with responsive layouts and optimized performance."
+  },
+  {
+    "id": 2,
+    "title": "Mobile App Development",
+    "description": "A cross-platform mobile application built with React Native.",
+    "image": "/img/img2.png",
+    "text": "This mobile app works seamlessly across iOS and Android platforms, providing a consistent user experience."
+  },
+  {
+    "id": 3,
+    "title": "Mobile App Development",
+    "description": "A cross-platform mobile application built with React Native.",
+    "image": "https://via.placeholder.com/400x300?text=Mobile+App",
+    "text": "This mobile app works seamlessly across iOS and Android platforms, providing a consistent user experience."
+  },
+  {
+    "id": 4,
+    "title": "Mobile App Development",
+    "description": "A cross-platform mobile application built with React Native.",
+    "image": "https://via.placeholder.com/400x300?text=Mobile+App",
+    "text": "This mobile app works seamlessly across iOS and Android platforms, providing a consistent user experience."
+  }
+]

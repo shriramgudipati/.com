@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "id": "project1",
+      "title": "Category 3 - Item 1 (Detailed View)",
+      "subtitle": "Innovative approach to problem solving",
+      "description": [
+        "This is the detailed content for Category 3 - Item 1. This content appears when you click the Read More button on the slider.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci?",
+        "Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi!"
+      ]
+    },
+    {
+      "id": "project2",
+      "title": "Category 3 - Item 2 (Detailed View)",
+      "subtitle": "Research and development highlights",
+      "description": [
+        "This is the detailed content for Category 3 - Item 2. This content appears when you click the Read More button on the slider.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci?",
+        "Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi!"
+      ]
+    },
+    {
+      "id": "project3",
+      "title": "Category 3 - Item 3 (Detailed View)",
+      "subtitle": "Complete project lifecycle documentation",
+      "description": [
+        "This is the detailed content for Category 3 - Item 3. This content appears when you click the Read More button on the slider.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci?",
+        "Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi!"
+      ]
+    },
+    {
+      "id": "project4",
+      "title": "Category 3 - Item 4 (Detailed View)",
+      "subtitle": "Technical implementation guide",
+      "description": [
+        "This is the detailed content for Category 3 - Item 4. This content appears when you click the Read More button on the slider.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci?",
+        "Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi!"
+      ]
+    }
+  ]
+}
