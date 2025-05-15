@@ -821,7 +821,7 @@ Keyframes
   
   /* Fix content carousel display on mobile */
   .carousel-container {
-    margin-top: 20px; /* Reduced margin */
+    margin-top: 60px; /* Reduced margin */
     margin-bottom: 30px;
     height: 240px; /* Explicit height to ensure visibility */
     overflow: visible; /* Ensure content isn't cut off */
@@ -879,7 +879,43 @@ Keyframes
     margin-top: 3px;
   }
   
-  /* ...existing code... */
+  /* Reduce blog slider size for mobile */
+  .blog-slider {
+    margin: 50px auto;
+    min-height: 400px;
+    height: auto;
+    padding: 15px;
+  }
+  
+  .blog-slider__img {
+    height: 220px; /* Smaller image height */
+    width: 85%; /* Slightly narrower */
+    transform: translateY(-40%); /* Less translation */
+  }
+  
+  .blog-slider__content {
+    margin-top: -60px; /* Reduced negative margin */
+    padding: 0 15px; /* Less padding */
+  }
+  
+  .blog-slider__title {
+    font-size: 20px; /* Smaller title */
+    margin-bottom: 10px;
+  }
+  
+  .blog-slider__text {
+    margin-bottom: 20px;
+    font-size: 14px; /* Smaller text */
+  }
+  
+  .blog-slider__button {
+    padding: 10px 20px; /* Smaller button */
+    font-size: 14px;
+  }
+  
+  .blog-slider__pagination {
+    top: 170px; /* Adjust pagination location */
+  }
 }
 
 /* -------------------------------- 
@@ -889,7 +925,7 @@ Keyframes
   /* Even more reduced margins for very small screens */
   .category-carousel-container {
     padding: 30px 0 20px;
-    margin-top: 20px;
+    margin-top: 60px;
   }
   
   .content-wrapper {
@@ -939,16 +975,44 @@ Keyframes
     font-size: 10px;
   }
   
-  /* Ensure the blog slider is visible and properly sized */
+  /* Further reduce blog slider for very small screens */
   .blog-slider {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 15px;
-    height: auto;
-    min-height: 450px;
+    margin: 30px auto;
+    min-height: 360px;
+    padding: 10px;
   }
   
-  /* ...existing code... */
+  .blog-slider__img {
+    height: 180px;
+    width: 90%;
+    transform: translateY(-30%);
+    box-shadow: 2px 8px 20px 0px rgba(15, 16, 16, 0.7);
+  }
+  
+  .blog-slider__content {
+    margin-top: -5px;
+    padding: 0 10px;
+  }
+  
+  .blog-slider__title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .blog-slider__text {
+    margin-bottom: 15px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  
+  .blog-slider__button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+  
+  .blog-slider__pagination {
+    top: 150px;
+  }
 }
 
 /* --------------------------------
@@ -957,18 +1021,34 @@ Keyframes
 @media screen and (max-height: 600px) {
   .category-carousel-container {
     padding: 30px 0 20px;
-    margin-top: 20px;
+    margin-top: 60px;
   }
   
   .blog-slider {
-    height: 300px;
-    min-height: 300px;
-    margin: 20px auto;
+    height: 280px;
+    min-height: 280px;
+    padding: 10px 15px;
+    margin: 15px auto;
   }
   
-  .carousel-container {
-    margin-top: 15px;
-    margin-bottom: 30px;
+  .blog-slider__img {
+    height: 180px;
+    transform: translateX(-60px);
+  }
+  
+  .blog-slider__title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .blog-slider__text {
+    margin-bottom: 10px;
+    max-height: 80px;
+    overflow-y: auto;
+  }
+  
+  .blog-slider__pagination {
+    display: none; /* Hide pagination for very short screens */
   }
 }
 
