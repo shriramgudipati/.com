@@ -1054,7 +1054,7 @@ Keyframes
 
 /* Fix spacing for the components to prevent overlap */
 .blog-slider {
-  margin-top: 50px; /* Increase margin to create space */
+  margin-top: 30px; /* Increase margin to create space */
   margin-bottom: 50px;
 }
 
