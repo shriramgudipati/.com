@@ -756,6 +756,222 @@ Keyframes
   z-index: 4;
 }
 
+/* -------------------------------- 
+   Responsive Layout - Tablet (768px - 991px)
+   -------------------------------- */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  /* Reduce top margins globally for tablet */
+  .content-wrapper {
+    padding-top: 20px;
+  }
+  
+  .category-carousel-container {
+    padding: 60px 0 40px; /* Further reduced top padding */
+    margin-top: 40px; /* Reduced margin */
+  }
+
+  .category-carousel {
+    max-width: 500px;
+  }
+  
+  .category-carousel__item {
+    width: 200px; /* Smaller width for category items */
+    height: 45px; /* Slightly smaller height */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .category-carousel__item[data-pos="-1"] {
+    transform: translateX(-50%) scale(.85); /* More compact positioning */
+  }
+
+  .category-carousel__item[data-pos="1"] {
+    transform: translateX(50%) scale(.85); /* More compact positioning */
+  }
+
+  /* Adjust blog slider margins for tablet */
+  .blog-slider {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  /* Adjust carousel container margins for tablet */
+  .carousel-container {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+}
+
+/* -------------------------------- 
+   Responsive Layout - Mobile Phones (up to 767px)
+   -------------------------------- */
+@media screen and (max-width: 767px) {
+  /* Reduce top margins globally for mobile */
+  .content-wrapper {
+    padding-top: 10px;
+  }
+  
+  .category-carousel-container {
+    padding: 40px 0 30px; /* Significantly reduced padding */
+    margin-top: 30px; /* Smaller top margin */
+  }
+
+  .category-carousel {
+    max-width: 320px;
+  }
+  
+  /* Fix content carousel display on mobile */
+  .carousel-container {
+    margin-top: 20px; /* Reduced margin */
+    margin-bottom: 30px;
+    height: 240px; /* Explicit height to ensure visibility */
+    overflow: visible; /* Ensure content isn't cut off */
+  }
+  
+  .carousel {
+    width: 100%;
+    height: 220px; /* Reduced height for mobile */
+    overflow: visible;
+  }
+  
+  .carousel__list {
+    height: 200px; /* Reduced height */
+    overflow: visible;
+  }
+
+  .carousel__item {
+    /* Smaller items for mobile */
+    --item-width: 120px;
+    --item-height: 120px;
+    --active-min-width: 140px;
+    --active-max-width: 180px;
+    --active-min-height: 120px;
+    --active-max-height: 160px;
+  }
+  
+  /* Make carousel items more visible and concentrated on mobile */
+  .carousel__item[data-pos="0"] {
+    transform: translateZ(0) scale(1);
+    z-index: 10;
+  }
+  
+  .carousel__item[data-pos="-1"] {
+    transform: translateX(-120%) scale(0.75);
+  }
+  
+  .carousel__item[data-pos="1"] {
+    transform: translateX(120%) scale(0.75);
+  }
+  
+  /* Highly compress outer items on mobile or hide them */
+  .carousel__item[data-pos="-2"] {
+    transform: translateX(-180%) scale(0.6);
+    opacity: 0.3;
+  }
+  
+  .carousel__item[data-pos="2"] {
+    transform: translateX(180%) scale(0.6);
+    opacity: 0.3;
+  }
+  
+  /* Fix text size for mobile */
+  .carousel__item-title {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  
+  /* ...existing code... */
+}
+
+/* -------------------------------- 
+   Responsive Layout - Small Phones (up to 480px)
+   -------------------------------- */
+@media screen and (max-width: 480px) {
+  /* Even more reduced margins for very small screens */
+  .category-carousel-container {
+    padding: 30px 0 20px;
+    margin-top: 20px;
+  }
+  
+  .content-wrapper {
+    padding-top: 5px;
+  }
+
+  /* Further compress carousel for very small screens */
+  .carousel-container {
+    margin-top: 15px;
+    height: 200px;
+  }
+  
+  .carousel {
+    height: 180px;
+  }
+  
+  .carousel__list {
+    height: 160px;
+  }
+  
+  .carousel__item {
+    /* Even smaller items for very small screens */
+    --item-width: 100px;
+    --item-height: 100px;
+    --active-min-width: 120px;
+    --active-max-width: 150px;
+    --active-min-height: 100px;
+    --active-max-height: 140px;
+  }
+  
+  /* Make side items very compact on small phones */
+  .carousel__item[data-pos="-1"] {
+    transform: translateX(-100%) scale(0.7);
+  }
+  
+  .carousel__item[data-pos="1"] {
+    transform: translateX(100%) scale(0.7);
+  }
+  
+  /* Hide outer items on very small screens to focus on main content */
+  .carousel__item[data-pos="-2"],
+  .carousel__item[data-pos="2"] {
+    display: none; /* Remove completely on very small screens */
+  }
+
+  .carousel__item-title {
+    font-size: 10px;
+  }
+  
+  /* Ensure the blog slider is visible and properly sized */
+  .blog-slider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    height: auto;
+    min-height: 450px;
+  }
+  
+  /* ...existing code... */
+}
+
+/* --------------------------------
+   Fix for devices with very short height
+   -------------------------------- */
+@media screen and (max-height: 600px) {
+  .category-carousel-container {
+    padding: 30px 0 20px;
+    margin-top: 20px;
+  }
+  
+  .blog-slider {
+    height: 300px;
+    min-height: 300px;
+    margin: 20px auto;
+  }
+  
+  .carousel-container {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+}
+
 /* Fix spacing for the components to prevent overlap */
 .blog-slider {
   margin-top: 50px; /* Increase margin to create space */
