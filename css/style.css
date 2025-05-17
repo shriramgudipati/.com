@@ -866,7 +866,7 @@ Keyframes
 
   /* Further compress carousel for very small screens */
   .carousel-container {
-    margin-top: 15px;
+    margin-top: -15px;
     height: 200px;
   }
   
@@ -898,7 +898,10 @@ Keyframes
   }
   
   /* Hide outer items on very small screens to focus on main content */
-  .carousel__item[data-pos="-2"],
+  .carousel__item[data-pos="-2"] {
+    display: none; /* Remove completely on very small screens */
+  }
+  
   .carousel__item[data-pos="2"] {
     display: none; /* Remove completely on very small screens */
   }
@@ -1005,6 +1008,7 @@ Keyframes
   position: relative;
   z-index: 10; /* Increased z-index to ensure visibility */
   overflow: visible;
+  perspective: 800px; /* Add perspective to enhance 3D effect */
 }
 
 .category-carousel {
@@ -1014,6 +1018,7 @@ Keyframes
   max-width: 600px;
   margin: 0 auto;
   position: relative; /* Ensure positioned context */
+  transform-style: preserve-3d; /* Enable 3D transformations */
 }
 
 .category-carousel__list {
@@ -1021,12 +1026,13 @@ Keyframes
   list-style: none;
   position: relative;
   width: 100%;
-  height: 60px;
+  height: 80px; /* Increased height to accommodate vertical offsets */
   justify-content: center;
   perspective: 300px;
   padding: 0;
   margin: 0;
   overflow: visible; /* Ensure items aren't clipped */
+  transform-style: preserve-3d; /* Enable 3D transformations */
 }
 
 .category-carousel__item {
@@ -1044,4 +1050,110 @@ Keyframes
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.9) !important; /* Ensure background is visible */
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transform-style: preserve-3d; /* Enable 3D transformations */
+}
+
+/* Active item styling - bring to front and highlight */
+.category-carousel__item.active {
+  z-index: 10;
+  transform: translateZ(20px) !important; /* Push active item forward */
+  box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.8);
+  border: 1px solid rgba(232, 116, 100, 0.4);
+}
+
+/* Position items with increased spacing */
+.category-carousel__item[data-pos="0"] {
+  transform: translateZ(20px); /* Center item is closest to viewer */
+  z-index: 5;
+}
+
+.category-carousel__item[data-pos="-1"] {
+  transform: translateX(-150%) translateY(10px) translateZ(-10px) scale(0.85); /* Increased horizontal spacing */
+  opacity: 0.8;
+  filter: brightness(0.8);
+  z-index: 4;
+}
+
+.category-carousel__item[data-pos="1"] {
+  transform: translateX(150%) translateY(10px) translateZ(-10px) scale(0.85); /* Increased horizontal spacing */
+  opacity: 0.8;
+  filter: brightness(0.8);
+  z-index: 4;
+}
+
+.category-carousel__item[data-pos="-2"] {
+  transform: translateX(-260%) translateY(20px) translateZ(-30px) scale(0.7); /* Increased horizontal spacing */
+  opacity: 0.6;
+  filter: brightness(0.6);
+  z-index: 3;
+}
+
+.category-carousel__item[data-pos="2"] {
+  transform: translateX(260%) translateY(20px) translateZ(-30px) scale(0.7); /* Increased horizontal spacing */
+  opacity: 0.6;
+  filter: brightness(0.6);
+  z-index: 3;
+}
+
+/* Hover effects to enhance interactivity */
+.category-carousel__item:not(.active):hover {
+  transform: translateY(-5px) translateZ(5px) scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+  filter: brightness(1.1);
+}
+
+/* Responsive adjustments for the enhanced carousel */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .category-carousel__item[data-pos="-1"] {
+    transform: translateX(-120%) translateY(8px) translateZ(-5px) scale(0.85); /* Adjusted for tablet */
+  }
+
+  .category-carousel__item[data-pos="1"] {
+    transform: translateX(120%) translateY(8px) translateZ(-5px) scale(0.85); /* Adjusted for tablet */
+  }
+
+  .category-carousel__item[data-pos="-2"] {
+    transform: translateX(-200%) translateY(18px) translateZ(-20px) scale(0.75); /* Adjusted for tablet */
+  }
+
+  .category-carousel__item[data-pos="2"] {
+    transform: translateX(200%) translateY(18px) translateZ(-20px) scale(0.75); /* Adjusted for tablet */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .category-carousel__item[data-pos="-1"] {
+    transform: translateX(-110%) translateY(6px) translateZ(-5px) scale(0.85); /* Adjusted for mobile */
+  }
+
+  .category-carousel__item[data-pos="1"] {
+    transform: translateX(110%) translateY(6px) translateZ(-5px) scale(0.85); /* Adjusted for mobile */
+  }
+
+  .category-carousel__item[data-pos="-2"] {
+    transform: translateX(-180%) translateY(16px) translateZ(-15px) scale(0.75); /* Adjusted for mobile */
+  }
+
+  .category-carousel__item[data-pos="2"] {
+    transform: translateX(180%) translateY(16px) translateZ(-15px) scale(0.75); /* Adjusted for mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .category-carousel__item[data-pos="-1"] {
+    transform: translateX(-90%) translateY(5px) translateZ(-5px) scale(0.8); /* Adjusted for small screens */
+  }
+
+  .category-carousel__item[data-pos="1"] {
+    transform: translateX(90%) translateY(5px) translateZ(-5px) scale(0.8); /* Adjusted for small screens */
+  }
+
+  .category-carousel__item[data-pos="-2"] {
+    transform: translateX(-160%) translateY(14px) translateZ(-10px) scale(0.7); /* Adjusted for small screens */
+  }
+
+  .category-carousel__item[data-pos="2"] {
+    transform: translateX(160%) translateY(14px) translateZ(-10px) scale(0.7); /* Adjusted for small screens */
+  }
 }
