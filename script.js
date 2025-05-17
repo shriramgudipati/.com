@@ -47,6 +47,7 @@ function populateSlider(data) {
       <div class="blog-slider__content">
         <span class="blog-slider__code">${item.date || ''}</span>
         <div class="blog-slider__title">${item.title || ''}</div>
+        <div class="blog-slider__skills">${item.skills || ''}</div>
         <div class="blog-slider__text">${item.description || ''}</div>
         <a href="#" class="blog-slider__button">READ MORE</a>
       </div>
@@ -103,5 +104,5 @@ categorySelector.addEventListener('change', (e) => {
 
 // Load default category on page load
 window.onload = function() {
-  loadCategory('category1');
+  loadCategory('Certifications');
 };
