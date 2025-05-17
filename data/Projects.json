@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "UI/UX Research",
+    "skills": ["Research", "Design", "Prototyping"],
+    "description": "A comprehensive study of user interaction patterns and interface design.",
+    "image": "https://via.placeholder.com/400x300?text=UI/UX+Research",
+    "text": "This research project explores how users interact with digital interfaces and identifies patterns for improving user experience."
+  },
+  {
+    "id": 2,
+    "title": "Branding & Identity",
+    "skills": ["Research", "Design", "Prototyping"],
+    "description": "Complete brand identity design for a tech startup.",
+    "image": "https://via.placeholder.com/400x300?text=Branding",
+    "text": "A comprehensive brand identity package including logo design, color schemes, typography, and brand guidelines."
+  },
+  {
+    "id": 3,
+    "title": "E-commerce Solution",
+    "skills": ["Research", "Design", "Prototyping"],
+    "description": "Full-stack e-commerce platform with inventory management.",
+    "image": "https://via.placeholder.com/400x300?text=E-commerce",
+    "text": "An end-to-end e-commerce solution with product management, payment processing, and customer relationship tools."
+  }
+]
