@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="blog-slider__content">
               <span class="blog-slider__code">${item.date}</span>
               <div class="blog-slider__title">${item.title}</div>
+              ${item.Skills ? `<div class="blog-slider__skills">${item.skills}</div>` : ''}
               <div class="blog-slider__text">${item.text}</div>
               <a href="#" class="blog-slider__button">READ MORE</a>
             </div>
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Load default category on page load
-  loadCategory("category1");
+  loadCategory("Certifications");
 
   // Change category on dropdown selection
   categorySelector.addEventListener("change", (e) => {
