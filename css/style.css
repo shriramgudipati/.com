@@ -29,6 +29,13 @@ img {
   max-width: 100%;
 }
 
+/* Prevent horizontal scrolling on mobile devices */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 /* -------------------------------- 
 
 Patterns - reusable parts of our design
@@ -1877,6 +1884,9 @@ Lighting Effects - Enhanced Stage Lighting
     padding: 3em 1em;
     transform: scale(0.95);
     transform-origin: top center;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
   
   .cd-project-content h2 {
@@ -1897,13 +1907,28 @@ Lighting Effects - Enhanced Stage Lighting
   /* Adjust skills carousel for mobile */
   .skills-carousel-container {
     margin: 10px 0;
-    transform: scale(0.9);
+    transform: scale(0.75);
     transform-origin: center;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .skills-carousel {
+    width: 100%;
+    height: 80px; /* Reduced height */
+  }
+  
+  .skills-carousel__list {
+    height: 60px; /* Reduced height */
+  }
+  
+  .skills-carousel__item {
+    --item-spacing: 150px; /* Reduced spacing between items */
   }
   
   .skills-carousel__item span {
-    font-size: 1.6rem;
-    padding: 4px 12px;
+    font-size: 1.4rem;
+    padding: 4px 10px;
   }
   
   /* Make close button more accessible on mobile */
@@ -1941,11 +1966,34 @@ Lighting Effects - Enhanced Stage Lighting
   }
   
   .skills-carousel-container {
-    transform: scale(0.85);
+    transform: scale(0.65);
+    margin: 0;
+  }
+  
+  .skills-carousel {
+    height: 70px;
+  }
+  
+  .skills-carousel__list {
+    height: 50px;
+  }
+  
+  .skills-carousel__item {
+    --item-spacing: 120px;
   }
   
   .skills-carousel__item span {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    padding: 3px 8px;
+  }
+  
+  /* Make sure all content stays within screen bounds */
+  .cd-project-content > div > *,
+  .cd-project-content .content-image,
+  .cd-project-content .video-figure,
+  .cd-project-content .video-container {
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   /* Further adjust spacing for images and videos */
