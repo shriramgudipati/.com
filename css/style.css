@@ -1858,3 +1858,100 @@ Lighting Effects - Enhanced Stage Lighting
     margin: 1em auto;
   }
 }
+
+/* Add background to sidebar */
+.social-icons-sidebar {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 15px 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced mobile styling for project content */
+@media screen and (max-width: 767px) {
+  /* Scale project content for mobile */
+  .cd-project-content > div {
+    padding: 3em 1em;
+    transform: scale(0.95);
+    transform-origin: top center;
+  }
+  
+  .cd-project-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5em;
+  }
+  
+  .cd-project-content em {
+    font-size: 1.6rem;
+    margin: 0.7em auto;
+  }
+  
+  .cd-project-content p {
+    font-size: 1.4rem;
+    margin-bottom: 0.8em;
+  }
+  
+  /* Adjust skills carousel for mobile */
+  .skills-carousel-container {
+    margin: 10px 0;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  
+  .skills-carousel__item span {
+    font-size: 1.6rem;
+    padding: 4px 12px;
+  }
+  
+  /* Make close button more accessible on mobile */
+  .cd-project-content .close {
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    background-size: 60%;
+  }
+  
+  /* Hide carousel completely */
+  .carousel-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further scale down project content */
+  .cd-project-content > div {
+    padding: 2em 1em;
+    transform: scale(0.9);
+  }
+  
+  .cd-project-content h2 {
+    font-size: 2.4rem;
+  }
+  
+  .cd-project-content em {
+    font-size: 1.4rem;
+  }
+  
+  .cd-project-content p {
+    font-size: 1.3rem;
+  }
+  
+  .skills-carousel-container {
+    transform: scale(0.85);
+  }
+  
+  .skills-carousel__item span {
+    font-size: 1.4rem;
+  }
+  
+  /* Further adjust spacing for images and videos */
+  .cd-project-content .content-image,
+  .cd-project-content .video-figure,
+  .cd-project-content .video-container {
+    margin: 1em auto;
+  }
+}
