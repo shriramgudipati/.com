@@ -1,0 +1,89 @@
+{
+  "projects": [
+    {
+      "id": "research_paper1",
+      "title": "Research Paper: Machine Learning Applications",
+      "subtitle": "Journal of Advanced Computing, 2023",
+      "skills": ["Machine Learning", "Data Analysis", "Neural Networks", "Statistical Methods"],
+      "description": [
+        {
+          "type": "paragraph",
+          "content": "Abstract: This paper explores applications of machine learning in various domains including healthcare, finance, and logistics."
+        },
+        {
+          "type": "image",
+          "src": "img/research/ml-methodology.jpg",
+          "alt": "Research Methodology",
+          "caption": "Figure 1: Methodology used for data collection and analysis"
+        },
+        {
+          "type": "paragraph",
+          "content": "Introduction: Machine learning has transformed how businesses approach data-driven decision making. This paper examines several case studies demonstrating effective implementation strategies."
+        },
+        {
+          "type": "paragraph",
+          "content": "Methods: We analyzed 150 different implementations across 3 industries using a standardized evaluation framework."
+        },
+        {
+          "type": "image",
+          "src": "img/research/ml-results-graph.jpg",
+          "alt": "Results Graph",
+          "caption": "Figure 2: Comparative analysis of algorithm performance"
+        },
+        {
+          "type": "paragraph",
+          "content": "Conclusion: The findings indicate that hybrid approaches combining multiple algorithms tend to yield better results than single-algorithm implementations."
+        },
+        {
+          "type": "video",
+          "videoType": "direct",
+          "src": "videos/research_presentation.mp4",
+          "title": "Research Presentation",
+          "caption": "Video presentation of research findings",
+          "poster": "img/research/video_thumbnail.jpg",
+          "autoplay": false,
+          "controls": true,
+          "responsive": true,
+          "width": 640,
+          "height": 360
+        }
+      ]
+    },
+    {
+      "id": "research_paper2",
+      "title": "Blockchain Technology in Supply Chain Management",
+      "subtitle": "International Journal of Supply Chain Innovation, 2022",
+      "skills": ["Blockchain", "Supply Chain", "Distributed Systems", "Smart Contracts"],
+      "description": [
+        {
+          "type": "paragraph",
+          "content": "Abstract: This research examines how blockchain technology can enhance transparency and efficiency in modern supply chain management systems."
+        },
+        {
+          "type": "image",
+          "src": "img/research/blockchain-diagram.jpg",
+          "alt": "Blockchain Supply Chain Integration",
+          "caption": "Figure 1: Integration points between blockchain and supply chain processes"
+        },
+        {
+          "type": "paragraph",
+          "content": "Introduction: Supply chain management faces challenges in transparency, traceability, and trust between parties. Blockchain offers potential solutions to these persistent issues."
+        },
+        {
+          "type": "image",
+          "src": "img/research/implementation-timeline.jpg",
+          "alt": "Implementation Timeline",
+          "caption": "Figure 2: Blockchain implementation timeline for the case study"
+        },
+        {
+          "type": "paragraph",
+          "content": "Case Study: We implemented a blockchain solution for a global manufacturer, resulting in 37% improved traceability and 24% reduction in documentation processing time."
+        },
+        {
+          "type": "paragraph",
+          "content": "Conclusion: While blockchain adoption presents initial implementation challenges, the long-term benefits for supply chain transparency and efficiency are substantial."
+        }
+      ]
+    }
+  ]
+}

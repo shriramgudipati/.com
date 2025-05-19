@@ -1,0 +1,91 @@
+{
+  "projects": [
+    {
+      "id": "project1",
+      "title": "Project 1 Details",
+      "subtitle": "Comprehensive project overview",
+      "skills": ["JavaScript", "HTML5", "CSS3", "Responsive Design"],
+      "description": [
+        {
+          "type": "paragraph",
+          "content": "This project showcases modern web development techniques with responsive layouts."
+        },
+        {
+          "type": "image",
+          "src": "img/projects/project1-mockup.jpg",
+          "alt": "Project Mockup Design",
+          "caption": "Initial design mockup created in Figma"
+        },
+        {
+          "type": "paragraph",
+          "content": "The development process included extensive user testing and multiple iterations to ensure optimal user experience across devices."
+        },
+        {
+          "type": "image",
+          "src": "img/projects/project1-final.jpg",
+          "alt": "Final Project Implementation",
+          "caption": "The final implementation with responsive layout"
+        },
+        {
+          "type": "paragraph",
+          "content": "Technologies used include HTML5, CSS3, JavaScript, and various modern frameworks to ensure performance and maintainability."
+        },
+        {
+          "type": "video",
+          "videoType": "youtube",
+          "src": "https://www.youtube.com/embed/YOUR_PROJECT_VIDEO_ID",
+          "title": "Project Demo Video",
+          "caption": "Watch a demonstration of the completed project",
+          "autoplay": false,
+          "controls": true,
+          "responsive": true,
+          "width": 640,
+          "height": 360
+        },
+        {
+          "type": "video",
+          "videoType": "direct",
+          "src": "img/projects/animation.gif",
+          "title": "Animated Demonstration",
+          "caption": "Animated demonstration of the project workflow",
+          "controls": true,
+          "autoplay": true,
+          "loop": true,
+          "responsive": true
+        }
+      ]
+    },
+    {
+      "id": "project2",
+      "title": "Project 2 Analysis",
+      "subtitle": "Technical implementation details",
+      "skills": ["React", "Node.js", "MongoDB", "API Development"],
+      "description": [
+        {
+          "type": "paragraph",
+          "content": "A full-stack application built with React frontend and Node.js backend."
+        },
+        {
+          "type": "image",
+          "src": "img/projects/project2-architecture.jpg",
+          "alt": "Application Architecture",
+          "caption": "System architecture diagram showing data flow"
+        },
+        {
+          "type": "paragraph",
+          "content": "The database design utilized MongoDB for flexibility and scalability, allowing for rapid iteration during development."
+        },
+        {
+          "type": "paragraph",
+          "content": "API endpoints were designed following RESTful principles with comprehensive documentation using Swagger."
+        },
+        {
+          "type": "image",
+          "src": "img/projects/project2-dashboard.jpg",
+          "alt": "Admin Dashboard",
+          "caption": "The admin dashboard interface for data management"
+        }
+      ]
+    }
+  ]
+}
