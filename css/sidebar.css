@@ -6,7 +6,8 @@
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+    align-items: center; /* Center align all items */
 }
 
 .social-icons-sidebar a {
@@ -137,6 +138,27 @@
     }
 }
 
+.icon-with-tooltip {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center align all items */
+  width: 100%;
+  margin: 15px 0;
+}
+
+.icon-with-tooltip img {
+  /* Ensure all icons are properly centered */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Special handling for the drone icon which is larger */
+.project-link img {
+  transform: translateX(0); /* Reset any potential offset */
+  display: block;
+  margin: 0 auto;
+}
+
 /* Drone icon hover effects */
 #drone-img {
     transition: all 0.3s ease;
@@ -163,4 +185,30 @@
 @keyframes pulse {
     0% { opacity: 0.8; }
     100% { opacity: 1; }
+}
+
+/* Override centered alignment for the About Me close button */
+.about-me-close.icon-with-tooltip {
+  display: block;
+  justify-content: flex-start; /* Left align instead of center */
+  align-items: center;
+  width: auto; /* Don't stretch full width */
+  margin: 0;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  text-align: left;
+}
+
+.about-me-close.icon-with-tooltip img {
+  margin: 0; /* Remove auto margins */
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+/* Make sure tooltip position is maintained */
+.about-me-close .tooltip-right {
+  left: 45px;
+  top: 50%;
 }
