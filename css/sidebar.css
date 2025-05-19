@@ -138,53 +138,35 @@
     }
 }
 
-.icon-with-tooltip {
-  display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center align all items */
-  width: 100%;
-  margin: 15px 0;
-}
-
-.icon-with-tooltip img {
-  /* Ensure all icons are properly centered */
-  display: block;
-  margin: 0 auto;
-}
-
-/* Special handling for the drone icon which is larger */
-.project-link img {
-  transform: translateX(0); /* Reset any potential offset */
-  display: block;
-  margin: 0 auto;
-}
-
-/* Drone icon hover effects */
-#drone-img {
-    transition: all 0.3s ease;
-    transform-origin: center;
-}
-
-.project-link.drone-cont:hover #drone-img {
-    transform: scale(1.1) rotate(45deg);
-    filter: drop-shadow(0 0 4px rgba(232, 116, 100, 0.8));
-}
-
-/* Ensure the drone-cont has enough padding for the rotation effect */
-.project-link.drone-cont {
-    padding: 2px;
-    position: relative;
-    overflow: visible;
-}
-
-/* Add some animation to the tooltip when hovering the drone */
-.project-link.drone-cont:hover .tooltip {
-    animation: pulse 1s infinite alternate;
-}
-
-@keyframes pulse {
-    0% { opacity: 0.8; }
-    100% { opacity: 1; }
+/* Improve mobile interaction targets for sidebar */
+@media (max-width: 767px) {
+  .social-icons-sidebar .icon-with-tooltip {
+    padding: 10px 0; /* Increase padding for better touch targets */
+    margin: 8px 0;
+  }
+  
+  /* Ensure the About Me toggle is easily tappable */
+  .social-icons-sidebar .about-me-toggle {
+    min-height: 44px; /* Apple's recommended minimum tap target size */
+  }
+  
+  /* Make the close button in About Me section easier to tap */
+  .about-me-close.icon-with-tooltip {
+    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Prevent text selection during taps which can interfere with the toggle */
+  .social-icons-sidebar,
+  .about-me-section {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 }
 
 /* Override centered alignment for the About Me close button */
