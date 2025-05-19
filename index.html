@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,400italic' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<!-- Added Swiper CSS for blog slider -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+	<link rel="stylesheet" href="css/sidebar.css"> <!-- Social Icons Sidebar styles -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Squeezebox Portfolio Template | CodyHouse</title>
+</head>
+<body>
+<div class="social-icons-sidebar">
+	<a href="#0" class="icon-with-tooltip home-link" data-action="go-home">
+		<img width="30" height="30" src="https://img.icons8.com/?size=100&id=2797&format=png&color=e87464" alt="home" />
+		<span class="tooltip">Home</span>
+	</a>
+	<!-- Add About Me icon with a special class -->
+	<a href="#0" class="icon-with-tooltip about-me-toggle sidebar-about" data-action="toggle-about-and-navigate">
+		<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/e87464/user-male-circle.png" alt="about" />
+		<span class="tooltip">About Me</span>
+	</a>
+	<a href="#0" class="icon-with-tooltip project-link drone-cont" data-action="show-projects-direct">
+		<img width="40" height="40" src="img/drone.png" alt="projects" id="drone-img" />
+		<span class="tooltip">Projects</span>
+	</a>
+	<a href="mailto:shriram.gudipati@gmail.com" class="icon-with-tooltip">
+		<img width="30" height="30" src="https://img.icons8.com/fluency-systems-filled/48/e87464/new-post.png" alt="mail" />
+		<span class="tooltip">Email</span>
+	</a>
+	<a href="https://github.com/shriramgudipati" target="_blank" class="icon-with-tooltip">
+		<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/e87464/github.png" alt="github" />
+		<span class="tooltip">GitHub</span>
+	</a>
+	<a href="https://www.linkedin.com/in/shriramgudipati" target="_blank" class="icon-with-tooltip">
+		<img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/e87464/linkedin.png" alt="linkedin" />
+		<span class="tooltip">LinkedIn</span>
+	</a>
+</div>
+<div id="particles-js" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;"></div>
+	<div class="cd-intro-block">
+		<div id="particles-intro"></div> <!-- Unique id for intro block -->
+		<div class="content-wrapper">
+			<div class="container_top">
+				<div class="text-container">
+					<p>
+						My name is
+						<span class="name">
+							Shri Ram
+						</span>
+					</p>
+				</div>
+				<div class="subtext">
+					<p>
+						I design, code, and manufacture
+						<span id="anib">
+						</span>
+					</p>
+				</div>
+			</div>
+
+			<!-- About Me section as overlay with close button -->
+			<div class="about-me-section">
+				<a href="#0" class="about-me-close icon-with-tooltip">
+					<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/e87464/chevron-left.png" alt="back" />
+					<span class="tooltip tooltip-right">Back</span>
+				</a>
+				<h2>About Me</h2>
+				<div class="about-me-content">
+					<img src="img/profile.jpg" alt="Shri Ram" class="profile-image">
+					<p>
+						Hello! I'm Shri Ram, a passionate designer, developer, and engineer with expertise in creating
+						innovative solutions. I specialize in software engineering, mechanical design, and creative problem-solving.
+					</p>
+					<p>
+						My journey spans across various domains including web development, machine learning, and product design.
+						I'm committed to creating meaningful products that solve real-world problems.
+					</p>
+					<div class="about-me-skills">
+						<span>Software Engineering</span>
+						<span>Product Design</span>
+						<span>Full Stack Development</span>
+						<span>Machine Learning</span>
+						<span>UI/UX Design</span>
+					</div>
+				</div>
+			</div>
+			
+			<a href="#0" class='cd-btn' data-action="show-projects">Show projects</a>
+		</div>
+	</div> <!-- .cd-intro-block -->
+
+	<div class="cd-projects-wrapper">
+		<div id="particles-projects"></div> <!-- Unique id for projects wrapper -->
+		<!-- New category carousel with improved visibility -->
+		<div class="category-selector" style="display: none;">
+			<label for="category">Select Category:</label>
+			<select id="category">
+				<option value="Certifications">Certifications</option>
+				<option value="Projects">Projects</option>
+				<option value="research_papers">Research</option>
+			</select>
+		</div>
+ 
+		<!-- New category carousel -->
+		<div class="category-carousel-container">
+			<div class="category-carousel">
+				<ul class="category-carousel__list" id="category-carousel-content">
+					<li class="category-carousel__item" data-value="Certifications" data-pos="-1">Certifications</li>
+					<li class="category-carousel__item active" data-value="Projects" data-pos="0">Projects</li>
+					<li class="category-carousel__item" data-value="research_papers" data-pos="1">Research Publications</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="blog-slider">
+			<div class="blog-slider__wrp swiper-wrapper" id="slider-content">
+				<!-- Slider content will be dynamically loaded here -->
+			</div>
+			<div class="blog-slider__pagination"></div>
+		</div>
+
+		<!-- Carousel container placed directly below the blog slider -->
+		<div class="carousel-container">
+			<div class="carousel">
+				<ul class="carousel__list" id="carousel-content">
+					<!-- Carousel items will be dynamically loaded here with images -->
+				</ul>
+			</div>
+		</div>
+	</div> <!-- .cd-projects-wrapper -->
+
+	<div class="cd-project-content">
+		<div id="particles-content"></div> <!-- Unique id for project content -->
+		<div id="project-content-container">
+			<!-- Project content will be loaded dynamically -->
+		</div>
+		<a href="#0" class="close cd-img-replace">Close</a>
+	</div> <!-- .cd-project-content -->
+	
+	<script src="js/jquery-2.1.4.js"></script>
+	<script src="js/jquery.mobile.custom.min.js"></script>
+	<!-- Added Swiper JS for blog slider -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+	<!-- Added new script files -->
+	<script src="js/slider.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/category-carousel.js"></script>
+	<script src="js/integration.js"></script>
+	<script src="js/project-content.js"></script> <!-- Added project content loader -->
+	<script src="js/skills-carousel.js"></script> <!-- Added skills carousel functionality -->
+	<script src="js/particles.min.js"></script>
+	<script src="js/unified-particles.js"></script>
+	
+	<!-- Optional: Color controls for testing -->
+	<script>
+		// Example of how to change colors dynamically:
+		// window.updateParticleColors('intro', '#ff0000', '#ffffff');
+	</script>
+	<script>
+		// Ensure carousel reinitializes if needed
+		$(document).ready(function() {
+			// Wait for everything to load
+			setTimeout(function() {
+				if ($('.category-carousel__item.active').length === 0) {
+					console.log("Forcing carousel re-initialization");
+					window.reinitializeCategoryCarousel();
+				}
+			}, 1000);
+		});
+	</script>
+</body>
+</html>
