@@ -319,4 +319,40 @@ jQuery(document).ready(function(){
 	        'scrollTop': $(window).height()
 	    }, 500);
 	});
+	
+	// Enhanced mobile support for About Me toggle
+	$(document).on('touchstart', '[data-action="toggle-about"]', function(event) {
+	  // Prevent default touch behavior which might interfere with our toggle
+	  event.preventDefault();
+	  
+	  // Get the About Me section
+	  var aboutSection = $('.about-me-section');
+	  
+	  // Simple toggle functionality
+	  if (aboutSection.hasClass('active')) {
+	    aboutSection.removeClass('active');
+	    $('.about-me-toggle').removeClass('active');
+	  } else {
+	    aboutSection.addClass('active');
+	    $('.about-me-toggle').addClass('active');
+	    
+	    // Hide projects if showing About Me
+	    if($('.cd-intro-block').hasClass('projects-visible')) {
+	      $('.cd-intro-block').removeClass('projects-visible');
+	      $('.cd-projects-wrapper').removeClass('projects-visible');
+	    }
+	    
+	    // Hide project content if visible
+	    if($('.cd-project-content').hasClass('is-visible')) {
+	      $('.cd-project-content').removeClass('is-visible');
+	    }
+	  }
+	});
+
+	// Also improve touch support for closing About Me section
+	$(document).on('touchstart', '.about-me-close', function(event) {
+	  event.preventDefault();
+	  $('.about-me-section').removeClass('active');
+	  $('.about-me-toggle').removeClass('active');
+	});
 });
