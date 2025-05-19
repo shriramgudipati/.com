@@ -64,12 +64,39 @@
     box-shadow: -2px 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Animated show tooltip on hover */
+/* Hide tooltips by default */
+.icon-with-tooltip .tooltip {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  pointer-events: none;
+}
+
+/* Show tooltip only on hover */
 .icon-with-tooltip:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Make sure tooltips still work on touch devices with explicit touch events */
+@media (max-width: 767px) {
+  /* Better touch support for tooltips */
+  .icon-with-tooltip:focus .tooltip,
+  .icon-with-tooltip:active .tooltip {
     opacity: 1;
     visibility: visible;
-    transform: translateY(-50%) scale(1);
-    left: 55px;
+  }
+  
+  /* Make tooltip disappear after a delay on mobile touch */
+  .icon-with-tooltip .tooltip {
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  /* Increase tooltip size for better touch visibility */
+  .icon-with-tooltip .tooltip {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
 }
 
 /* Add glow effect to icons on hover */
