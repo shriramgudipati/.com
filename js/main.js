@@ -250,93 +250,53 @@ jQuery(document).ready(function(){
 		}, 500);
 	});
 	
-	// Handle About Me toggle
-	$('.about-me-toggle').on('click', function(event){
-		event.preventDefault();
-		
-		// Toggle active class on the button
-		$(this).toggleClass('active');
-		
-		// Show the About Me section
-		$('.about-me-section').addClass('active');
-		
-		// If projects are visible, hide them when showing About Me
-		if($('.cd-intro-block').hasClass('projects-visible')) {
-			$('.cd-intro-block').removeClass('projects-visible');
-		}
-	});
-	
-	// Handle About Me button in the intro section
-	$('.about-me-button-container .about-me-toggle').on('click', function(event){
-	    event.preventDefault();
-	    
-	    // Toggle active class on the button
-	    $(this).toggleClass('active');
-	    
-	    // Toggle the About Me section
-	    $('.about-me-section').toggleClass('active');
-	});
-	
-	// Handle About Me close button
-	$('.about-me-close').on('click', function(event){
-		event.preventDefault();
-		
-		// Hide the About Me section
-		$('.about-me-section').removeClass('active');
-		
-		// Remove active class from all toggle buttons
-		$('.about-me-toggle').removeClass('active');
-	});
+	// Clear all existing event handlers for About Me toggles
+	$(document).off('click', '.about-me-toggle');
+	$(document).off('click', '.sidebar-about');
+	$(document).off('click', '[data-action="toggle-about"]');
+	$(document).off('click', '[data-action="toggle-about-and-navigate"]');
 
-	// Make sure About Me section closes when showing projects
-	$('.cd-btn[data-action="show-projects"]').on('click', function(){
-		if($('.about-me-section').hasClass('active')) {
-			$('.about-me-section').removeClass('active');
-			$('.about-me-toggle').removeClass('active');
-		}
-	});
-
-	// Close About Me when clicking Home button
-	$('.home-link').on('click', function(){
-		if($('.about-me-section').hasClass('active')) {
-			$('.about-me-section').removeClass('active');
-			$('.about-me-toggle').removeClass('active');
-		}
-	});
-	
-	// Handle regular About Me toggle (the one in the intro section)
-	$('.about-me-toggle:not(.sidebar-about)').on('click', function(event){
-	    event.preventDefault();
+	// Single clean handler for About Me toggle - this replaces all the above handlers
+	$(document).on('click', '[data-action="toggle-about"]', function(event) {
+	  event.preventDefault();
+	  event.stopPropagation();
+	  
+	  var aboutSection = $('.about-me-section');
+	  
+	  // Simple toggle functionality
+	  if (aboutSection.hasClass('active')) {
+	    aboutSection.removeClass('active');
+	    $('.about-me-toggle').removeClass('active');
+	  } else {
+	    aboutSection.addClass('active');
+	    $('.about-me-toggle').addClass('active');
 	    
-	    // Toggle active class on the button
-	    $(this).toggleClass('active');
-	    
-	    // Toggle the About Me section
-	    $('.about-me-section').toggleClass('active');
-	});
-
-	// Handle sidebar About Me toggle (navigates + shows About Me)
-	$('.sidebar-about').on('click', function(event){
-	    event.preventDefault();
-	    
-	    // If projects are visible, hide them and show intro block
-	    if($('.cd-project-content').hasClass('is-visible')) {
-	        $('.cd-project-content').removeClass('is-visible');
-	    }
-	    
-	    // If projects wrapper is visible, hide it and show intro block
+	    // If projects are visible, hide them when showing About Me
 	    if($('.cd-intro-block').hasClass('projects-visible')) {
-	        $('.cd-intro-block').removeClass('projects-visible');
+	      $('.cd-intro-block').removeClass('projects-visible');
+	      $('.cd-projects-wrapper').removeClass('projects-visible');
 	    }
 	    
-	    // Scroll to top to show intro block
+	    // If project content is visible, hide it
+	    if($('.cd-project-content').hasClass('is-visible')) {
+	      $('.cd-project-content').removeClass('is-visible');
+	    }
+	    
+	    // Ensure we're at the top of the page
 	    $('body,html').animate({
-	        'scrollTop': 0
-	    }, 500, function() {
-	        // After navigation completes, open the about me section
-	        $('.about-me-section').addClass('active');
-	        $('.about-me-button-container .about-me-toggle').addClass('active');
-	    });
+	      'scrollTop': 0
+	    }, 300);
+	  }
+	});
+
+	// Keep the close button handler simple
+	$(document).off('click', '.about-me-close');
+	$(document).on('click', '.about-me-close', function(event) {
+	  event.preventDefault();
+	  event.stopPropagation();
+	  
+	  $('.about-me-section').removeClass('active');
+	  $('.about-me-toggle').removeClass('active');
 	});
 	
 	// Handle Projects direct link
