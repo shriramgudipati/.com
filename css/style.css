@@ -856,6 +856,11 @@ Keyframes
   .blog-slider__pagination {
     top: 170px; /* Adjust pagination location */
   }
+  
+  /* Hide carousel container completely on mobile */
+  .carousel-container {
+    display: none;
+  }
 }
 
 /* -------------------------------- 
