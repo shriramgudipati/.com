@@ -1194,7 +1194,7 @@ Keyframes
   }
   
   .category-carousel-container {
-    padding: 40px 0 0px; /* Less padding */
+    padding: 60px 0 0px; /* Less padding */
     margin-top: 40px; /* Less margin */
   }
 }
@@ -1904,10 +1904,10 @@ Lighting Effects - Enhanced Stage Lighting
     margin-bottom: 0.8em;
   }
   
-  /* Adjust skills carousel for mobile */
+  /* Adjust skills carousel for mobile - increased size */
   .skills-carousel-container {
-    margin: 10px 0;
-    transform: scale(0.75);
+    margin: 20px 0 30px;
+    transform: scale(0.95); /* Increased from 0.85 */
     transform-origin: center;
     width: 100%;
     overflow: hidden;
@@ -1915,20 +1915,21 @@ Lighting Effects - Enhanced Stage Lighting
   
   .skills-carousel {
     width: 100%;
-    height: 80px; /* Reduced height */
+    height: 90px; /* Increased from 80px */
   }
   
   .skills-carousel__list {
-    height: 60px; /* Reduced height */
+    height: 70px; /* Increased from 60px */
   }
   
   .skills-carousel__item {
-    --item-spacing: 150px; /* Reduced spacing between items */
+    --item-spacing: 160px; /* Adjusted spacing between items */
   }
   
   .skills-carousel__item span {
-    font-size: 1.4rem;
-    padding: 4px 10px;
+    font-size: 1.5rem; /* Increased from 1.4rem */
+    padding: 5px 12px; /* Increased padding */
+    border-radius: 22px; /* More rounded edges */
   }
   
   /* Make close button more accessible on mobile */
@@ -1965,26 +1966,27 @@ Lighting Effects - Enhanced Stage Lighting
     font-size: 1.3rem;
   }
   
+  /* Larger skills carousel even for small screens */
   .skills-carousel-container {
-    transform: scale(0.65);
-    margin: 0;
+    transform: scale(0.8); /* Increased from 0.65 */
+    margin: 10px 0 20px;
   }
   
   .skills-carousel {
-    height: 70px;
+    height: 80px; /* Increased from 70px */
   }
   
   .skills-carousel__list {
-    height: 50px;
+    height: 60px; /* Increased from 50px */
   }
   
   .skills-carousel__item {
-    --item-spacing: 120px;
+    --item-spacing: 140px; /* Adjusted spacing */
   }
   
   .skills-carousel__item span {
-    font-size: 1.2rem;
-    padding: 3px 8px;
+    font-size: 1.4rem; /* Increased from 1.2rem */
+    padding: 4px 10px; /* Increased padding */
   }
   
   /* Make sure all content stays within screen bounds */
