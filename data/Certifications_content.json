@@ -1,43 +1,58 @@
 {
   "projects": [
-    {
+        {
       "id": "certification1",
-      "title": "Category 1 - Item 1 (Detailed View)",
-      "subtitle": "Full project exploration and analysis",
-      "skills": ["Research", "Design", "Prototyping"],
+      "title": "CSWA – SolidWorks Associate Certification",
+      "subtitle": "Parametric 3D Modelling and Engineering Design Proficiency",
+      "skills": ["3D Modelling", "Part Design", "Assembly", "Engineering Drawing"],
       "description": [
         {
+          "type": "image",
+          "src": "img/certifications/cert1-cswa_certificate.png",
+          "alt": "CSWA-Certificate",
+          "caption": "CSWA Certificate"
+        },
+        {
           "type": "paragraph",
-          "content": "This is the detailed content for Category 1 - Item 1. This content appears when you click the Read More button on the slider."
+          "content": "As part of the CSWA certification, I created detailed 3D part and assembly models from engineering drawings using SolidWorks. Each part was designed with careful attention to constraints, sketch relations, and proper modeling hierarchy to ensure accurate geometry and maintain design intent."
+        },
+        {
+          "type": "paragraph",
+          "content": "The models also included real-world property calculations such as mass, center of gravity, and principal moments of inertia using the Mass Properties tool. I completed all tasks within a timed environment, simulating industry-standard workflows involving precision, efficiency, and documentation practices."
         },
         {
           "type": "image",
-          "src": "img/certifications/cert1-detail.jpg",
-          "alt": "Certification Details",
-          "caption": "Professional certification awarded after completion of course"
+          "src": "img/certifications/cert1-cswa_model1.png",
+          "alt": "Machined Fork Part - Mass Properties",
+          "caption": "SolidWorks 3D part with mass property evaluation"
         },
         {
-          "type": "video",
-          "videoType": "youtube",
-          "src": "https://www.youtube.com/embed/YOUR_YOUTUBE_ID",
-          "title": "Certification Overview Video",
-          "caption": "Video overview of the certification process",
-          "autoplay": false,
-          "controls": true,
-          "responsive": true,
-          "width": 640,
-          "height": 360
+          "type": "image",
+          "src": "img/certifications/cert1-cswa_model2.png",
+          "alt": "Spoked Wheel Model",
+          "caption": "High-fidelity wheel with hub-spoke structure and property analysis"
         },
         {
-          "type": "paragraph",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae."
+          "type": "image",
+          "src": "img/certifications/cert1-cswa_model3.png",
+          "alt": "Bracket Component Model",
+          "caption": "Mid-complexity component showing real-world mass and volume"
         },
         {
-          "type": "paragraph",
-          "content": "Ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus."
+          "type": "image",
+          "src": "img/certifications/cert1-cswa_model4.png",
+          "alt": "Colored Assembly Model",
+          "caption": "Multi-part assembly showcasing mates, color coding, and analysis"
+        },
+        {
+          "type": "image",
+          "src": "img/certifications/cert1-cswa_model5.png",
+          "alt": "Mechanical Linkage Assembly",
+          "caption": "Fully constrained mechanism with mass and inertia computations"
         }
       ]
     },
+
     {
       "id": "certification2",
       "title": "Category 1 - Item 2 (Detailed View)",
