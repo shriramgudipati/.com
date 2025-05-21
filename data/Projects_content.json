@@ -129,7 +129,7 @@
         {
           "type": "video",
           "videoType": "direct",
-          "src": "/img/Projects/project6-Road Car_Bump.gif",
+          "src": "/img/Projects/project6-Road_Car_Bump.gif",
           "title": "Front View Simulation",
           "caption": "Steering kinematics viewed from the front",
           "controls": true,
@@ -140,7 +140,7 @@
         {
           "type": "video",
           "videoType": "direct",
-          "src": "/img/Projects/project6-Road Car_Bump.gif",
+          "src": "/img/Projects/project6-Road_Car_Steer.gif",
           "title": "Top View",
           "caption": "Top view of steering movement",
           "controls": true,
