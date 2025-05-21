@@ -1,176 +1,99 @@
 {
   "projects": [
-    {
-      "id": "project1",
-      "title": "E-Puck Path Planning with RRT",
-      "subtitle": "Goal-biased Rapid Exploration in Webots",
-      "skills": ["Webots", "Python", "Path Planning"],
+        {
+      "id": "certification1",
+      "title": "CSWA – SolidWorks Associate Certification",
+      "subtitle": "Parametric 3D Modelling and Engineering Design Proficiency",
+      "skills": ["3D Modelling", "Part Design", "Assembly", "Engineering Drawing"],
       "description": [
         {
+          "type": "image",
+          "src": "img/Certifications/cert1-cswa_certificate.png",
+          "alt": "CSWA-Certificate",
+          "caption": "CSWA Certificate"
+        },
+        {
           "type": "paragraph",
-          "content": "Implemented Rapidly Exploring Random Tree (RRT) algorithm with 50% goal bias on the E-Puck robot in Webots."
+          "content": "As part of the CSWA certification, I created detailed 3D part and assembly models from engineering drawings using SolidWorks. Each part was designed with careful attention to constraints, sketch relations, and proper modeling hierarchy to ensure accurate geometry and maintain design intent."
+        },
+        {
+          "type": "paragraph",
+          "content": "The models also included real-world property calculations such as mass, center of gravity, and principal moments of inertia using the Mass Properties tool. I completed all tasks within a timed environment, simulating industry-standard workflows involving precision, efficiency, and documentation practices."
         },
         {
           "type": "image",
-          "src": "/img/Projects/project1-epuck.png",
-          "alt": "E-Puck Simulation",
-          "caption": "Webots simulation of E-Puck performing goal-biased navigation"
+          "src": "img/Certifications/cert1-cswa_model1.png",
+          "alt": "Machined Fork Part - Mass Properties",
+          "caption": "SolidWorks 3D part with mass property evaluation"
         },
         {
-          "type": "paragraph",
-          "content": "Supervisor and Controller scripts in Python generated and replayed path trees for different propagation settings."
+          "type": "image",
+          "src": "img/Certifications/cert1-cswa_model2.png",
+          "alt": "Spoked Wheel Model",
+          "caption": "High-fidelity wheel with hub-spoke structure and property analysis"
+        },
+        {
+          "type": "image",
+          "src": "img/Certifications/cert1-cswa_model3.png",
+          "alt": "Bracket Component Model",
+          "caption": "Mid-complexity component showing real-world mass and volume"
+        },
+        {
+          "type": "image",
+          "src": "img/Certifications/cert1-cswa_model4.png",
+          "alt": "Colored Assembly Model",
+          "caption": "Multi-part assembly showcasing mates, color coding, and analysis"
+        },
+        {
+          "type": "image",
+          "src": "img/Certifications/cert1-cswa_model5.png",
+          "alt": "Mechanical Linkage Assembly",
+          "caption": "Fully constrained mechanism with mass and inertia computations"
         }
       ]
     },
+
     {
-      "id": "project2",
-      "title": "MEMS Electron Microscope Simulation",
-      "subtitle": "Electron Beam Focusing in COMSOL",
-      "skills": ["COMSOL Multiphysics", "Beam Optics", "MEMS Design"],
+      "id": "certification2",
+      "title": "Category 1 - Item 2 (Detailed View)",
+      "subtitle": "Comprehensive overview and technical specifications",
+      "skills": ["Research", "Design", "Prototyping"],
       "description": [
         {
           "type": "paragraph",
-          "content": "Simulated an Einzel lens to focus electron beams for a miniaturized MEMS-based Transmission Electron Microscope."
+          "content": "This is the detailed content for Category 1 - Item 2. This content appears when you click the Read More button on the slider."
         },
         {
           "type": "image",
-          "src": "/img/Projects/project2-memsmesh.png",
-          "alt": "MEMS Lens Mesh",
-          "caption": "Meshed Einzel lens structure in COMSOL"
+          "src": "img/certifications/cert2-process.jpg",
+          "alt": "Certification Process",
+          "caption": "The certification process required multiple assessments"
         },
         {
           "type": "paragraph",
-          "content": "Beam quality metrics such as beta emittance and 1-RMS were analyzed to study lens performance."
-        }
-      ]
-    },
-    {
-      "id": "project3",
-      "title": "Lagrangian Analysis of IC Engine",
-      "subtitle": "Kinetic & Potential Energy Modeling of Engine Dynamics",
-      "skills": ["Dynamics", "Lagrange's Method", "System Modeling"],
-      "description": [
+          "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci?"
+        },
         {
-          "type": "paragraph",
-          "content": "Derived motion equations for a 4-stroke internal combustion engine using Lagrange’s equations."
+          "type": "video",
+          "videoType": "vimeo",
+          "src": "https://player.vimeo.com/video/YOUR_VIMEO_ID",
+          "title": "Certification Details",
+          "caption": "Detailed walkthrough of certification requirements",
+          "autoplay": false,
+          "controls": true,
+          "responsive": true,
+          "width": 640,
+          "height": 360
         },
         {
           "type": "image",
-          "src": "/img/Projects/project3-icengine.png",
-          "alt": "IC Engine Diagram",
-          "caption": "Engine cycle and dynamics schematic"
+          "src": "img/img2.png",
+          "alt": "Final Certificate",
+          "caption": "The final certificate awarded upon completion"
         },
         {
           "type": "paragraph",
-          "content": "Model incorporated piston, crankshaft, and connecting rod to analyze stroke-by-stroke motion."
-        }
-      ]
-    },
-    {
-      "id": "project4",
-      "title": "Quadrotor Dynamics with Wind Gusts",
-      "subtitle": "Trajectory Control Using PID and MPC",
-      "skills": ["Control Systems", "MATLAB Simulink", "MPC", "PID"],
-      "description": [
-        {
-          "type": "paragraph",
-          "content": "Designed and implemented a PID and MPC-based trajectory tracking system for quadrotor drones in MATLAB Simulink."
-        },
-        {
-          "type": "image",
-          "src": "/img/Projects/project4-trajectoryplot.png",
-          "alt": "Quadrotor MPC",
-          "caption": "Path tracking response under simulated wind gusts"
-        },
-        {
-          "type": "paragraph",
-          "content": "Performance metrics improved by 40% under wind disturbances using predictive control schemes."
-        }
-      ]
-    },
-    {
-      "id": "project5",
-      "title": "Pouch Cell Thermal Simulation",
-      "subtitle": "Thermal Modeling in Ansys Fluent",
-      "skills": ["Ansys Fluent", "Thermal Modeling", "Electrochemical Simulation"],
-      "description": [
-        {
-          "type": "paragraph",
-          "content": "Simulated thermal conduction and convection in lithium-ion pouch cells using Ansys Fluent and EChem tools."
-        },
-        {
-          "type": "image",
-          "src": "/img/Projects/project5-pouchcell.png",
-          "alt": "Thermal Contour",
-          "caption": "Temperature distribution during peak operation"
-        },
-        {
-          "type": "paragraph",
-          "content": "Helped evaluate optimal cooling strategies for battery packs used in EV applications."
-        }
-      ]
-    },
-    {
-      "id": "project6",
-      "title": "Lotus Shark Steering Wheel Mechanism Analysis",
-      "subtitle": "Kinematic Linkage and Ackermann Behavior",
-      "skills": ["Kinematic Modeling", "Mechanical Simulation", "Design Evaluation"],
-      "description": [
-        {
-          "type": "paragraph",
-          "content": "Analyzed the Lotus Shark steering system using geometric and linkage modeling for sensitivity and response."
-        },
-        {
-          "type": "image",
-          "src": "/img/Projects/project6-lotus_shark1.png",
-          "alt": "Lotus Shark Steering Layout",
-          "caption": "Initial geometry setup of the steering assembly"
-        },
-        {
-          "type": "image",
-          "src": "img/Projects/project6-Road_Car_Bump.gif",
-          "alt": "Front View Simulation",
-          "caption": "Steering kinematics viewed from the front"
-        },
-        {
-          "type": "image",
-          "src": "img/Projects/project6-topview.gif",
-          "alt": "Top View",
-          "caption": "Top view of steering movement"
-        },
-        {
-          "type": "image",
-          "src": "img/Projects/project6-steering3.gif",
-          "alt": "Tie Rod Response",
-          "caption": "Linkage deformation during cornering"
-        },
-        {
-          "type": "image",
-          "src": "img/Projects/project6-steering4.gif",
-          "alt": "Assembly Overview",
-          "caption": "Complete motion overview of the steering"
-        }
-      ]
-    },
-    {
-      "id": "project7",
-      "title": "Tubular Chassis Stress Analysis",
-      "subtitle": "FEA for Load Distribution in Race Chassis",
-      "skills": ["FEA", "Mechanical Design", "SolidWorks Simulation"],
-      "description": [
-        {
-          "type": "paragraph",
-          "content": "Evaluated stress concentrations in a tubular chassis using SolidWorks Simulation to optimize structural layout."
-        },
-        {
-          "type": "image",
-          "src": "/img/Projects/project7-chassis.png",
-          "alt": "Tubular Chassis FEA",
-          "caption": "Stress plot showing torsional deformation under load"
-        },
-        {
-          "type": "paragraph",
-          "content": "Simulations were conducted under braking, bump, and cornering conditions for high-load scenarios."
+          "content": "Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus."
         }
       ]
     }
