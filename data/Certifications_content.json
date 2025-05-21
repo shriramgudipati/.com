@@ -8,7 +8,7 @@
       "description": [
         {
           "type": "image",
-          "src": "img/certifications/cert1-cswa_certificate.png",
+          "src": "img/Certifications/cert1-cswa_certificate.png",
           "alt": "CSWA-Certificate",
           "caption": "CSWA Certificate"
         },
@@ -22,31 +22,31 @@
         },
         {
           "type": "image",
-          "src": "img/certifications/cert1-cswa_model1.png",
+          "src": "img/Certifications/cert1-cswa_model1.png",
           "alt": "Machined Fork Part - Mass Properties",
           "caption": "SolidWorks 3D part with mass property evaluation"
         },
         {
           "type": "image",
-          "src": "img/certifications/cert1-cswa_model2.png",
+          "src": "img/Certifications/cert1-cswa_model2.png",
           "alt": "Spoked Wheel Model",
           "caption": "High-fidelity wheel with hub-spoke structure and property analysis"
         },
         {
           "type": "image",
-          "src": "img/certifications/cert1-cswa_model3.png",
+          "src": "img/Certifications/cert1-cswa_model3.png",
           "alt": "Bracket Component Model",
           "caption": "Mid-complexity component showing real-world mass and volume"
         },
         {
           "type": "image",
-          "src": "img/certifications/cert1-cswa_model4.png",
+          "src": "img/Certifications/cert1-cswa_model4.png",
           "alt": "Colored Assembly Model",
           "caption": "Multi-part assembly showcasing mates, color coding, and analysis"
         },
         {
           "type": "image",
-          "src": "img/certifications/cert1-cswa_model5.png",
+          "src": "img/Certifications/cert1-cswa_model5.png",
           "alt": "Mechanical Linkage Assembly",
           "caption": "Fully constrained mechanism with mass and inertia computations"
         }
