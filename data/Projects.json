@@ -1,26 +1,58 @@
 [
   {
     "id": 1,
-    "title": "UI/UX Research",
-    "skills": ["Research", "Design", "Prototyping"],
-    "description": "A comprehensive study of user interaction patterns and interface design.",
-    "image": "https://via.placeholder.com/400x300?text=UI/UX+Research",
-    "text": "This research project explores how users interact with digital interfaces and identifies patterns for improving user experience."
+    "title": "E-Puck Path Planning with RRT",
+    "skills": ["Webots", "Python", "Path Planning"],
+    "description": "Autonomous robot navigation using Rapidly Exploring Random Trees.",
+    "image": "https://via.placeholder.com/400x300?text=E-Puck+RRT",
+    "text": "Implemented RRT with 50% goal bias in Webots to enable goal-oriented navigation for the E-puck robot, using supervisor and controller scripts for path generation and replay."
   },
   {
     "id": 2,
-    "title": "Branding & Identity",
-    "skills": ["Research", "Design", "Prototyping"],
-    "description": "Complete brand identity design for a tech startup.",
-    "image": "https://via.placeholder.com/400x300?text=Branding",
-    "text": "A comprehensive brand identity package including logo design, color schemes, typography, and brand guidelines."
+    "title": "MEMS Electron Microscope Simulation",
+    "skills": ["COMSOL Multiphysics", "Beam Optics", "MEMS Design"],
+    "description": "Focusing simulation of an electron beam using an Einzel lens in a miniaturized TEM.",
+    "image": "/img/Projects/project2-memsmesh.png",
+    "text": "Simulated focusing effects of an Einzel Lens for a MEMS-scale electron microscope in COMSOL, analyzing beta emittance and 1-RMS beam quality."
   },
   {
     "id": 3,
-    "title": "E-commerce Solution",
-    "skills": ["Research", "Design", "Prototyping"],
-    "description": "Full-stack e-commerce platform with inventory management.",
-    "image": "https://via.placeholder.com/400x300?text=E-commerce",
-    "text": "An end-to-end e-commerce solution with product management, payment processing, and customer relationship tools."
+    "title": "Lagrangian Analysis of IC Engine",
+    "skills": ["Dynamics", "Lagrange's Method", "System Modeling"],
+    "description": "Dynamic modeling of a 4-stroke IC engine using Lagrange’s equations.",
+    "image": "https://via.placeholder.com/400x300?text=IC+Engine+Lagrangian",
+    "text": "Performed a comprehensive dynamic analysis of piston, crank, and connecting rod motion using Lagrange’s equations to derive system equations of motion."
+  },
+  {
+    "id": 4,
+    "title": "Quadrotor Dynamics with Wind Gusts",
+    "skills": ["Control Systems", "MATLAB Simulink", "MPC", "PID"],
+    "description": "Trajectory control system design for quadrotors under wind disturbances.",
+    "image": "/img/Projects/project4-trajectoryplot.png",
+    "text": "Designed and implemented a PID and MPC-based control system for quadrotor drones in MATLAB Simulink, achieving 40% improvement in stability under gust conditions."
+  },
+  {
+    "id": 5,
+    "title": "Pouch Cell Thermal Simulation",
+    "skills": ["Ansys Fluent", "Thermal Modeling", "Electrochemical Simulation"],
+    "description": "Heat conduction and convection analysis in lithium-ion pouch cells using Ansys and EChem models.",
+    "image": "https://via.placeholder.com/400x300?text=Pouch+Cell+Thermal+Sim",
+    "text": "Thermal simulation of pouch cells under operational load to evaluate heat dissipation, aiding in improved battery pack design."
+  },
+  {
+    "id": 6,
+    "title": "Lotus Shark Steering Wheel Mechanism Analysis",
+    "skills": ["Kinematic Modeling", "Mechanical Simulation", "Design Evaluation"],
+    "description": "Kinematic analysis of Lotus Shark-style steering to evaluate turning behavior and steering sensitivity.",
+    "image": "/img/Projects/project6-lotus_shark1.png",
+    "text": "Detailed mechanism analysis for the Lotus Shark steering wheel using linkage modeling, to understand its responsiveness and mechanical advantage."
+  },
+  {
+    "id": 7,
+    "title": "Tubular Chassis Stress Analysis",
+    "skills": ["FEA", "Mechanical Design", "SolidWorks Simulation"],
+    "description": "Stress and deformation analysis of tubular chassis for load-bearing efficiency.",
+    "image": "https://via.placeholder.com/400x300?text=Chassis+Stress+Analysis",
+    "text": "Simulated torsional and bending loads on a tubular chassis to assess structural integrity and optimize material layout."
   }
 ]
