@@ -2,52 +2,169 @@
   "projects": [
     {
       "id": "project1",
-      "title": "Project 1 Details",
-      "subtitle": "Comprehensive project overview",
-      "skills": ["JavaScript", "HTML5", "CSS3", "Responsive Design"],
+      "title": "E-Puck Path Planning with RRT",
+      "subtitle": "Goal-biased Rapid Exploration in Webots",
+      "skills": ["Webots", "Python", "Path Planning"],
       "description": [
         {
           "type": "paragraph",
-          "content": "This project showcases modern web development techniques with responsive layouts."
+          "content": "Implemented Rapidly Exploring Random Tree (RRT) algorithm with 50% goal bias on the E-Puck robot in Webots."
         },
         {
           "type": "image",
-          "src": "img/projects/project1-mockup.jpg",
-          "alt": "Project Mockup Design",
-          "caption": "Initial design mockup created in Figma"
+          "src": "/img/Projects/project1-epuck.png",
+          "alt": "E-Puck Simulation",
+          "caption": "Webots simulation of E-Puck performing goal-biased navigation"
         },
         {
           "type": "paragraph",
-          "content": "The development process included extensive user testing and multiple iterations to ensure optimal user experience across devices."
+          "content": "Supervisor and Controller scripts in Python generated and replayed path trees for different propagation settings."
+        }
+      ]
+    },
+    {
+      "id": "project2",
+      "title": "MEMS Electron Microscope Simulation",
+      "subtitle": "Electron Beam Focusing in COMSOL",
+      "skills": ["COMSOL Multiphysics", "Beam Optics", "MEMS Design"],
+      "description": [
+        {
+          "type": "paragraph",
+          "content": "Simulated an Einzel lens to focus electron beams for a miniaturized MEMS-based Transmission Electron Microscope."
         },
         {
           "type": "image",
-          "src": "img/projects/project1-final.jpg",
-          "alt": "Final Project Implementation",
-          "caption": "The final implementation with responsive layout"
+          "src": "/img/Projects/project2-memsmesh.png",
+          "alt": "MEMS Lens Mesh",
+          "caption": "Meshed Einzel lens structure in COMSOL"
         },
         {
           "type": "paragraph",
-          "content": "Technologies used include HTML5, CSS3, JavaScript, and various modern frameworks to ensure performance and maintainability."
+          "content": "Beam quality metrics such as beta emittance and 1-RMS were analyzed to study lens performance."
+        }
+      ]
+    },
+    {
+      "id": "project3",
+      "title": "Lagrangian Analysis of IC Engine",
+      "subtitle": "Kinetic & Potential Energy Modeling of Engine Dynamics",
+      "skills": ["Dynamics", "Lagrange's Method", "System Modeling"],
+      "description": [
+        {
+          "type": "paragraph",
+          "content": "Derived motion equations for a 4-stroke internal combustion engine using Lagrange’s equations."
         },
         {
-          "type": "video",
-          "videoType": "youtube",
-          "src": "https://www.youtube.com/embed/YOUR_PROJECT_VIDEO_ID",
-          "title": "Project Demo Video",
-          "caption": "Watch a demonstration of the completed project",
-          "autoplay": false,
-          "controls": true,
-          "responsive": true,
-          "width": 640,
-          "height": 360
+          "type": "image",
+          "src": "/img/Projects/project3-icengine.png",
+          "alt": "IC Engine Diagram",
+          "caption": "Engine cycle and dynamics schematic"
+        },
+        {
+          "type": "paragraph",
+          "content": "Model incorporated piston, crankshaft, and connecting rod to analyze stroke-by-stroke motion."
+        }
+      ]
+    },
+    {
+      "id": "project4",
+      "title": "Quadrotor Dynamics with Wind Gusts",
+      "subtitle": "Trajectory Control Using PID and MPC",
+      "skills": ["Control Systems", "MATLAB Simulink", "MPC", "PID"],
+      "description": [
+        {
+          "type": "paragraph",
+          "content": "Designed and implemented a PID and MPC-based trajectory tracking system for quadrotor drones in MATLAB Simulink."
+        },
+        {
+          "type": "image",
+          "src": "/img/Projects/project4-trajectoryplot.png",
+          "alt": "Quadrotor MPC",
+          "caption": "Path tracking response under simulated wind gusts"
+        },
+        {
+          "type": "paragraph",
+          "content": "Performance metrics improved by 40% under wind disturbances using predictive control schemes."
+        }
+      ]
+    },
+    {
+      "id": "project5",
+      "title": "Pouch Cell Thermal Simulation",
+      "subtitle": "Thermal Modeling in Ansys Fluent",
+      "skills": ["Ansys Fluent", "Thermal Modeling", "Electrochemical Simulation"],
+      "description": [
+        {
+          "type": "paragraph",
+          "content": "Simulated thermal conduction and convection in lithium-ion pouch cells using Ansys Fluent and EChem tools."
+        },
+        {
+          "type": "image",
+          "src": "/img/Projects/project5-pouchcell.png",
+          "alt": "Thermal Contour",
+          "caption": "Temperature distribution during peak operation"
+        },
+        {
+          "type": "paragraph",
+          "content": "Helped evaluate optimal cooling strategies for battery packs used in EV applications."
+        }
+      ]
+    },
+    {
+      "id": "project6",
+      "title": "Lotus Shark Steering Wheel Mechanism Analysis",
+      "subtitle": "Kinematic Linkage and Ackermann Behavior",
+      "skills": ["Kinematic Modeling", "Mechanical Simulation", "Design Evaluation"],
+      "description": [
+        {
+          "type": "paragraph",
+          "content": "Analyzed the Lotus Shark steering system using geometric and linkage modeling for sensitivity and response."
+        },
+        {
+          "type": "image",
+          "src": "/img/Projects/project6-lotus_shark1.png",
+          "alt": "Lotus Shark Steering Layout",
+          "caption": "Initial geometry setup of the steering assembly"
         },
         {
           "type": "video",
           "videoType": "direct",
-          "src": "img/projects/animation.gif",
-          "title": "Animated Demonstration",
-          "caption": "Animated demonstration of the project workflow",
+          "src": "/img/Projects/project6-Road Car_Bump.gif",
+          "title": "Front View Simulation",
+          "caption": "Steering kinematics viewed from the front",
+          "controls": true,
+          "autoplay": true,
+          "loop": true,
+          "responsive": true
+        },
+        {
+          "type": "video",
+          "videoType": "direct",
+          "src": "/img/Projects/project6-Road Car_Bump.gif",
+          "title": "Top View",
+          "caption": "Top view of steering movement",
+          "controls": true,
+          "autoplay": true,
+          "loop": true,
+          "responsive": true
+        },
+        {
+          "type": "video",
+          "videoType": "direct",
+          "src": "/img/Projects/lotus-steering3.gif",
+          "title": "Tie Rod Response",
+          "caption": "Linkage deformation during cornering",
+          "controls": true,
+          "autoplay": true,
+          "loop": true,
+          "responsive": true
+        },
+        {
+          "type": "video",
+          "videoType": "direct",
+          "src": "/img/Projects/lotus-steering4.gif",
+          "title": "Assembly Overview",
+          "caption": "Complete motion overview of the steering",
           "controls": true,
           "autoplay": true,
           "loop": true,
@@ -56,34 +173,24 @@
       ]
     },
     {
-      "id": "project2",
-      "title": "Project 2 Analysis",
-      "subtitle": "Technical implementation details",
-      "skills": ["React", "Node.js", "MongoDB", "API Development"],
+      "id": "project7",
+      "title": "Tubular Chassis Stress Analysis",
+      "subtitle": "FEA for Load Distribution in Race Chassis",
+      "skills": ["FEA", "Mechanical Design", "SolidWorks Simulation"],
       "description": [
         {
           "type": "paragraph",
-          "content": "A full-stack application built with React frontend and Node.js backend."
+          "content": "Evaluated stress concentrations in a tubular chassis using SolidWorks Simulation to optimize structural layout."
         },
         {
           "type": "image",
-          "src": "img/projects/project2-architecture.jpg",
-          "alt": "Application Architecture",
-          "caption": "System architecture diagram showing data flow"
+          "src": "/img/Projects/project7-chassis.png",
+          "alt": "Tubular Chassis FEA",
+          "caption": "Stress plot showing torsional deformation under load"
         },
         {
           "type": "paragraph",
-          "content": "The database design utilized MongoDB for flexibility and scalability, allowing for rapid iteration during development."
-        },
-        {
-          "type": "paragraph",
-          "content": "API endpoints were designed following RESTful principles with comprehensive documentation using Swagger."
-        },
-        {
-          "type": "image",
-          "src": "img/projects/project2-dashboard.jpg",
-          "alt": "Admin Dashboard",
-          "caption": "The admin dashboard interface for data management"
+          "content": "Simulations were conducted under braking, bump, and cornering conditions for high-load scenarios."
         }
       ]
     }
