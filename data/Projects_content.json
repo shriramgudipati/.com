@@ -127,48 +127,28 @@
           "caption": "Initial geometry setup of the steering assembly"
         },
         {
-          "type": "video",
-          "videoType": "direct",
-          "src": "/img/Projects/project6-Road_Car_Bump.gif",
-          "title": "Front View Simulation",
-          "caption": "Steering kinematics viewed from the front",
-          "controls": true,
-          "autoplay": true,
-          "loop": true,
-          "responsive": true
+          "type": "image",
+          "src": "img/Projects/project6-Road_Car_Bump.gif",
+          "alt": "Front View Simulation",
+          "caption": "Steering kinematics viewed from the front"
         },
         {
-          "type": "video",
-          "videoType": "direct",
-          "src": "/img/Projects/project6-Road_Car_Steer.gif",
-          "title": "Top View",
-          "caption": "Top view of steering movement",
-          "controls": true,
-          "autoplay": true,
-          "loop": true,
-          "responsive": true
+          "type": "image",
+          "src": "img/Projects/project6-topview.gif",
+          "alt": "Top View",
+          "caption": "Top view of steering movement"
         },
         {
-          "type": "video",
-          "videoType": "direct",
-          "src": "/img/Projects/lotus-steering3.gif",
-          "title": "Tie Rod Response",
-          "caption": "Linkage deformation during cornering",
-          "controls": true,
-          "autoplay": true,
-          "loop": true,
-          "responsive": true
+          "type": "image",
+          "src": "img/Projects/project6-steering3.gif",
+          "alt": "Tie Rod Response",
+          "caption": "Linkage deformation during cornering"
         },
         {
-          "type": "video",
-          "videoType": "direct",
-          "src": "/img/Projects/lotus-steering4.gif",
-          "title": "Assembly Overview",
-          "caption": "Complete motion overview of the steering",
-          "controls": true,
-          "autoplay": true,
-          "loop": true,
-          "responsive": true
+          "type": "image",
+          "src": "img/Projects/project6-steering4.gif",
+          "alt": "Assembly Overview",
+          "caption": "Complete motion overview of the steering"
         }
       ]
     },
