@@ -12,7 +12,7 @@
     "title": "MEMS Electron Microscope Simulation",
     "skills": ["COMSOL Multiphysics", "Beam Optics", "MEMS Design"],
     "description": "Focusing simulation of an electron beam using an Einzel lens in a miniaturized TEM.",
-    "image": "/img/Projects/project2-memsmesh.png",
+    "image": "/img/Projects/projectElectronMicroscope-memsmesh.png",
     "text": "Simulated focusing effects of an Einzel Lens for a MEMS-scale electron microscope in COMSOL, analyzing beta emittance and 1-RMS beam quality."
   },
   {
@@ -28,7 +28,7 @@
     "title": "Quadrotor Dynamics with Wind Gusts",
     "skills": ["Control Systems", "MATLAB Simulink", "MPC", "PID"],
     "description": "Trajectory control system design for quadrotors under wind disturbances.",
-    "image": "/img/Projects/project4-trajectoryplot.png",
+    "image": "/img/Projects/projectQuadrotorFeedbackControl-trajectoryplot.png",
     "text": "Designed and implemented a PID and MPC-based control system for quadrotor drones in MATLAB Simulink, achieving 40% improvement in stability under gust conditions."
   },
   {
@@ -44,7 +44,7 @@
     "title": "Lotus Shark Steering Wheel Mechanism Analysis",
     "skills": ["Kinematic Modeling", "Mechanical Simulation", "Design Evaluation"],
     "description": "Kinematic analysis of Lotus Shark-style steering to evaluate turning behavior and steering sensitivity.",
-    "image": "/img/Projects/project6-lotus_shark1.png",
+    "image": "/img/Projects/projectLotusShark-lotus_shark1.png",
     "text": "Detailed mechanism analysis for the Lotus Shark steering wheel using linkage modeling, to understand its responsiveness and mechanical advantage."
   },
   {
