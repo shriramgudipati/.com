@@ -16,6 +16,17 @@
           "alt": "E-Puck Simulation",
           "caption": "Webots simulation of E-Puck performing goal-biased navigation"
         },
+         {
+          "type": "video",
+          "videoType": "direct",
+          "src": "/img/Projects/project1-epuck-demo.mp4",
+          "title": "E-Puck RRT Navigation",
+          "caption": "Live demonstration of the E-Puck robot navigating using RRT algorithm",
+          "controls": true,
+          "autoplay": false,
+          "loop": false,
+          "responsive": true
+        },
         {
           "type": "paragraph",
           "content": "Supervisor and Controller scripts in Python generated and replayed path trees for different propagation settings."
@@ -78,7 +89,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/project4-trajectoryplot.png",
+          "src": "/img/Projects/projectQuadrotorFeedbackControl-trajectoryplot.png",
           "alt": "Quadrotor MPC",
           "caption": "Path tracking response under simulated wind gusts"
         },
@@ -122,19 +133,19 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/project6-lotus_shark1.png",
+          "src": "/img/Projects/projectLotusShark-lotus_shark1.png",
           "alt": "Lotus Shark Steering Layout",
           "caption": "Initial geometry setup of the steering assembly"
         },
         {
           "type": "image",
-          "src": "img/Projects/project6-Road_Car_Bump.gif",
+          "src": "img/Projects/projectLotusShark-Road_Car_Bump.gif",
           "alt": "Front View Simulation",
           "caption": "Steering kinematics viewed from the front"
         },
         {
           "type": "image",
-          "src": "img/Projects/project6-Road_Car_Steer.gif",
+          "src": "img/Projects/projectLotusShark-Road_Car_Steer.gif",
           "alt": "Top View",
           "caption": "Top view of steering movement"
         },
