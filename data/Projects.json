@@ -4,7 +4,7 @@
     "title": "E-Puck Path Planning with RRT",
     "skills": ["Webots", "Python", "Path Planning"],
     "description": "Autonomous robot navigation using Rapidly Exploring Random Trees.",
-    "image": "https://via.placeholder.com/400x300?text=E-Puck+RRT",
+    "image": "/img/Projects/projectRRT-1.png",
     "text": "Implemented RRT with 50% goal bias in Webots to enable goal-oriented navigation for the E-puck robot, using supervisor and controller scripts for path generation and replay."
   },
   {
@@ -20,7 +20,7 @@
     "title": "Lagrangian Analysis of IC Engine",
     "skills": ["Dynamics", "Lagrange's Method", "System Modeling"],
     "description": "Dynamic modeling of a 4-stroke IC engine using Lagrange’s equations.",
-    "image": "https://via.placeholder.com/400x300?text=IC+Engine+Lagrangian",
+    "image": "/img/Projects/projectLagrangian-1.png",
     "text": "Performed a comprehensive dynamic analysis of piston, crank, and connecting rod motion using Lagrange’s equations to derive system equations of motion."
   },
   {
@@ -36,7 +36,7 @@
     "title": "Pouch Cell Thermal Simulation",
     "skills": ["Ansys Fluent", "Thermal Modeling", "Electrochemical Simulation"],
     "description": "Heat conduction and convection analysis in lithium-ion pouch cells using Ansys and EChem models.",
-    "image": "https://via.placeholder.com/400x300?text=Pouch+Cell+Thermal+Sim",
+    "image": "/img/Projects/projectPouchCell-1.png",
     "text": "Thermal simulation of pouch cells under operational load to evaluate heat dissipation, aiding in improved battery pack design."
   },
   {
