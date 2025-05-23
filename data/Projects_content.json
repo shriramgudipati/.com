@@ -12,7 +12,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/project1-epuck.png",
+          "src": "/img/Projects/projectRRT-Start_End.png",
           "alt": "E-Puck Simulation",
           "caption": "Webots simulation of E-Puck performing goal-biased navigation"
         },
