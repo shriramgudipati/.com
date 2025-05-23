@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const position = parseInt(item.dataset.pos);
                 
                 // Apply transforms based on position
-                item.style.transform = `translateX(${position * 100}%)`;
+                item.style.transform = `translateX(${position * 150}%)`;
                 
                 // Apply active class to center item
                 if (position === 0) {
