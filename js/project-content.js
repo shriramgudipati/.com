@@ -90,6 +90,39 @@ $(document).ready(function() {
                     } else if (item.type === 'video') {
                         // Use the createVideoHtml function to generate correct HTML for videos
                         descriptionHtml += createVideoHtml(item);
+                    } else if (item.type === 'image-row') {
+                        // Handle image-row content type
+                        const rowDiv = document.createElement('div');
+                        rowDiv.className = 'image-row';
+                        rowDiv.style.display = 'flex';
+                        rowDiv.style.justifyContent = 'space-between';
+                        rowDiv.style.flexWrap = 'wrap';
+                        rowDiv.style.marginBottom = '1.5em';
+                        
+                        item.images.forEach(image => {
+                            const figureEl = document.createElement('figure');
+                            figureEl.style.margin = '0';
+                            figureEl.style.width = `${item.widthPercentage || 48}%`;
+                            
+                            const imgEl = document.createElement('img');
+                            imgEl.src = image.src;
+                            imgEl.alt = image.alt || '';
+                            imgEl.style.width = '100%';
+                            imgEl.style.height = 'auto';
+                            imgEl.style.borderRadius = '8px';
+                            
+                            const captionEl = document.createElement('figcaption');
+                            captionEl.textContent = image.caption || '';
+                            captionEl.style.textAlign = 'center';
+                            captionEl.style.fontSize = '1.2rem';
+                            captionEl.style.marginTop = '8px';
+                            
+                            figureEl.appendChild(imgEl);
+                            figureEl.appendChild(captionEl);
+                            rowDiv.appendChild(figureEl);
+                        });
+                        
+                        descriptionHtml += rowDiv.outerHTML;
                     }
                 });
             } else {
@@ -312,6 +345,41 @@ $(document).ready(function() {
                     
                 case 'video':
                     element = createVideoElement(item);
+                    break;
+                    
+                case 'image-row':
+                    // Handle image-row content type
+                    const rowDiv = document.createElement('div');
+                    rowDiv.className = 'image-row';
+                    rowDiv.style.display = 'flex';
+                    rowDiv.style.justifyContent = 'space-between';
+                    rowDiv.style.flexWrap = 'wrap';
+                    rowDiv.style.marginBottom = '1.5em';
+                    
+                    item.images.forEach(image => {
+                        const figureEl = document.createElement('figure');
+                        figureEl.style.margin = '0';
+                        figureEl.style.width = `${item.widthPercentage || 48}%`;
+                        
+                        const imgEl = document.createElement('img');
+                        imgEl.src = image.src;
+                        imgEl.alt = image.alt || '';
+                        imgEl.style.width = '100%';
+                        imgEl.style.height = 'auto';
+                        imgEl.style.borderRadius = '8px';
+                        
+                        const captionEl = document.createElement('figcaption');
+                        captionEl.textContent = image.caption || '';
+                        captionEl.style.textAlign = 'center';
+                        captionEl.style.fontSize = '1.2rem';
+                        captionEl.style.marginTop = '8px';
+                        
+                        figureEl.appendChild(imgEl);
+                        figureEl.appendChild(captionEl);
+                        rowDiv.appendChild(figureEl);
+                    });
+                    
+                    element = $(rowDiv);
                     break;
                     
                 // ...existing cases...
