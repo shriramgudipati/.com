@@ -19,7 +19,7 @@
          {
           "type": "video",
           "videoType": "direct",
-          "src": "/img/Projects/project1-epuck-demo.mp4",
+          "src": "/img/Projects/projectRRT-Sim_Video.webm",
           "title": "E-Puck RRT Navigation",
           "caption": "Live demonstration of the E-Puck robot navigating using RRT algorithm",
           "controls": true,
