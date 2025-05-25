@@ -144,9 +144,10 @@ $(document).ready(function() {
                         iframe.width = item.width || '100%';
                         iframe.height = item.height || 600;
                         iframe.style.border = 'none';
+                        iframe.frameBorder = "0";
                         
                         if (item.allowFullscreen) {
-                          iframe.allowFullscreen = true;
+                          iframe.setAttribute('allowfullscreen', 'true');
                         }
                         
                         containerDiv.appendChild(iframe);
@@ -442,9 +443,10 @@ $(document).ready(function() {
                     iframe.width = item.width || '100%';
                     iframe.height = item.height || 600;
                     iframe.style.border = 'none';
+                    iframe.frameBorder = "0";
                     
                     if (item.allowFullscreen) {
-                      iframe.allowFullscreen = true;
+                      iframe.setAttribute('allowfullscreen', 'true');
                     }
                     
                     containerDiv.appendChild(iframe);
@@ -618,9 +620,10 @@ $(document).ready(function() {
         iframe.width = item.width || '100%';
         iframe.height = item.height || 600;
         iframe.style.border = 'none';
+        iframe.frameBorder = "0";
         
         if (item.allowFullscreen) {
-          iframe.allowFullscreen = true;
+          iframe.setAttribute('allowfullscreen', 'true');
         }
         
         containerDiv.appendChild(iframe);
