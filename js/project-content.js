@@ -114,7 +114,7 @@ $(document).ready(function() {
                             const captionEl = document.createElement('figcaption');
                             captionEl.textContent = image.caption || '';
                             captionEl.style.textAlign = 'center';
-                            captionEl.style.fontSize = '1.2rem';
+                            captionEl.style.fontSize = '2rem';
                             captionEl.style.marginTop = '8px';
                             
                             figureEl.appendChild(imgEl);
@@ -123,7 +123,46 @@ $(document).ready(function() {
                         });
                         
                         descriptionHtml += rowDiv.outerHTML;
-                    }
+                    } else if (item.type === 'pdf-embed') {
+                        // Handle PDF embed content type
+                        const containerDiv = document.createElement('div');
+                        containerDiv.className = 'pdf-embed-container';
+                        containerDiv.style.width = '100%';
+                        containerDiv.style.marginBottom = '2em';
+                        
+                        // Add title if provided
+                        if (item.title) {
+                            const titleEl = document.createElement('h3');
+                            titleEl.textContent = item.title;
+                            titleEl.style.marginBottom = '1em';
+                            containerDiv.appendChild(titleEl);
+                        }
+                        
+                        // Create the iframe for embedding the PDF
+                        const iframe = document.createElement('iframe');
+                        iframe.src = item.googleDriveLink;
+                        iframe.width = item.width || '100%';
+                        iframe.height = item.height || 600;
+                        iframe.style.border = 'none';
+                        
+                        if (item.allowFullscreen) {
+                          iframe.allowFullscreen = true;
+                        }
+                        
+                        containerDiv.appendChild(iframe);
+                        
+                        // Add description if provided
+                        if (item.description) {
+                          const descEl = document.createElement('p');
+                          descEl.textContent = item.description;
+                          descEl.style.marginTop = '1em';
+                          descEl.style.fontSize = '0.9em';
+                          descEl.style.fontStyle = 'italic';
+                          containerDiv.appendChild(descEl);
+                        }
+                        
+                        descriptionHtml += containerDiv.outerHTML;
+                      }
                 });
             } else {
                 // Old format (array of strings) - for backward compatibility
@@ -371,8 +410,8 @@ $(document).ready(function() {
                         const captionEl = document.createElement('figcaption');
                         captionEl.textContent = image.caption || '';
                         captionEl.style.textAlign = 'center';
-                        captionEl.style.fontSize = '1.2rem';
-                        captionEl.style.marginTop = '8px';
+                        captionEl.style.fontSize = '1.5rem';
+                        captionEl.style.marginTop = '10px';
                         
                         figureEl.appendChild(imgEl);
                         figureEl.appendChild(captionEl);
@@ -380,6 +419,47 @@ $(document).ready(function() {
                     });
                     
                     element = $(rowDiv);
+                    break;
+                    
+                case 'pdf-embed':
+                    // Handle PDF embed content type
+                    const containerDiv = document.createElement('div');
+                    containerDiv.className = 'pdf-embed-container';
+                    containerDiv.style.width = '100%';
+                    containerDiv.style.marginBottom = '2em';
+                    
+                    // Add title if provided
+                    if (item.title) {
+                        const titleEl = document.createElement('h3');
+                        titleEl.textContent = item.title;
+                        titleEl.style.marginBottom = '1em';
+                        containerDiv.appendChild(titleEl);
+                    }
+                    
+                    // Create the iframe for embedding the PDF
+                    const iframe = document.createElement('iframe');
+                    iframe.src = item.googleDriveLink;
+                    iframe.width = item.width || '100%';
+                    iframe.height = item.height || 600;
+                    iframe.style.border = 'none';
+                    
+                    if (item.allowFullscreen) {
+                      iframe.allowFullscreen = true;
+                    }
+                    
+                    containerDiv.appendChild(iframe);
+                    
+                    // Add description if provided
+                    if (item.description) {
+                      const descEl = document.createElement('p');
+                      descEl.textContent = item.description;
+                      descEl.style.marginTop = '1em';
+                      descEl.style.fontSize = '0.9em';
+                      descEl.style.fontStyle = 'italic';
+                      containerDiv.appendChild(descEl);
+                    }
+                    
+                    element = $(containerDiv);
                     break;
                     
                 // ...existing cases...
@@ -513,5 +593,49 @@ $(document).ready(function() {
         }
         
         return videoHtml;
+    }
+    
+    // Look for the function that creates content elements, likely called createContentElement or similar
+    function createContentElement(item) {
+      // Handle PDF embed content type
+      if (item.type === 'pdf-embed') {
+        const containerDiv = document.createElement('div');
+        containerDiv.className = 'pdf-embed-container';
+        containerDiv.style.width = '100%';
+        containerDiv.style.marginBottom = '2em';
+        
+        // Add title if provided
+        if (item.title) {
+          const titleEl = document.createElement('h3');
+          titleEl.textContent = item.title;
+          titleEl.style.marginBottom = '1em';
+          containerDiv.appendChild(titleEl);
+        }
+        
+        // Create the iframe for embedding the PDF
+        const iframe = document.createElement('iframe');
+        iframe.src = item.googleDriveLink;
+        iframe.width = item.width || '100%';
+        iframe.height = item.height || 600;
+        iframe.style.border = 'none';
+        
+        if (item.allowFullscreen) {
+          iframe.allowFullscreen = true;
+        }
+        
+        containerDiv.appendChild(iframe);
+        
+        // Add description if provided
+        if (item.description) {
+          const descEl = document.createElement('p');
+          descEl.textContent = item.description;
+          descEl.style.marginTop = '1em';
+          descEl.style.fontSize = '0.9em';
+          descEl.style.fontStyle = 'italic';
+          containerDiv.appendChild(descEl);
+        }
+        
+        return containerDiv;
+      }
     }
 });
