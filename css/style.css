@@ -2037,27 +2037,51 @@ Lighting Effects - Enhanced Stage Lighting
   }
 }
 
-/* PDF Embed Styling */
+/* PDF Embed Styling - Updated for A4 dimensions */
 .pdf-embed-container {
   width: 100%;
-  margin: 2em 0;
+  max-width: 900px; /* Standard A4 width in pixels at 72dpi */
+  margin: 2em auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px;
 }
 
 .pdf-embed-container iframe {
   display: block;
-  background-color: rgba(0, 0, 0, 0.03);
+  width: 100%;
+  height: 842px; /* A4 height in pixels at 72dpi */
+  border: none;
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
-/* Responsive styling */
+/* Responsive styling for PDF container */
+@media screen and (max-width: 1200px) {
+  .pdf-embed-container iframe {
+    height: 800px; /* Slightly reduced for medium-large screens */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .pdf-embed-container iframe {
+    height: 700px; /* Reduced height for medium screens */
+  }
+}
+
 @media screen and (max-width: 768px) {
   .pdf-embed-container {
-    height: 400px;
+    max-width: 100%;
   }
   
   .pdf-embed-container iframe {
-    height: 400px;
+    height: 600px; /* Further reduced for small screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pdf-embed-container iframe {
+    height: 500px; /* Smallest height for mobile screens */
   }
 }
