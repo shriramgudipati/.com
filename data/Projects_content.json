@@ -81,18 +81,18 @@
           "images": [
             {
               "src": "/img/Projects/projectElectronMicroscope-1.png",
-              "alt": "E-Puck Simulation",
-              "caption": "Webots simulation of E-Puck performing goal-biased navigation"
+              "alt": "Fabrication of sharp silicon/CNT cathode",
+              "caption": "Fabrication of sharp silicon/CNT cathode"
             },
             {
               "src": "/img/Projects/projectElectronMicroscope-2.png",
-              "alt": "Path Root Tree Replay",
-              "caption": "Path Root Tree Replay"
+              "alt": "Sharp silicon/CNT cathode used in experiments",
+              "caption": "Sharp silicon/CNT cathode used in experiments"
             },
             {
               "src": "/img/Projects/projectElectronMicroscope-4.png",
-              "alt": "Path Root Tree Replay",
-              "caption": "Path Root Tree Replay"
+              "alt": " Results of measurements in a triode configuration. ",
+              "caption": " Results of measurements in a triode configuration. "
             }
           ],
           "widthPercentage": 30
@@ -108,23 +108,23 @@
           "images": [
             {
               "src": "/img/Projects/projectElectronMicroscope-BeamFocusing.png",
-              "alt": "E-Puck Simulation",
-              "caption": "Webots simulation of E-Puck performing goal-biased navigation"
+              "alt": "Focusing action of the Electron Beam",
+              "caption": "Focusing action of the Electron Beam"
             },
             {
               "src": "/img/Projects/projectElectronMicroscope-AvgParticleDensity.png",
-              "alt": "Path Root Tree Replay",
-              "caption": "Path Root Tree Replay"
+              "alt": "Average Beam Position ",
+              "caption": "Average Beam Position "
             },
             {
               "src": "/img/Projects/projectElectronMicroscope-ScatteringView.png",
-              "alt": "Path Root Tree Replay",
-              "caption": "Path Root Tree Replay"
+              "alt": "1 RMS Scattering View",
+              "caption": "1 RMS Scattering View"
             },
             {
               "src": "/img/Projects/projectElectonMicroscope-FringeFields.png",
-              "alt": "Path Root Tree Replay",
-              "caption": "Path Root Tree Replay"
+              "alt": "Equipotential Mapping of the electrostatic Field",
+              "caption": "Equipotential Mapping of the electrostatic Field"
             }
 
           ],
@@ -153,17 +153,11 @@
       "description": [
         {
           "type": "paragraph",
-          "content": "Modeled a 4-stroke IC engine using Lagrangian mechanics, incorporating kinetic and potential energy of the crankshaft, connecting rod, and piston."
+          "content": "This project presents a comprehensive Lagrangian dynamic model of an internal combustion (IC) engine by treating the piston, connecting rod, and crankshaft as rigid bodies with interdependent motion. The main goal was to derive a set of nonlinear differential equations that govern the dynamics of each component using energy-based methods, particularly the Lagrange equations of the second kind. The formulation carefully accounts for translational and rotational kinetic energies, gravitational potential energies, and the coupling constraints imposed by the crank-slider geometry. Variables such as the crank angle, piston position, and connecting rod inclination were parametrized, and their time derivatives were systematically linked to evaluate the generalized velocities and accelerations."
         },
         {
           "type": "paragraph",
-          "content": "Applied generalized coordinates to capture crank angle and rod-piston interactions, accounting for gravitational forces and reciprocating inertia."
-        },
-        {
-          "type": "image",
-          "src": "/img/Projects/project3-icengine.png",
-          "alt": "IC Engine Diagram",
-          "caption": "Engine cycle and dynamics schematic"
+          "content": "By modeling the system in terms of generalized coordinates and identifying the associated inertial and potential energy terms, the study provides symbolic expressions for the total Lagrangian of the engine mechanism. The equations include dynamic interactions at the joints and the effects of offset geometries, masses, and moments of inertia. These expressions can then be used to simulate realistic crankshaft motion, force transmission, and load variations during the engine cycle. The model explicitly includes expressions for generalized forces due to combustion pressure and external constraints, making it applicable for control, optimization, and fault analysis in mechanical engine design."
         },
         {
           "type": "pdf-embed",
@@ -176,7 +170,7 @@
         },
         {
           "type": "paragraph",
-          "content": "Derived non-linear equations of motion and verified engine torque characteristics across the stroke cycle."
+          "content": "Ultimately, this analytical approach enables a deeper understanding of the internal dynamics that govern IC engine efficiency and performance. It allows engineers to simulate behavior under various boundary conditions—such as crankshaft torques or combustion forces—while capturing effects like piston slap or connecting rod whip. This Lagrangian formulation lays the foundation for further control-oriented studies, multibody simulations, and digital twin implementations for predictive maintenance and design validation in engine development."
         },
         {
           "type": "paragraph",
@@ -289,25 +283,52 @@
       "description": [
         {
           "type": "paragraph",
-          "content": "Simulated thermal characteristics of lithium-ion pouch cells using Ansys Fluent, focusing on internal heat generation and external convection effects."
+          "content": "<b style=\"color: #FFFFFF !important; font-size: 1.4em;\">Scope and Involvement</b><br>This project focused on simulating thermal behavior of a 6S10P Li-ion pouch cell pack using ANSYS Fluent. The objective was to evaluate how variations in C-rate, ambient temperature, and cell thickness affect thermal stability and performance, while holding material and electrical parameters constant. Each pouch cell was modeled with dimensions 205 × 157 mm and variable thicknesses (3 mm and 5 mm), incorporating accurate thermal and electrical properties for both the cell body and tab connectors."
+        },
+        {
+          "type": "image-row",
+          "images": [
+            {
+              "src": "/img/Projects/projectPouchCell-Meshed.png",
+              "alt": "No Wind Gust: Path tracking response",
+              "caption": "No Wind Gust: Path tracking response"
+            }
+          ],
+          "widthPercentage": 100
+        },
+
+        {
+          "type": "paragraph",
+          "content": "<b style=\"color: #FFFFFF !important; font-size: 1.4em;\">Summary</b><br><span style=\"color: #FFFFFF !important;\">The study used a heat generation model within ANSYS Fluent to simulate thermal response in pouch cells under different charging and discharging stresses. The simulation examined key parameter variations:</span><br><ul style=\"color: #FFFFFF !important;\"><li style=\"color: #FFFFFF !important;\">• C-rate: 1C, 2C, 4C, 5C</li><li style=\"color: #FFFFFF !important;\">• Ambient temperature: -10°C, 0°C, 25°C, 45°C, 65°C, 80°C</li><li style=\"color: #FFFFFF !important;\">• Cell thickness: 3 mm, 5 mm</li></ul><br><span style=\"color: #FFFFFF !important;\">Structured tetrahedral meshes were developed for both thickness configurations to capture internal heat generation and surface cooling. Heat generation was modeled based on internal resistance and applied current, with boundary conditions including fixed ambient temperatures and convective cooling on all outer pouch surfaces.</span><br><br><b style=\"color: #FFFFFF !important; font-size: 1.2em;\">Post-processing provided visualizations and graphs for:</b><br><ul style=\"color: #FFFFFF !important;\"><li style=\"color: #FFFFFF !important;\">• Surface temperature vs. C-rate</li><li style=\"color: #FFFFFF !important;\">• Surface temperature vs. ambient temperature</li><li style=\"color: #FFFFFF !important;\">• Surface temperature vs. thickness</li><li style=\"color: #FFFFFF !important;\">• Voltage vs. time</li><li style=\"color: #FFFFFF !important;\">• Voltage vs. thickness</li><li style=\"color: #FFFFFF !important;\">• Voltage vs. surface temperature</li><li style=\"color: #FFFFFF !important;\">• Input current vs. time</li></ul><br><span style=\"color: #FFFFFF !important;\">Temperature contours and XY plots were used to analyze how pouch cells respond thermally and electrically under real-world operating conditions.</span>"
+        },
+        {
+          "type": "image-row",
+          "images": [
+            {
+              "src": "/img/Projects/projectPouchCell-2.png",
+              "alt": "Temperature contour showing internal thermal gradient during 4C discharge at 25°C ambient — hotspots are observed near current collector tabs.",
+              "caption": "Electric potential distribution across the pouch cell terminals during discharge — highlighting voltage drop between the positive and negative tabs."
+            },
+            {
+              "src": "/img/Projects/projectPouchCell-3.png",
+              "alt": "Electric potential distribution across the pouch cell terminals during discharge — highlighting voltage drop between the positive and negative tabs.",
+              "caption": "Electric potential distribution across the pouch cell terminals during discharge — highlighting voltage drop between the positive and negative tabs."
+            },
+            {
+              "src": "/img/Projects/projectPouchCell-4.png",
+              "alt": "Residual convergence of thermal and electrochemical source terms during 6S10P pouch cell simulation under 25°C ambient and 4C discharge. Energy residuals converge below 1e-6, confirming solution stability.",
+              "caption": "Residual convergence of thermal and electrochemical source terms during 6S10P pouch cell simulation under 25°C ambient and 4C discharge. Energy residuals converge below 1e-6, confirming solution stability."
+            }
+          ],
+          "widthPercentage": 100
         },
         {
           "type": "paragraph",
-          "content": "Used EChem coupled simulations to represent electrochemical reactions and heat generation during charge/discharge cycles."
-        },
-        {
-          "type": "image",
-          "src": "/img/Projects/project5-pouchcell.png",
-          "alt": "Thermal Contour",
-          "caption": "Temperature distribution during peak operation"
+          "content": "<b style=\"color: #FFFFFF !important; font-size: 1.4em;\">Outcomes</b><br><ul style=\"color: #FFFFFF !important;\"><li style=\"color: #FFFFFF !important;\">• C-rate Impact: Higher C-rates (4C and 5C) led to significant heating, especially near the core, highlighting the risk of thermal runaway in densely packed pouch cells.</li><li style=\"color: #FFFFFF !important;\">• Ambient Temperature Effect: Pouch cells operated in ambient temperatures above 45°C showed steep internal temperature rises, underscoring the importance of thermal management in hot climates.</li><li style=\"color: #FFFFFF !important;\">• Thickness Variation: Thinner pouch cells (3 mm) demonstrated more efficient heat dissipation due to shorter thermal paths, offering performance advantages in compact, high-drain designs.</li><li style=\"color: #FFFFFF !important;\">• Voltage Decay: Accelerated voltage drop was observed at high ambient temperatures and C-rates, suggesting increased internal resistance.</li><li style=\"color: #FFFFFF !important;\">• Seven graphs were developed to map performance trends across all parameter variations.</li><li style=\"color: #FFFFFF !important;\">• A comprehensive report was compiled to serve as a reference for optimizing thermal designs in Li-ion pouch cell configurations for EV and energy storage applications.</li></ul>"
         },
         {
           "type": "paragraph",
-          "content": "Analyzed temperature gradients and hotspot formation under high-rate operation to identify critical areas needing improved cooling."
-        },
-        {
-          "type": "paragraph",
-          "content": "Tested different cooling strategies including forced air and immersion cooling for battery pack designs used in EVs."
+          "content": "Additional cooling strategies were tested including forced air circulation and direct immersion cooling for multi-cell battery pack designs. These methods demonstrated significant improvements in thermal management, especially for high-drain applications in electric vehicles."
         }
       ]
     },
@@ -323,47 +344,89 @@
       "description": [
         {
           "type": "paragraph",
-          "content": "Interned at Ordnance Factory Medak, working on the structural simulation of chassis frames used in BMP-II infantry combat vehicles."
+          "content": "<b style=\"color: #FFFFFF !important; font-size: 1.4em;\">Scope and Involvement</b><br>During my Internship at OFMK, I engaged in the manufacturing and assembly of Infantry Combat Vehicles (ICVs) like the BMP-II Sarath and its variants. Study of the processes of hull and turret fabrication, powerpack assembly, suspension system alignment, and functional testing."
         },
         {
           "type": "paragraph",
-          "content": "Performed FEA using SolidWorks to evaluate stress and deformation under load cases such as braking, cornering, and blast protection."
+          "content": "<b style=\"color: #FFFFFF !important; font-size: 1.4em;\">Summary</b><br><span style=\"color: #FFFFFF !important;\">Spent a month and a half as an in-plant intern for Ordnance Factory Medak, Documenting the various processes and sequences involved in the fabrication and quality testing of Armored Infantry Combat Vehicles. The Armored vehicles included Mine protected vehicles and Amphibious BMP tanks. "
         },
         {
-          "type": "image",
-          "src": "/img/Projects/projectOFMK-FICV.png",
-          "alt": "Tubular Chassis FEA",
-          "caption": "Stress plot showing torsional deformation under load"
+          "type": "image-row",
+          "images": [
+            {
+              "src": "/img/Projects/projectOFMK-FICV.png",
+              "alt": "Futuristic Infantry Combat Vehicle(FICV)",
+              "caption": "Futuristic Infantry Combat Vehicle(FICV)"
+            },
+            {
+              "src": "/img/Projects/projectOFMK-MPV.png",
+              "alt": "Mine Protrected Vehicle (MPV)",
+              "caption": "Mine Protrected Vehicle (MPV)"
+            },
+            {
+              "src": "/img/Projects/projectOFMK-WaldrichCoberg.png",
+              "alt": "Waldrich Coberg CNC Machine",
+              "caption": "Waldrich Coberg CNC Machine"
+            }
+          ],
+          "widthPercentage": 30
         },
-        {
-          "type": "image",
-          "src": "/img/Projects/projectOFMK-MPV.png",
-          "alt": "Tubular Chassis FEA",
-          "caption": "Stress plot showing torsional deformation under load"
-        },
-        {
-          "type": "image",
+
+       {
+          "type": "image-row",
+          "images": [
+            {
           "src": "/img/Projects/projectOFMK-PKT120mm.png",
-          "alt": "Tubular Chassis FEA",
-          "caption": "Stress plot showing torsional deformation under load"
+          "alt": "PKT 120mm Cannon",
+          "caption": "30mm 2A42 PKT automatic cannon with integrated mounting system"
+            }
+          ],
+          "widthPercentage": 60,
+          "alignment": "center"
         },
+        
         {
-          "type": "image",
-          "src": "/img/Projects/projectOFMK-WaldrichCoberg.png",
-          "alt": "Tubular Chassis FEA",
-          "caption": "Stress plot showing torsional deformation under load"
+          "type": "paragraph",
+          "content": "During my internship at OFMK, I was closely involved in the fabrication and assembly processes for the BMP-II Sarath Infantry Combat Vehicle. I worked alongside teams handling CNC machining operations for critical components like the hull and turret, using both vertical and horizontal machining centers. The hull segments, typically made from 8–15 mm thick armored steel (Jackal grade), were welded using MIG and Arc welding techniques. I also observed the use of TIG welding with argon shielding for lighter aluminum parts like exhaust covers and bonnet assemblies. These weldments were subjected to heat treatment around 250–280°C to relieve internal stresses and improve structural performance."
         },
         {
           "type": "paragraph",
-          "content": "Validated weldments, torsion bar mounts, and turret ring supports under both linear and nonlinear conditions."
+          "content": "As part of the vehicle assembly process, I assisted in tasks ranging from installing torsion bar suspension systems to aligning the powerpack, a 300 HP UTD-20, 6-cylinder diesel engine coupled to a 5-speed planetary gearbox. We followed a standard sequence including suspension fitting, cabling, mounting of auxiliary components like the ejector and bilge pumps, and preliminary quality checks. I participated in leak testing using pneumatic tools and soapy water inspection and observed how post-assembly tests such as dipping and sprinkling ensured amphibious sealing. Critical dimensional verification of the hull using Coordinate Measuring Machines (CMM) was also part of the workflow."
+        },
+
+        {
+          "type": "image-row",
+          "images": [
+            {
+              "src": "/img/Projects/projectOFMK-LineUp.jpg",
+              "alt": "Line Up of Infantry Combat Vehicle(FICV)",
+              "caption": "Line Up of Infantry Combat Vehicle(FICV)"
+            },
+            {
+              "src": "/img/Projects/projectOFMK-InvestmentCasting.jpeg",
+              "alt": "Investment Casting Process-Zircon Spray Coating on Wax Pattern",
+              "caption": "Investment Casting Process-Zircon Spray Coating on Wax Pattern"
+            },
+            {
+              "src": "/img/Projects/projectOFMK-CastingPour.jpeg",
+              "alt": "Casting Pouring Process",
+              "caption": "Casting Pouring Process"
+            }
+          ],
+          "widthPercentage": 30
+        },
+
+        {
+          "type": "paragraph",
+          "content": "Toward the latter half of the internship, I worked on turret integration which included the installation of the 30 mm 2A42 PKT automatic cannon with a fire rate of 300rpm. I supported tasks related to its mechanical alignment, elevation gearing, and mounting of optical systems. The turret assembly was also fitted with the NBC (Nuclear Biological & Chemical) protection system, onboard fire suppression lines, and compressed air-based engine starters. Before delivery, I got to observe full stationary testing procedures, such as engine preheat using glow plug chambers for high altitude operations, compressor cycling, and radiator airflow validation using ejector principles. This hands-on exposure gave me valuable insights into the integration of heavy mechanical, thermal, and control subsystems within an armored vehicle."
+        },
+        {
+          "type": "paragraph",
+          "content": "<b style=\"color: #FFFFFF !important; font-size: 1.4em;\">Outcomes:</b><br><span style=\"color: #FFFFFF !important;\">- Designed a Hydraulic latch for the rear door assembly for easy egress and ingress of troops.<br> - Developed a detailed technical report to aid future intern training."
         },
         {
           "type": "paragraph",
           "content": "Included images from simulation results, indicating stress concentrations around PKT gun mounts and 5-axis machining regions."
-        },
-        {
-          "type": "paragraph",
-          "content": "Designed a hydraulic latch mechanism for the rear hatch and contributed to turret integration tasks involving the 30mm autocannon."
         }
       ]
     },
