@@ -28,7 +28,7 @@
     "title": "Quadrotor Dynamics with Wind Gusts",
     "skills": ["Control Systems", "MATLAB Simulink", "MPC", "PID"],
     "description": "Trajectory control system design for quadrotors under wind disturbances.",
-    "image": "/img/Projects/projectQuadrotorFeedbackControl-trajectoryplot.png",
+    "image": "/img/Projects/projectQuadrotorFeedbackControl-plots_WindGust.png",
     "text": "Designed and implemented a PID and MPC-based control system for quadrotor drones in MATLAB Simulink, achieving 40% improvement in stability under gust conditions."
   },
   {
@@ -41,6 +41,14 @@
   },
   {
     "id": 6,
+    "title": "Ordnance Factory Medak| Ministry of Defence| Govt of India",
+    "skills": ["FEA", "Mechanical Design", "SolidWorks Simulation"],
+    "description": "Stress and deformation analysis of tubular chassis for load-bearing efficiency.",
+    "image": "/img/Projects/projectOFMK-img1.png",
+    "text": "Simulated torsional and bending loads on a tubular chassis to assess structural integrity and optimize material layout."
+  },
+  {
+    "id": 7,
     "title": "Lotus Shark Steering Wheel Mechanism Analysis",
     "skills": ["Kinematic Modeling", "Mechanical Simulation", "Design Evaluation"],
     "description": "Kinematic analysis of Lotus Shark-style steering to evaluate turning behavior and steering sensitivity.",
@@ -48,7 +56,7 @@
     "text": "Detailed mechanism analysis for the Lotus Shark steering wheel using linkage modeling, to understand its responsiveness and mechanical advantage."
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Tubular Chassis Stress Analysis",
     "skills": ["FEA", "Mechanical Design", "SolidWorks Simulation"],
     "description": "Stress and deformation analysis of tubular chassis for load-bearing efficiency.",
