@@ -99,6 +99,12 @@ $(document).ready(function() {
                         rowDiv.style.flexWrap = 'wrap';
                         rowDiv.style.marginBottom = '1.5em';
                         
+                        // Add center alignment if specified
+                        if (item.alignment === 'center') {
+                          rowDiv.style.justifyContent = 'center';
+                          rowDiv.style.textAlign = 'center';
+                        }
+                        
                         item.images.forEach(image => {
                             const figureEl = document.createElement('figure');
                             figureEl.style.margin = '0';
@@ -396,6 +402,12 @@ $(document).ready(function() {
                     rowDiv.style.flexWrap = 'wrap';
                     rowDiv.style.marginBottom = '1.5em';
                     
+                    // Add center alignment if specified
+                    if (item.alignment === 'center') {
+                      rowDiv.style.justifyContent = 'center';
+                      rowDiv.style.textAlign = 'center';
+                    }
+                    
                     item.images.forEach(image => {
                         const figureEl = document.createElement('figure');
                         figureEl.style.margin = '0';
@@ -640,5 +652,21 @@ $(document).ready(function() {
         
         return containerDiv;
       }
+    }
+    
+    // When creating content elements for images
+    // Look for code that processes 'image' type content and add:
+    // Apply alignment if specified
+    if (item.type === 'image') {
+      const figure = document.createElement('figure');
+      const img = document.createElement('img');
+      
+      // Apply alignment if specified
+      if (item.alignment === 'center') {
+        figure.style.margin = '0 auto';
+        figure.style.textAlign = 'center';
+      }
+      
+      // ...existing code for setting img src, alt, etc...
     }
 });
