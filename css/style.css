@@ -1014,17 +1014,17 @@ Keyframes
   margin-bottom: 70px;
 }
 
-/* Category Carousel Styles - Updated & Fixed */
+/* Category Carousel Styles - Fixed version */
 .category-carousel-container {
   display: flex;
   width: 100%;
   justify-content: center;
   padding: 30px 0;
   margin-top: 70px;
-  position: relative;
-  z-index: 10; /* Increased z-index to ensure visibility */
+  position: relative; 
+  z-index: 10;
   overflow: visible;
-  perspective: 800px; /* Add perspective to enhance 3D effect */
+  /* Remove perspective from container to avoid compounding 3D effects */
 }
 
 .category-carousel {
@@ -1033,8 +1033,9 @@ Keyframes
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
-  position: relative; /* Ensure positioned context */
-  transform-style: preserve-3d; /* Enable 3D transformations */
+  position: relative;
+  /* Use more stable transform style */
+  transform-style: flat; 
 }
 
 .category-carousel__list {
@@ -1042,13 +1043,14 @@ Keyframes
   list-style: none;
   position: relative;
   width: 100%;
-  height: 80px; /* Increased height to accommodate vertical offsets */
+  height: 80px;
   justify-content: center;
-  perspective: 300px;
+  /* Reduced perspective for more stable rendering */
+  perspective: 500px;
   padding: 0;
   margin: 0;
-  overflow: visible; /* Ensure items aren't clipped */
-  transform-style: preserve-3d; /* Enable 3D transformations */
+  overflow: visible;
+  transform-style: preserve-3d;
 }
 
 .category-carousel__item {
@@ -1062,70 +1064,76 @@ Keyframes
   border-radius: 12px;
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
   position: absolute;
-  transition: all .3s ease;
+  /* Slow down transitions for smoother effect */
+  transition: all .5s cubic-bezier(0.33, 1, 0.68, 1);
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.9) !important; /* Ensure background is visible */
+  background-color: rgba(0, 0, 0, 0.9) !important;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transform-style: preserve-3d; /* Enable 3D transformations */
+  /* Ensure pointer events work properly */
+  pointer-events: auto;
+  /* Improved willchange property for performance */
+  will-change: transform, opacity;
+  /* Add X and Y translation for more stability */
+  backface-visibility: hidden;
 }
 
-/* Active item styling - bring to front and highlight */
+/* Active item styling - reduce extreme transforms */
 .category-carousel__item.active {
   z-index: 10;
-  transform: translateZ(20px) !important; /* Push active item forward */
+  transform: translateZ(10px) !important; /* Reduced from 20px */
   box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.8);
   border: 1px solid rgba(232, 116, 100, 0.4);
 }
 
-/* Position items with increased spacing */
+/* Position items with smoother spacing */
 .category-carousel__item[data-pos="0"] {
-  transform: translateZ(20px); /* Center item is closest to viewer */
+  transform: translateZ(10px); /* Reduced from 20px */
   z-index: 5;
 }
 
 .category-carousel__item[data-pos="-1"] {
-  transform: translateX(-150%) translateY(10px) translateZ(-10px) scale(0.85); /* Increased horizontal spacing */
+  transform: translateX(-120%) translateY(5px) translateZ(-5px) scale(0.85);
   opacity: 0.8;
   filter: brightness(0.8);
   z-index: 4;
 }
 
 .category-carousel__item[data-pos="1"] {
-  transform: translateX(150%) translateY(10px) translateZ(-10px) scale(0.85); /* Increased horizontal spacing */
+  transform: translateX(120%) translateY(5px) translateZ(-5px) scale(0.85);
   opacity: 0.8;
   filter: brightness(0.8);
   z-index: 4;
 }
 
+/* Simplify transformations for outer elements */
 .category-carousel__item[data-pos="-2"] {
-  transform: translateX(-260%) translateY(20px) translateZ(-30px) scale(0.7); /* Increased horizontal spacing */
+  transform: translateX(-220%) translateY(10px) translateZ(-10px) scale(0.7);
   opacity: 0.6;
   filter: brightness(0.6);
   z-index: 3;
 }
 
 .category-carousel__item[data-pos="2"] {
-  transform: translateX(260%) translateY(20px) translateZ(-30px) scale(0.7); /* Increased horizontal spacing */
+  transform: translateX(220%) translateY(10px) translateZ(-10px) scale(0.7);
   opacity: 0.6;
   filter: brightness(0.6);
   z-index: 3;
 }
 
-/* Add styles for additional positions to ensure circular continuity */
+/* Reduce extreme transforms for the furthest items */
 .category-carousel__item[data-pos="-3"],
 .category-carousel__item[data-pos="3"] {
   opacity: 0.2;
-  filter: blur(5px) grayscale(30%);
+  filter: blur(3px) grayscale(30%);
+  z-index: 1;
 }
 
 .category-carousel__item[data-pos="-3"] {
-  transform: translateX(-720%) scale(0.6);
-  z-index: 2;
+  transform: translateX(-300%) scale(0.6);
 }
 
 .category-carousel__item[data-pos="3"] {
-  transform: translateX(720%) scale(0.6);
-  z-index: 2;
+  transform: translateX(300%) scale(0.6);
 }
 
 /* Hover effects to enhance interactivity */
@@ -2012,11 +2020,14 @@ Lighting Effects - Enhanced Stage Lighting
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 2em auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 .image-row figure {
   margin: 0;
-  width: 48%; /* Default to slightly less than half to account for spacing */
+  /* Default fallback if no specific width is set */
+  width: 48%;
 }
 
 .image-row img {
@@ -2026,62 +2037,33 @@ Lighting Effects - Enhanced Stage Lighting
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-@media screen and (max-width: 600px) {
+/* Responsive styling for image rows */
+@media screen and (max-width: 768px) {
   .image-row {
     flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
   
+  /* Force 100% width on mobile regardless of inline style */
   .image-row figure {
-    width: 100%;
+    width: 100% !important; /* Override any inline styles */
     margin-bottom: 1.5em;
-  }
-}
-
-/* PDF Embed Styling - Updated for A4 dimensions */
-.pdf-embed-container {
-  width: 100%;
-  max-width: 900px; /* Standard A4 width in pixels at 72dpi */
-  margin: 2em auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 10px;
-}
-
-.pdf-embed-container iframe {
-  display: block;
-  width: 100%;
-  height: 842px; /* A4 height in pixels at 72dpi */
-  border: none;
-  background-color: rgba(255, 255, 255, 0.02);
-}
-
-/* Responsive styling for PDF container */
-@media screen and (max-width: 1200px) {
-  .pdf-embed-container iframe {
-    height: 800px; /* Slightly reduced for medium-large screens */
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .pdf-embed-container iframe {
-    height: 700px; /* Reduced height for medium screens */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .pdf-embed-container {
     max-width: 100%;
   }
   
-  .pdf-embed-container iframe {
-    height: 600px; /* Further reduced for small screens */
+  /* Handle equal height images on mobile */
+  .image-row figure img {
+    height: auto !important;
+    object-fit: contain;
   }
 }
 
+/* Extra small devices */
 @media screen and (max-width: 480px) {
-  .pdf-embed-container iframe {
-    height: 500px; /* Smallest height for mobile screens */
+  .image-row figcaption {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    padding: 0 5px;
   }
 }
