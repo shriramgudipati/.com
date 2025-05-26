@@ -238,4 +238,94 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(ensureSkillTagsFormatting, 300);
     }
   }
+
+  // Improved category carousel functionality
+  initializeCategoryCarousel();
 });
+
+function initializeCategoryCarousel() {
+  const carousel = document.querySelector('.category-carousel');
+  const items = document.querySelectorAll('.category-carousel__item');
+  
+  if (!carousel || items.length === 0) {
+      console.warn('Category carousel elements not found');
+      return;
+  }
+  
+  // Clear any existing positions to prevent conflicts
+  items.forEach(item => {
+      item.setAttribute('data-original-pos', item.getAttribute('data-pos') || '0');
+  });
+  
+  // Find the active item or set the middle one as active
+  let activeItem = document.querySelector('.category-carousel__item.active');
+  if (!activeItem && items.length > 0) {
+      const middleIndex = Math.floor(items.length / 2);
+      activeItem = items[middleIndex];
+      activeItem.classList.add('active');
+  }
+  
+  // Ensure proper positioning
+  updateCarouselPositions();
+  
+  // Add event listeners for each item
+  items.forEach(item => {
+      item.addEventListener('click', function() {
+          if (this.classList.contains('active')) return;
+          
+          // Remove active class from current active
+          document.querySelector('.category-carousel__item.active')?.classList.remove('active');
+          
+          // Add active class to clicked item
+          this.classList.add('active');
+          
+          // Update positions based on the newly active item
+          updateCarouselPositions();
+          
+          // Trigger category change event
+          const categoryValue = this.getAttribute('data-value');
+          if (categoryValue) {
+              const event = new CustomEvent('categoryChanged', {
+                  detail: { category: categoryValue }
+              });
+              document.dispatchEvent(event);
+          }
+      });
+      
+      // Add touch support for mobile
+      item.addEventListener('touchend', function(e) {
+          // Prevent quick double-click issues
+          e.preventDefault();
+          if (!this.classList.contains('active')) {
+              this.click();
+          }
+      });
+  });
+}
+
+// Function to update positions based on active item
+function updateCarouselPositions() {
+  const items = document.querySelectorAll('.category-carousel__item');
+  const activeItem = document.querySelector('.category-carousel__item.active');
+  
+  if (!activeItem) return;
+  
+  const activeIndex = Array.from(items).indexOf(activeItem);
+  
+  items.forEach((item, index) => {
+      // Calculate relative position to active item
+      const relativePos = index - activeIndex;
+      
+      // Set data-pos attribute for CSS styling
+      item.setAttribute('data-pos', relativePos);
+      
+      // Add a small delay to ensure smooth transition
+      setTimeout(() => {
+          item.style.transition = 'all 0.5s cubic-bezier(0.33, 1, 0.68, 1)';
+      }, 50);
+  });
+}
+
+// Make functions available globally
+window.reinitializeCategoryCarousel = initializeCategoryCarousel;
+window.updateCarouselPositions = updateCarouselPositions;
