@@ -467,18 +467,6 @@
           "caption": "Top view of steering movement"
         },
         {
-          "type": "image",
-          "src": "img/Projects/project6-steering3.gif",
-          "alt": "Tie Rod Response",
-          "caption": "Linkage deformation during cornering"
-        },
-        {
-          "type": "image",
-          "src": "img/Projects/project6-steering4.gif",
-          "alt": "Assembly Overview",
-          "caption": "Complete motion overview of the steering"
-        },
-        {
           "type": "paragraph",
           "content": "Evaluated Ackermann angle fidelity, scrub radius changes, and toe variations in road car configurations."
         },
