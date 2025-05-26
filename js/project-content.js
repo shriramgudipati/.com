@@ -669,4 +669,78 @@ $(document).ready(function() {
       
       // ...existing code for setting img src, alt, etc...
     }
+    
+    // If there's a function that creates image rows, update it:
+    function createImageRowElement(item) {
+      const rowDiv = document.createElement('div');
+      rowDiv.className = 'image-row';
+      
+      // Get alignment if specified
+      if (item.alignment) {
+        rowDiv.style.justifyContent = item.alignment === 'center' ? 'center' : 'space-between';
+      }
+
+      const isMobile = window.innerWidth <= 768;
+      const widthPercentage = item.widthPercentage || (100 / item.images.length);
+      
+      item.images.forEach(image => {
+        const figure = document.createElement('figure');
+        
+        // Apply width - will be overridden by CSS on mobile
+        if (!isMobile) {
+          figure.style.width = `${widthPercentage}%`;
+        }
+        
+        const img = document.createElement('img');
+        img.src = image.src;
+        img.alt = image.alt || '';
+        img.style.width = '100%';
+        img.style.height = 'auto';
+        
+        const caption = document.createElement('figcaption');
+        caption.textContent = image.caption || '';
+        
+        figure.appendChild(img);
+        figure.appendChild(caption);
+        rowDiv.appendChild(figure);
+      });
+      
+      return rowDiv;
+    }
+    
+    // When creating image rows, add this code to properly handle widths:
+
+function createImageRow(item) {
+  const row = document.createElement('div');
+  row.className = 'image-row';
+  
+  if (item.alignment) {
+    row.style.justifyContent = item.alignment === 'center' ? 'center' : 'space-between';
+  }
+  
+  // Calculate width for each figure
+  const totalImages = item.images.length;
+  const widthPerFigure = item.widthPercentage 
+    ? (item.widthPercentage / totalImages) 
+    : (100 / totalImages);
+  
+  // Create figures with calculated widths
+  item.images.forEach(image => {
+    const figure = document.createElement('figure');
+    figure.style.width = widthPerFigure + '%';
+    
+    const img = document.createElement('img');
+    img.src = image.src;
+    img.alt = image.alt || '';
+    
+    const caption = document.createElement('figcaption');
+    caption.textContent = image.caption || '';
+    
+    figure.appendChild(img);
+    figure.appendChild(caption);
+    row.appendChild(figure);
+  });
+  
+  return row;
+}
 });
