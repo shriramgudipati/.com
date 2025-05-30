@@ -6,13 +6,5 @@
   "description": "Industry-recognized certification in parametric 3D modeling and design using SolidWorks.",
   "image": "/img/Certifications/certcswa-cswa_certificate.png",
   "text": "Certified SolidWorks Associate credential earned by demonstrating proficiency in creating and modifying 3D models, assemblies, and engineering drawings under timed conditions."
-  },
-  {
-    "id": 2,
-    "title": "Mobile App Development",
-    "skills": ["Research", "Design", "Prototyping"],
-    "description": "A cross-platform mobile application built with React Native.",
-    "image": "/img/img2.png",
-    "text": "This mobile app works seamlessly across iOS and Android platforms, providing a consistent user experience."
   }
 ]
