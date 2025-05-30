@@ -147,8 +147,8 @@ function initializeAllParticles() {
     // Main background
     particlesJS("particles-js", createParticlesConfig({
         color: "#e87464",
-        linkColor: "#000000",
-        particleCount: 120,
+        linkColor: "#ffffff",
+        particleCount: 50,
         particleSize: 3,
         speed: 6,
         hoverMode: "repulse"
@@ -156,34 +156,29 @@ function initializeAllParticles() {
     
     // Intro section
     particlesJS("particles-intro", createParticlesConfig({
-        color: "#e67e22",
+        color: "#e87464",
         linkColor: "#ffffff",
         linkOpacity: 0.2,
-        particleCount: 80,
+        particleCount: 0,
         hoverMode: "grab"
     }));
     
     // Projects section
     particlesJS("particles-projects", createParticlesConfig({
-        color: "#2ecc71", 
-        linkColor: "#2ecc71",
-        linkOpacity: 0.15,
-        particleCount: 60,
-        particleSize: 4,
-        shape: "polygon",
-        speed: 2,
-        hoverMode: "bubble"
+        color: "#e87464",
+        linkColor: "#ffffff",
+        linkOpacity: 0.2,
+        particleCount: 50,
+        hoverMode: "grab"
     }));
     
     // Content section
     particlesJS("particles-content", createParticlesConfig({
-        color: "#3498db",
-        particleCount: 30,
-        particleSize: 8,
-        disableLinks: true,
-        direction: "top",
-        speed: 1,
-        hoverMode: "connect"
+        color: "#e87464",
+        linkColor: "#ffffff",
+        linkOpacity: 0.2,
+        particleCount: 50,
+        hoverMode: "grab"
     }));
 }
 
