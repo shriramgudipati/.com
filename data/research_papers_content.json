@@ -2,13 +2,13 @@
   "projects": [
     {
       "id": "research_paper1",
-      "title": "Research Paper: Machine Learning Applications",
-      "subtitle": "Journal of Advanced Computing, 2023",
-      "skills": ["Machine Learning", "Data Analysis", "Neural Networks", "Statistical Methods"],
+      "title": "Research Paper: Study of Hierarchical Auxetic Materials",
+      "subtitle": "B.E. Capstone Project in Collaboration with DRDO-DYSL, Osmania University, 2021",
+      "skills": ["Finite Element Analysis", "SolidWorks", "Fusion 360", "Material Science"],
       "description": [
         {
           "type": "paragraph",
-          "content": "Abstract: This paper explores applications of machine learning in various domains including healthcare, finance, and logistics."
+          "content": "This study, conducted in collaboration with the Defence Research and Development Organisation – Young Scientist Laboratory for Cognitive Technologies (DRDO-DYSL CT), Hyderabad, investigates the design, simulation, and mechanical evaluation of hierarchically architectured materials, with a specific focus on auxetic structures. Auxetics are materials that exhibit a negative Poisson’s ratio, meaning they expand laterally when stretched longitudinally—a counterintuitive behavior enabled by their internal geometry. The project aimed to understand and compare the performance of re-entrant auxetic honeycomb structures against conventional hexagonal honeycomb structures under various loading conditions."
         },
         {
           "type": "image",
@@ -18,11 +18,11 @@
         },
         {
           "type": "paragraph",
-          "content": "Introduction: Machine learning has transformed how businesses approach data-driven decision making. This paper examines several case studies demonstrating effective implementation strategies."
+          "content": "Using CAD modeling in Fusion 360 and finite element simulation in COMSOL Multiphysics, both honeycomb geometries were analyzed for their response to uniaxial and impact loading in orthogonal directions. Parameters such as Young’s modulus, strain energy, Poisson’s ratio, and equivalent strain were computed and compared between the two geometries. The re-entrant (auxetic) structures consistently demonstrated higher energy absorption, better impact resistance, and synclastic curvature under bending, thereby validating their advantage over conventional honeycombs for dynamic and deformation-sensitive applications."
         },
         {
           "type": "paragraph",
-          "content": "Methods: We analyzed 150 different implementations across 3 industries using a standardized evaluation framework."
+          "content": "Manufacturing feasibility was also explored, with additive manufacturing techniques like Fused Deposition Modeling (FDM), Electron Beam Melting (EBM), and Selective Laser Sintering (SLS) identified as suitable processes for fabricating complex auxetic geometries. These methods enable the practical realization of multi-scale hierarchical structures that cannot be produced via traditional manufacturing. Notably, the influence of anisotropic print properties and build orientation on final mechanical behavior was considered as an important factor in design validation."
         },
         {
           "type": "image",
@@ -32,7 +32,7 @@
         },
         {
           "type": "paragraph",
-          "content": "Conclusion: The findings indicate that hybrid approaches combining multiple algorithms tend to yield better results than single-algorithm implementations."
+          "content": "The results of this project reinforce the potential of hierarchically architectured auxetic materials in applications ranging from biomedical implants and sports gear to aerospace structures and blast-resistant components. The strong correlation between analytical models and simulation results not only validates the accuracy of unit-cell based design approaches but also opens pathways for future research in functionally graded auxetic composites and multi-material lattices. This work represents a foundational step toward tailoring material behavior through architectural design, backed by a collaborative research framework with DRDO for defense-oriented innovations."
         },
         {
           "type": "video",
@@ -51,37 +51,145 @@
     },
     {
       "id": "research_paper2",
-      "title": "Blockchain Technology in Supply Chain Management",
-      "subtitle": "International Journal of Supply Chain Innovation, 2022",
-      "skills": ["Blockchain", "Supply Chain", "Distributed Systems", "Smart Contracts"],
+      "title": "Convolutional Neural Network for Vehicle Detection",
+      "subtitle": "YOLOv2-based Object Classification for Autonomous Driving",
+      "skills": [
+        "Deep Learning",
+        "TensorFlow",
+        "Python",
+        "Object Detection"
+      ],
       "description": [
         {
           "type": "paragraph",
-          "content": "Abstract: This research examines how blockchain technology can enhance transparency and efficiency in modern supply chain management systems."
+          "content": "Developed a real-time object detection pipeline using YOLOv2 for identifying vehicles in dashcam footage. A custom dataset was created by annotating front-view road images with bounding boxes for cars, trucks, and buses. These were resized to 608x608 to match the input dimensions for YOLOv2."
+        },
+        {
+          "type": "paragraph",
+          "content": "Trained the network with TensorFlow using 5 anchor boxes per grid cell. The output tensors (19x19x5x85) were filtered with IoU-based NMS to refine predictions. Detection was robust in various driving conditions."
+        },
+        {
+          "type": "image-row",
+          "images": [
+            {
+              "src": "/img/Research/researchCNN-DefnofBox.jpg",
+              "alt": "YOLO vehicle detection",
+              "caption": "Detected vehicles with class probabilities visualized as bounding boxes"
+            },
+            {
+              "src": "/img/Research/researchCNN-Cell19X19.png",
+              "alt": "YOLO Network Architecture",
+              "caption": "YOLOv2 CNN model layout showing multi-scale grid encoding and anchor boxes"
+            }
+          ],
+          "widthPercentage": 48
+        },
+        {
+          "type": "paragraph",
+          "content": "The model produced consistent results across 8 test frames, with bounding box placement matching ground truth. Detection confidence remained above 85% in non-occluded conditions."
+        },
+        {
+          "type": "image-row",
+          "images": [
+            {
+              "src": "/img/Research/researchCNN-YOLO-road.png",
+              "alt": "YOLO vehicle detection",
+              "caption": "Detected vehicles with class probabilities visualized as bounding boxes"
+            },
+            {
+              "src": "/img/Research/researchCNN-CelloverlayonPic.png",
+              "alt": "YOLO Network Architecture",
+              "caption": "YOLOv2 CNN model layout showing multi-scale grid encoding and anchor boxes"
+            }
+          ],
+          "widthPercentage": 48
+        },
+        {
+          "type": "paragraph",
+          "content": "YOLOv2 functions like `filter_boxes`, `iou`, and `non_max_suppression` were used to post-process detections. Tensor outputs were decoded and drawn on original video frames. The pipeline was modularized for future integration into ADAS stacks."
         },
         {
           "type": "image",
-          "src": "img/research/blockchain-diagram.jpg",
-          "alt": "Blockchain Supply Chain Integration",
-          "caption": "Figure 1: Integration points between blockchain and supply chain processes"
+          "src": "/img/Research/researchCNN-Non-Max_Suppression.png",
+          "alt": "YOLO Grid Cell Encoding",
+          "caption": "Each grid cell predicts 5 bounding boxes and associated object class scores"
         },
         {
           "type": "paragraph",
-          "content": "Introduction: Supply chain management faces challenges in transparency, traceability, and trust between parties. Blockchain offers potential solutions to these persistent issues."
+          "content": "Final results show reliable detection of multiple vehicles in real-time with high confidence, forming a baseline for perception layers in autonomous driving systems."
         },
         {
           "type": "image",
-          "src": "img/research/implementation-timeline.jpg",
-          "alt": "Implementation Timeline",
-          "caption": "Figure 2: Blockchain implementation timeline for the case study"
+          "src": "/img/Research/researchCNN-FinalPredictionModel.png",
+          "alt": "YOLO Grid Cell Encoding",
+          "caption": "Each grid cell predicts 5 bounding boxes and associated object class scores"
+        }
+      ]
+    },
+    {
+      "id": "research_paper3",
+      "title": "Fire Fighting Robot",
+      "subtitle": "Autonomous Flame Detection and Suppression Robot",
+      "skills": [
+        "Autonomous Navigation",
+        "Sensor Integration",
+        "Embedded Systems",
+        "Fire Detection"
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "content": "This paper presents the design and development of a compact, mobile firefighting robot named QRob, aimed at reducing human exposure to hazardous fire environments. Designed for narrow and constrained spaces such as tunnels, basements, and high-rise buildings, QRob integrates ultrasonic and flame sensors to autonomously detect obstacles and fire sources, respectively. The robot halts at a safe distance of 40 cm from the detected fire and allows remote fire suppression via an onboard water pump, controlled through a wireless transmitter."
         },
         {
           "type": "paragraph",
-          "content": "Case Study: We implemented a blockchain solution for a global manufacturer, resulting in 37% improved traceability and 24% reduction in documentation processing time."
+          "content": "QRob is built using an acrylic chassis for heat resistance and structural stability, and it features a real-time video feed through a camera linked to a smartphone, enhancing situational awareness for remote operators. The system architecture comprises an Arduino Uno microcontroller, motor drivers, DC motors, a water pump, and various sensors. QRob’s autonomous detection capability combined with human-in-the-loop control ensures operational flexibility in fire rescue scenarios."
+        },
+        {
+          "type": "image-row",
+          "images": [
+            {
+              "src": "/img/Research/researchFRED-2.png",
+              "alt": "YOLO vehicle detection",
+              "caption": "Detected vehicles with class probabilities visualized as bounding boxes"
+            },
+            {
+              "src": "/img/Research/researchFRED-FlowChart1.png",
+              "alt": "YOLO Network Architecture",
+              "caption": "YOLOv2 CNN model layout showing multi-scale grid encoding and anchor boxes"
+            }
+          ],
+          "widthPercentage": 48
         },
         {
           "type": "paragraph",
-          "content": "Conclusion: While blockchain adoption presents initial implementation challenges, the long-term benefits for supply chain transparency and efficiency are substantial."
+          "content": "Emphasis is placed on cost-efficiency, portability, and quick deployment, making QRob especially useful for fire departments in urban environments. The robot's obstacle-avoidance capability, combined with onboard thermal and visual sensing, supports navigation in cluttered and dangerous conditions. The project also compares QRob with other firefighting robotic platforms such as Thermite and Hoya, highlighting its unique advantages in size, modularity, and control integration."
+        },
+        {
+          "type": "image",
+          "src": "/img/Research/researchFRED-FlowChart3.png",
+          "alt": "YOLO Grid Cell Encoding",
+          "caption": "Each grid cell predicts 5 bounding boxes and associated object class scores"
+        },
+        {
+          "type": "image-row",
+          "images": [
+            {
+              "src": "/img/Research/researchFRED-FlowChart2.png",
+              "alt": "YOLO vehicle detection",
+              "caption": "Detected vehicles with class probabilities visualized as bounding boxes"
+            },
+            {
+              "src": "/img/Research/researchFRED-FlowChart4.png",
+              "alt": "YOLO Network Architecture",
+              "caption": "YOLOv2 CNN model layout showing multi-scale grid encoding and anchor boxes"
+            }
+          ],
+          "widthPercentage": 48
+        },
+        {
+          "type": "paragraph",
+          "content": "Overall, this study demonstrates how a hybrid autonomous-teleoperated robotic system can enhance fire suppression efforts by reducing risks to firefighters while providing real-time thermal and visual intelligence from the fireground."
         }
       ]
     }
