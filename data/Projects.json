@@ -12,7 +12,7 @@
     "title": "MEMS Electron Microscope Simulation",
     "skills": ["COMSOL Multiphysics", "Beam Optics", "MEMS Design"],
     "description": "Focusing simulation of an electron beam using an Einzel lens in a miniaturized TEM.",
-    "image": "/img/Projects/projectElectronMicroscope-memsmesh.png",
+    "image": "/img/Projects/projectElectronMicroscope-dp.png",
     "text": "Simulated focusing effects of an Einzel Lens for a MEMS-scale electron microscope in COMSOL, analyzing beta emittance and 1-RMS beam quality."
   },
   {
@@ -28,7 +28,7 @@
     "title": "Quadrotor Dynamics with Wind Gusts",
     "skills": ["Control Systems", "MATLAB Simulink", "MPC", "PID"],
     "description": "Trajectory control system design for quadrotors under wind disturbances.",
-    "image": "/img/Projects/projectQuadrotorFeedbackControl-plots_WindGust.png",
+    "image": "/img/Projects/projectQuadrotorFeedbackControl-DP.png",
     "text": "Designed and implemented a PID and MPC-based control system for quadrotor drones in MATLAB Simulink, achieving 40% improvement in stability under gust conditions."
   },
   {
