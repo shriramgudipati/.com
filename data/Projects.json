@@ -36,7 +36,7 @@
     "title": "Pouch Cell Thermal Simulation",
     "skills": ["Ansys Fluent", "Thermal Modeling", "Electrochemical Simulation"],
     "description": "Heat conduction and convection analysis in lithium-ion pouch cells using Ansys and EChem models.",
-    "image": "/img/Projects/projectPouchCell-1.png",
+    "image": "/img/Projects/projectPouchCell-dp.png",
     "text": "Thermal simulation of pouch cells under operational load to evaluate heat dissipation, aiding in improved battery pack design."
   },
   {
@@ -52,7 +52,7 @@
     "title": "Lotus Shark Steering Wheel Mechanism Analysis",
     "skills": ["Kinematic Modeling", "Mechanical Simulation", "Design Evaluation"],
     "description": "Kinematic analysis of Lotus Shark-style steering to evaluate turning behavior and steering sensitivity.",
-    "image": "/img/Projects/projectLotusShark-lotus_shark1.png",
+    "image": "/img/Projects/projectLotusShark-1.png",
     "text": "Detailed mechanism analysis for the Lotus Shark steering wheel using linkage modeling, to understand its responsiveness and mechanical advantage."
   },
   {
