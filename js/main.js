@@ -319,4 +319,71 @@ jQuery(document).ready(function(){
 	        'scrollTop': $(window).height()
 	    }, 500);
 	});
+	
+	// Handle Resume toggle - replace the existing handler with this toggle functionality
+	$('[data-action="toggle-resume"]').on('click', function(event) {
+	    event.preventDefault();
+	    
+	    // Toggle the resume section
+	    if ($('.resume-section').hasClass('is-visible')) {
+	        // If visible, hide it
+	        $('.resume-section').removeClass('is-visible');
+	    } else {
+	        // If we're on the projects page, return to intro page first
+	        if ($('.cd-projects-wrapper').hasClass('projects-visible')) {
+	            // Hide projects and go back to intro
+	            $('.cd-projects-wrapper').removeClass('projects-visible');
+	            $('.cd-intro-block').removeClass('projects-visible');
+	            
+	            // Wait for transition to complete before showing resume
+	            setTimeout(function() {
+	                // Make sure about-me is hidden if it's visible
+	                $('.about-me-section').removeClass('active');
+	                // Show resume
+	                $('.resume-section').addClass('is-visible');
+	                
+	                // Adjust PDF container size to match letter proportions
+	                adjustPdfContainerSize();
+	            }, 300);
+	        } else {
+	            // Already on intro page, just show resume
+	            // Make sure about-me is hidden if it's visible
+	            $('.about-me-section').removeClass('active');
+	            $('.resume-section').addClass('is-visible');
+	            
+	            // Adjust PDF container size to match letter proportions
+	            adjustPdfContainerSize();
+	        }
+	    }
+	});
+	
+	// Handle Resume close - keep this as is
+	$('.resume-close').on('click', function(event) {
+		event.preventDefault();
+		$('.resume-section').removeClass('is-visible');
+	});
+	
+	// Function to adjust PDF container size to match letter page proportions
+	function adjustPdfContainerSize() {
+	    // Get the container width
+	    var containerWidth = $('.resume-pdf-container').width();
+	    
+	    // Calculate height based on letter page ratio (8.5:11)
+	    // US Letter aspect ratio is approximately 1:1.294
+	    var letterHeight = containerWidth * 1.294;
+	    
+	    // Set a maximum height to ensure it fits well on most screens
+	    var maxHeight = $(window).height() * 0.8;  // 80% of viewport height
+	    var height = Math.min(letterHeight, maxHeight);
+	    
+	    // Update the height of the PDF object
+	    $('.resume-pdf-container object').css('height', height + 'px');
+	}
+	
+	// Adjust PDF size on window resize
+	$(window).on('resize', function() {
+	    if ($('.resume-section').hasClass('is-visible')) {
+	        adjustPdfContainerSize();
+	    }
+	});
 });
