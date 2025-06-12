@@ -13,6 +13,16 @@
 	<link rel="stylesheet" href="css/sidebar.css"> <!-- Social Icons Sidebar styles -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BR0JGFXCFK"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-BR0JGFXCFK');
+	</script>
+	
 	<title>Portfolio Website | Shri Ram Gudipati</title>
 </head>
 <body>
@@ -25,6 +35,11 @@
 	<a href="#0" class="icon-with-tooltip about-me-toggle sidebar-about" data-action="toggle-about">
 		<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/e87464/user-male-circle.png" alt="about" />
 		<span class="tooltip">About Me</span>
+	</a>
+	<!-- Add Resume icon -->
+	<a href="#0" class="icon-with-tooltip resume-toggle sidebar-resume" data-action="toggle-resume">
+		<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/e87464/resume.png" alt="resume" />
+		<span class="tooltip">Resume</span>
 	</a>
 	<a href="#0" class="icon-with-tooltip project-link drone-cont" data-action="show-projects-direct">
 		<img width="40" height="40" src="img/drone.png" alt="projects" id="drone-img" />
@@ -90,6 +105,30 @@
 						<span>Web Development</span>
 						<span>Perception/Path Planning</span>
 						<span>Prototyping</span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Resume section as overlay with close button -->
+			<div class="resume-section">
+				<a href="#0" class="resume-close icon-with-tooltip">
+					<img width="30" height="30" src="https://img.icons8.com/ios-filled/50/e87464/chevron-left.png" alt="back" />
+					<span class="tooltip tooltip-right">Back</span>
+				</a>
+				<h2>Resume</h2>
+				<div class="resume-content">
+					<div class="resume-pdf-container">
+						<object data="/data/Resume/Shri Ram_Resume.pdf" type="application/pdf" width="100%" height="600px">
+							<p>It appears your browser doesn't support embedded PDFs.
+							   <a href="/data/Resume/Shri Ram_Resume.pdf" download>Click here to download the resume</a>.
+							</p>
+						</object>
+					</div>
+					<div class="resume-actions">
+						<a href="resume/ShriRam_Resume.pdf" download class="resume-download-btn">
+							<img width="20" height="20" src="https://img.icons8.com/ios-filled/50/ffffff/download--v1.png" alt="download" />
+							Download PDF
+						</a>
 					</div>
 				</div>
 			</div>
@@ -167,15 +206,26 @@
 		// window.updateParticleColors('intro', '#ff0000', '#ffffff');
 	</script>
 	<script>
-		// Ensure carousel reinitializes if needed
+		// Better initialization and error handling
 		$(document).ready(function() {
-			// Wait for everything to load
+			// Wait longer for content to be fully loaded and rendered
 			setTimeout(function() {
 				if ($('.category-carousel__item.active').length === 0) {
-					console.log("Forcing carousel re-initialization");
+					console.log("Initializing category carousel");
 					window.reinitializeCategoryCarousel();
+				} else {
+					// Force position update to fix any display issues
+					console.log("Updating category carousel positions");
+					window.updateCarouselPositions();
 				}
-			}, 1000);
+			}, 2000); // Increased from 1000ms to 2000ms for better reliability
+			
+			// Additional listener for window resize to fix positioning issues
+			$(window).on('resize', function() {
+				if (window.updateCarouselPositions) {
+					window.updateCarouselPositions();
+				}
+			});
 		});
 	</script>
 </body>
