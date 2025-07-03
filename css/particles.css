@@ -1,0 +1,40 @@
+/* Single background particles container styling */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Canvas styling for proper sizing without stretching */
+canvas.particles-js-canvas-el {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Common container class for all particle containers */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Fix for Safari and other browsers */
+@media screen and (min-width: 1px) {
+    canvas.particles-js-canvas-el {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        perspective: 1000;
+    }
+}

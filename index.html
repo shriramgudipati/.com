@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,400italic' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/sidebar.css">
+	<link rel="stylesheet" href="css/particles.css">
+	<script src="js/modernizr.js"></script>
+	<style>
+		/* Zig-Zag Project Layout */
+		.projects-container {
+			width: 95%;
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px 0;
+		}
+		
+		.project-card {
+			display: flex;
+			background: rgba(0, 0, 0, 0.3);
+			border-radius: 15px;
+			margin-bottom: 40px;
+			overflow: hidden;
+			box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.2);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		
+		.project-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+		}
+		
+		/* Even cards are reversed (zig-zag pattern) */
+		.project-card:nth-child(even) {
+			flex-direction: row-reverse;
+		}
+		
+		.project-image {
+			flex: 0 0 40%;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.project-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.5s ease;
+		}
+		
+		.project-card:hover .project-image img {
+			transform: scale(1.05);
+		}
+		
+		.project-content {
+			flex: 0 0 60%;
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		
+		.project-title {
+			color: #e87464;
+			font-size: 24px;
+			margin-bottom: 15px;
+		}
+		
+		.project-skills {
+			color: #999;
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+		
+		.project-description {
+			color: #e0e0e0;
+			margin-bottom: 20px;
+			line-height: 1.5;
+		}
+		
+		.project-button {
+			display: inline-block;
+			background: transparent;
+			border: 2px solid #e87464;
+			color: #e87464;
+			padding: 10px 20px;
+			border-radius: 50px;
+			text-decoration: none;
+			font-weight: bold;
+			align-self: flex-start;
+			transition: all 0.3s ease;
+		}
+		
+		.project-button:hover {
+			background: #e87464;
+			color: #fff;
+		}
+		
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.project-card, .project-card:nth-child(even) {
+				flex-direction: column;
+			}
+			
+			.project-image {
+				flex: 0 0 200px;
+			}
+			
+			.project-content {
+				flex: 1;
+			}
+		}
+		
+		/* Tablet-specific styling for intro section */
+		@media (min-width: 481px) and (max-width: 1024px) and (pointer: coarse) {
+			.container_top {
+				padding: 40px 20px;
+				min-height: 70vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.text-container {
+				text-align: center;
+				margin-bottom: 30px;
+			}
+			
+			.text-container p {
+				font-size: 2.5rem;
+				line-height: 1.2;
+			}
+			
+			.name {
+				font-size: 3rem;
+				display: block;
+				margin-top: 10px;
+			}
+			
+			.subtext {
+				text-align: center;
+				font-size: 1.5rem;
+			}
+			
+			.subtext p {
+				font-size: 1.5rem;
+				line-height: 1.4;
+			}
+			
+			/* Adjust about me section for tablets */
+			.about-me-inline {
+				padding: 40px 30px;
+				margin: 20px auto;
+				max-width: 90%;
+			}
+			
+			.about-me-content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+			
+			.profile-image {
+				width: 200px;
+				height: 200px;
+				margin: 0 auto 30px auto;
+				border-radius: 50%;
+			}
+			
+			.about-me-content p {
+				font-size: 1.1rem;
+				line-height: 1.6;
+				margin-bottom: 20px;
+			}
+			
+			.about-me-skills span {
+				font-size: 0.95rem;
+				padding: 8px 16px;
+				margin: 4px;
+			}
+			
+			/* Adjust sidebar for tablets */
+			.social-icons-sidebar {
+				padding: 15px;
+				width: 60px;
+			}
+			
+			.social-icons-sidebar a {
+				margin-bottom: 15px;
+			}
+			
+			.text-button {
+				font-size: 0.9rem;
+				padding: 8px 12px;
+			}
+			
+			/* Category carousel adjustments for tablets */
+			.category-carousel-container {
+				padding: 30px 20px;
+			}
+			
+			.category-carousel__item {
+				font-size: 1.2rem;
+				padding: 12px 20px;
+			}
+		}
+		
+		/* Portrait tablet specific adjustments */
+		@media (min-width: 481px) and (max-width: 768px) and (orientation: portrait) and (pointer: coarse) {
+			.text-container p {
+				font-size: 2.2rem;
+			}
+			
+			.name {
+				font-size: 2.8rem;
+			}
+			
+			.subtext p {
+				font-size: 1.3rem;
+			}
+		}
+		
+		/* Landscape tablet specific adjustments */
+		@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) and (pointer: coarse) {
+			.container_top {
+				min-height: 80vh;
+			}
+			
+			.about-me-content {
+				flex-direction: row;
+				text-align: left;
+			}
+			
+			.profile-image {
+				margin: 0 30px 0 0;
+				flex-shrink: 0;
+			}
+		}
+
+		/* Mobile Detection Message */
+		.mobile-notice {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.95);
+			z-index: 9999;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding: 20px;
+			color: #fff;
+		}
+		
+		.mobile-notice h2 {
+			color: #e87464;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		
+		.mobile-notice p {
+			font-size: 16px;
+			line-height: 1.5;
+			margin-bottom: 15px;
+			max-width: 300px;
+		}
+		
+		.mobile-notice .icon {
+			font-size: 48px;
+			margin-bottom: 20px;
+		}
+		
+		.continue-anyway {
+			background: #e87464;
+			color: white;
+			padding: 12px 24px;
+			border: none;
+			border-radius: 25px;
+			font-size: 14px;
+			cursor: pointer;
+			margin-top: 20px;
+			transition: background 0.3s ease;
+		}
+		
+		.continue-anyway:hover {
+			background: #d05a4a;
+		}
+		
+		/* Show mobile notice only on phones (not tablets/iPads) */
+		@media (max-width: 480px) and (pointer: coarse) {
+			.mobile-notice {
+				display: flex;
+			}
+			
+			/* Completely hide all content on phones - force desktop viewing */
+			body > *:not(.mobile-notice) {
+				display: none !important;
+			}
+			
+			/* Ensure mobile notice covers everything */
+			.mobile-notice {
+				position: fixed !important;
+				top: 0 !important;
+				left: 0 !important;
+				width: 100% !important;
+				height: 100% !important;
+				z-index: 99999 !important;
+			}
+			
+			/* Remove the continue anyway button functionality */
+			.continue-anyway {
+				display: none !important;
+			}
+			
+			/* Add a stronger message */
+			.mobile-notice p:last-of-type::after {
+				content: "\A\A This content is not available on phone devices.";
+				white-space: pre;
+				color: #e87464;
+				font-weight: bold;
+			}
+		}
+	</style>
+  	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BR0JGFXCFK"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-BR0JGFXCFK');
+	</script>
+	
+	<title>Portfolio Website | Shri Ram Gudipati</title>
+</head>
+<body>
+	<!-- Mobile Notice Overlay -->
+	<div class="mobile-notice" id="mobile-notice">
+		<div class="icon">💻</div>
+		<h2>Best Viewed on Desktop</h2>
+		<p>This portfolio is optimized for desktop viewing to showcase interactive elements and detailed content.</p>
+		<p>For the best experience, please visit this site on a laptop or desktop computer.</p>
+		<button class="continue-anyway" onclick="hideMobileNotice()">Continue Anyway</button>
+	</div>
+	
+	<script>
+		// Completely disable mobile access - no continue button functionality
+		function hideMobileNotice() {
+			// Do nothing - keep the notice visible on mobile
+			return false;
+		}
+		
+		// More precise mobile detection - only for phones (not tablets)
+		function isPhone() {
+			return window.innerWidth <= 480 && 'ontouchstart' in window;
+		}
+		
+		// Disable any attempts to bypass mobile restriction - only for phones
+		if (isPhone()) {
+			document.addEventListener('DOMContentLoaded', function() {
+				// Hide all content except mobile notice
+				const allElements = document.querySelectorAll('body > *:not(.mobile-notice)');
+				allElements.forEach(element => {
+					element.style.display = 'none';
+				});
+				
+				// Ensure mobile notice stays visible
+				const mobileNotice = document.getElementById('mobile-notice');
+				if (mobileNotice) {
+					mobileNotice.style.display = 'flex';
+					mobileNotice.style.position = 'fixed';
+					mobileNotice.style.zIndex = '99999';
+				}
+			});
+		}
+		
+		// Fix particles initialization for tablets and desktop
+		document.addEventListener('DOMContentLoaded', function() {
+			if (!isPhone()) {
+				// Ensure particles are properly initialized
+				setTimeout(function() {
+					if (typeof particlesJS !== 'undefined') {
+						console.log('Initializing particles...');
+						const canvas = document.querySelector('#particles-js canvas');
+						if (canvas) {
+							canvas.style.width = '100%';
+							canvas.style.height = '100%';
+						}
+					}
+				}, 1000);
+			}
+		});
+	</script>
+
+<div class="social-icons-sidebar">
+	<a href="#home-section" class="text-button home-link" data-action="go-home">
+		Home
+	</a>
+	<a href="resume.html" class="text-button resume-link sidebar-resume">
+		Resume
+	</a>
+	<a href="#projects-section" class="text-button project-link" data-action="show-projects-direct">
+		Projects
+	</a>
+	<a href="mailto:shriram.gudipati@gmail.com" class="icon-with-tooltip">
+		<img width="24" height="24" src="https://img.icons8.com/ios-filled/50/e87464/mail.png" alt="Email" />
+		<span class="tooltip">Email</span>
+	</a>
+	<a href="https://github.com/shriramgudipati" target="_blank" class="icon-with-tooltip">
+		<img width="24" height="24" src="https://img.icons8.com/ios-filled/50/e87464/github.png" alt="GitHub" />
+		<span class="tooltip">GitHub</span>
+	</a>
+	<a href="https://www.linkedin.com/in/shriramgudipati" target="_blank" class="icon-with-tooltip">
+		<img width="24" height="24" src="https://img.icons8.com/ios-filled/50/e87464/linkedin.png" alt="LinkedIn" />
+		<span class="tooltip">LinkedIn</span>
+	</a>
+</div>
+<div id="particles-js" class="particles-container"></div>
+
+<!-- Main content directly in body -->
+<div class="container_top" id="home-section">
+	<div class="text-container">
+		<p>
+			My name is<br>
+			<span class="name">
+				Shri Ram Gudipati
+			</span>
+		</p>
+	</div>
+	<div class="subtext">
+		<p>
+			I design, code, and manufacture
+			<span id="anib">
+			</span>
+		</p>
+	</div>
+</div>
+
+<!-- About Me content moved to main flow -->
+<div class="about-me-inline clearfix">
+	<h2>About Me</h2>
+	<div class="about-me-content">
+		<img src="img/profile.jpg" alt="Shri Ram" class="profile-image">
+		<div>
+			<p>
+				Hello! I'm Shri Ram, a passionate designer, developer, and engineer with expertise in creating
+				innovative solutions. I'm a passionate Robotics and Control Systems Engineer with a strong foundation in dynamic systems, embedded electronics, and intelligent automation. My interests lie at the intersection of drones, computer vision, 3D printing, and CAD modeling, where I enjoy building end-to-end mechatronic systems. I bring hands-on experience in dynamics and control design, sensor integration, hardware interfacing, and real-time system simulation. With a background in both mechanical and electronic domains, I strive to develop smart, efficient, and scalable robotic solutions for real-world applications.
+			</p>
+			<p>
+				My journey spans across various domains including web development, machine learning, and product design.
+				I'm committed to creating meaningful products that solve real-world problems.
+			</p>
+			<div class="about-me-skills">
+				<span>Mechanical Engineering</span>
+				<span>Design Engineering</span>
+				<span>Control Systems</span>
+				<span>PLC Design</span>
+				<span>Web Development</span>
+				<span>Perception/Path Planning</span>
+				<span>Prototyping</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="category-selector" style="display: none;">
+	<label for="category">Select Category:</label>
+	<select id="category">
+		<option value="Certifications">Certifications</option>
+		<option value="Projects">Projects</option>
+		<option value="research_papers">Research</option>
+	</select>
+</div>
+
+<!-- New category carousel -->
+<div class="category-carousel-container" id="projects-section">
+	<div class="category-carousel">
+		<ul class="category-carousel__list" id="category-carousel-content">
+			<li class="category-carousel__item" data-value="Certifications" data-pos="-1">Certifications</li>
+			<li class="category-carousel__item active" data-value="Projects" data-pos="0">Projects</li>
+			<li class="category-carousel__item" data-value="research_papers" data-pos="1">Research</li>
+		</ul>
+	</div>
+</div>
+
+<div class="projects-container" id="projects-container">
+	<!-- Project cards will be dynamically populated here -->
+</div>
+
+<div class="carousel-container">
+	<div class="carousel">
+		<ul class="carousel__list" id="carousel-content">
+		</ul>
+	</div>
+</div>
+
+	
+	<script src="js/jquery-2.1.4.js"></script>
+	<script src="js/jquery.mobile.custom.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/category-carousel.js"></script>
+	<script src="js/project-manager.js"></script>
+	<script src="js/skills-carousel.js"></script>
+	<script src="js/particles.min.js"></script>
+	<script src="js/unified-particles.js"></script>
+	<script src="js/particles-fix.js"></script>
+	
+	<script>
+		$(document).ready(function() {
+			setTimeout(function() {
+				if ($('.category-carousel__item.active').length === 0) {
+					if (window.reinitializeCategoryCarousel) {
+						window.reinitializeCategoryCarousel();
+					}
+				} else {
+					if (window.updateCarouselPositions) {
+						window.updateCarouselPositions();
+					}
+				}
+				
+				// Initialize the category carousel
+				$('.category-carousel__item').on('click', function(e) {
+					// Prevent default behavior
+					e.preventDefault();
+					
+					const category = $(this).attr('data-value');
+					if (category) {
+						loadCategory(category);
+					}
+					
+					// Return false to prevent further propagation
+					return false;
+				});
+			}, 500);
+			
+			$(window).on('resize', function() {
+				if (window.updateCarouselPositions) {
+					window.updateCarouselPositions();
+				}
+			});
+		});
+	</script>
+	<script>
+		// Add custom handling for category selection from URL
+		$(document).ready(function() {
+			// Check URL for category parameter
+			function getURLParameter(name) {
+				const queryString = window.location.search || window.location.hash.split('?')[1];
+				if (!queryString) return null;
+				const params = new URLSearchParams(queryString);
+				return params.get(name);
+			}
+			
+			// If category parameter exists, select that category
+			const categoryParam = getURLParameter('category');
+			if (categoryParam) {
+				// Find the category item with this value
+				const categoryItems = document.querySelectorAll('.category-carousel__item');
+				categoryItems.forEach(item => {
+					if (item.dataset.value === categoryParam) {
+						// Simulate a click on this category
+						item.click();
+						// Scroll to ensure it's visible
+						document.querySelector('.category-carousel-container').scrollIntoView({
+							behavior: 'smooth',
+							block: 'center'
+						});
+					}
+				});
+			}
+		});
+	</script>
+	<script>
+		// Handle direct links to projects section
+		$(document).ready(function() {
+			// Check if hash indicates projects section
+			if (window.location.hash === '#projects-section') {
+				// Find the Projects category item
+				setTimeout(function() {
+					const projectsItems = document.querySelectorAll('.category-carousel__item');
+					projectsItems.forEach(item => {
+						if (item.dataset.value === 'Projects') {
+							// Make sure it's active
+							if (!item.classList.contains('active')) {
+								item.click();
+							}
+						}
+					});
+				}, 300); // Delay to ensure DOM is ready
+			}
+			
+			// Add a handler for when hash changes to projects-section
+			window.addEventListener('hashchange', function() {
+				if (window.location.hash === '#projects-section') {
+					const projectsItems = document.querySelectorAll('.category-carousel__item');
+					projectsItems.forEach(item => {
+						if (item.dataset.value === 'Projects') {
+							if (!item.classList.contains('active')) {
+								item.click();
+							}
+						}
+					});
+				}
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,2154 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #e87464;
+  background-color: #151515  ;
+}
+
+a {
+  color: #eebb00;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Prevent horizontal scrolling on mobile devices */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* -------------------------------- 
+
+Patterns - reusable parts of our design
+
+-------------------------------- */
+.cd-btn {
+  display: inline-block;
+  padding: 1.4em 2em;
+  border-radius: 50em;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 1px 20px rgba(238, 187, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  color: #e87464;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+}
+.no-touch .cd-btn:hover {
+  box-shadow: 0 1px 30px rgba(238, 187, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.cd-img-replace {
+  /* replace text with image */
+  color: transparent;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+/* -------------------------------- 
+
+Intro page
+
+-------------------------------- */
+/* Intro block now contains all content - remove wrapper transitions */
+.cd-intro-block {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh; /* Allow content to expand */
+  width: 100%;
+  background-color: #151515;
+  /* Remove table display for flexible content */
+  display: block;
+  /* Remove transforms - no more sliding */
+}
+.cd-intro-block::after {
+  /* arrow icon visible when .cd-intro-block slides out */
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  top: 95%;
+  height: 24px;
+  width: 24px;
+  background: url(../img/cd-arrow-back.svg) no-repeat center center;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.cd-intro-block {
+  /* Full content area styling */
+  display: block;
+  text-align: center;
+  padding: 2em 0;
+}
+.cd-intro-block h1 {
+  width: 90%;
+  margin: 0 auto .6em;
+  font-size: 2.4rem;
+  color: #ebebeb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Remove projects-visible styles - content is now integrated */
+@media only screen and (min-width: 900px) {
+  .cd-intro-block h1 {
+    font-size: 4.4rem;
+    font-weight: 300;
+  }
+}
+
+/* Integrated projects content styles - FORCE CENTERING */
+.cd-intro-block .category-carousel-container,
+.cd-intro-block .blog-slider,
+.cd-intro-block .carousel-container {
+  margin: 2em auto !important; /* Center horizontally */
+  width: 100% !important;
+  max-width: 1200px !important; /* Constrain width */
+  display: block !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  transform: none !important;
+}
+
+/* Ensure projects content is visible and properly centered */
+.cd-intro-block .category-carousel-container,
+.cd-intro-block .blog-slider,
+.cd-intro-block .carousel-container {
+  visibility: visible !important;
+}
+
+/* Category carousel centering */
+.cd-intro-block .category-carousel-container {
+  text-align: center !important;
+}
+
+/* Bottom carousel centering */
+.cd-intro-block .carousel-container {
+  text-align: center !important;
+}
+
+/* Make sure particles background works with integrated content */
+.cd-intro-block {
+  position: relative;
+  z-index: 2;
+}
+
+/* -------------------------------- 
+
+Keyframes
+
+-------------------------------- */
+@-webkit-keyframes cd-translate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-moz-keyframes cd-translate {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(100px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes cd-translate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container_top {
+  position: relative;
+  transform: none;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  z-index: 5;
+  width: 100%;
+  max-width: 1200px;  
+  margin: 0 auto 20px;
+}
+
+@media (max-width: 768px) {
+  .container_top {
+    width: calc(100% - 60px);
+    padding: 15px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  .container_top {
+    width: calc(100% - 50px);
+    padding: 10px;
+  }
+}
+
+.text-container,
+.subtext {
+  color: white;
+  margin: 0;
+  position: relative;
+}
+
+.text-container p,
+.subtext p {
+  margin: 0;
+}
+
+.text-container {
+  font-size: 50px;
+}
+
+@media (max-width: 768px) {
+  .text-container {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-container {
+    font-size: 24px;
+  }
+}
+
+.name,
+#anib {
+  color: var(--accent);
+}
+
+.subtext {
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .subtext {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtext {
+    font-size: 16px;
+  }
+}
+
+:root {
+  --accent: #e87464; /* Define accent color variable */
+  --particles-main-color: #e87464; /* Main background particles color */
+  --particles-intro-color: #ffffff; /* Intro section particles color */
+  --particles-intro-links: #ffffff; /* Intro section particle links color */
+  --particles-projects-color: #e67e22; /* Projects section particles color */
+  --particles-projects-links: #e67e22; /* Projects section particle links color */
+  --particles-content-color: #0f1926; /* Content section particles color */
+  --particles-content-links: #2980b9; /* Content section particle links color */
+}
+
+.filter-container {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin-bottom: 20px;
+  transition: opacity 0.3s;
+}
+
+.filter-container.is-visible {
+  display: block;
+  opacity: 1;
+}
+
+.filter-container select {
+  padding: 8px 15px;
+  margin: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Carousel Container - Updated */
+.carousel-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.carousel {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  align-items: center;
+  font-family: Arial;
+}
+
+.carousel__list {
+  display: flex;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  justify-content: center;
+  perspective: 300px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Carousel item styling with constant size */
+.carousel__item {
+  --item-width: 180px; /* Fixed width for all items */
+  --item-height: 180px; /* Fixed height for all items */
+  --item-spacing: 140px; /* Spacing between items - increased from 100px to 140px */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0;
+  width: var(--item-width);
+  height: var(--item-height);
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+  position: absolute;
+  transition: all 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  background: none !important;
+}
+
+/* Active item styling without size changes */
+.carousel__item.active {
+  /* Removed width/height/scale changes */
+  border: 2px solid rgba(232, 116, 100, 0.5);
+  z-index: 10;
+}
+
+.carousel__item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.carousel__item-img-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: none;
+  margin: 0;
+}
+
+.carousel__item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keep this to prevent image distortion */
+  display: block;
+  transition: all 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/* Update positioning for better spacing based on the template */
+.carousel__item[data-pos="0"] {
+  z-index: 5;
+}
+
+.carousel__item[data-pos="-1"],
+.carousel__item[data-pos="1"] {
+  opacity: 0.7;
+  filter: blur(1px) grayscale(10%);
+}
+
+.carousel__item[data-pos="-1"] {
+  transform: translateX(-240%) scale(0.85); /* Increased from -180% to -240% */
+  z-index: 4;
+  transition-delay: 0.05s;
+}
+
+.carousel__item[data-pos="1"] {
+  transform: translateX(240%) scale(0.85); /* Increased from 180% to 240% */
+  z-index: 4;
+  transition-delay: 0.05s;
+}
+
+.carousel__item[data-pos="-2"],
+.carousel__item[data-pos="2"] {
+  opacity: 0.4;
+  filter: blur(2px) grayscale(20%);
+}
+
+.carousel__item[data-pos="-2"] {
+  transform: translateX(-400%) scale(0.7); /* Increased from -300% to -400% */
+  z-index: 3;
+  transition-delay: 0.1s;
+}
+
+.carousel__item[data-pos="2"] {
+  transform: translateX(400%) scale(0.7); /* Increased from 300% to 400% */
+  z-index: 3;
+  transition-delay: 0.1s;
+}
+
+/* Force hardware acceleration for smoother transitions */
+.carousel__item {
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  transform-style: preserve-3d; /* Added missing standard property */
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity;
+}
+
+#particles-intro,
+#particles-projects,
+#particles-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Section-specific link colors */
+.cd-intro-block a {
+    color: var(--particles-intro-links);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cd-intro-block a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Projects wrapper link styles removed - content now integrated */
+
+/* -------------------------------- 
+   Responsive Layout - Tablet (768px - 991px)
+   -------------------------------- */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  /* Reduce top margins globally for tablet */
+  .cd-intro-block, .container {
+    padding-top: 20px;
+  }
+  
+  .category-carousel-container {
+    padding: 60px 0 40px; /* Further reduced top padding */
+    margin-top: 40px; /* Reduced margin */
+  }
+
+  .category-carousel {
+    max-width: 500px;
+  }
+  
+  .category-carousel__item {
+    width: 200px; /* Smaller width for category items */
+    height: 45px; /* Slightly smaller height */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .category-carousel__item[data-pos="-1"] {
+    transform: translateX(-50%) scale(.85); /* More compact positioning */
+  }
+
+  .category-carousel__item[data-pos="1"] {
+    transform: translateX(50%) scale(.85); /* More compact positioning */
+  }
+
+  /* Adjust blog slider margins for tablet */
+  .blog-slider {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  /* Adjust carousel container margins for tablet */
+  .carousel-container {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+}
+
+/* -------------------------------- 
+   Responsive Layout - Mobile Phones (up to 767px)
+   -------------------------------- */
+@media screen and (max-width: 767px) {
+  /* Reduce top margins globally for mobile */
+  .cd-intro-block, .container {
+    padding-top: 10px;
+  }
+  
+  .category-carousel-container {
+    padding: 40px 0 30px; /* Significantly reduced padding */
+    margin-top: 30px; /* Smaller top margin */
+  }
+
+  .category-carousel {
+    max-width: 280px; /* Decreased from 320px */
+  }
+  
+  /* Fix content carousel display on mobile */
+  .carousel-container {
+    margin-top: 60px; /* Reduced margin */
+    margin-bottom: 30px;
+    height: 240px; /* Explicit height to ensure visibility */
+    overflow: visible; /* Ensure content isn't cut off */
+  }
+  
+  .carousel {
+    width: 100%;
+    height: 220px; /* Reduced height for mobile */
+    overflow: visible;
+  }
+  
+  .carousel__list {
+    height: 200px; /* Reduced height */
+    overflow: visible;
+  }
+
+  .carousel__item {
+    /* Smaller items for mobile but still constant size */
+    --item-width: 140px;
+    --item-height: 140px;
+  }
+  
+  /* Make carousel items more visible and concentrated on mobile */
+  .carousel__item[data-pos="0"] {
+    transform: translateZ(0) scale(1);
+    z-index: 10;
+  }
+  
+  .carousel__item[data-pos="-1"] {
+    transform: translateX(-120%) scale(0.75);
+  }
+  
+  .carousel__item[data-pos="1"] {
+    transform: translateX(120%) scale(0.75);
+  }
+  
+  /* Highly compress outer items on mobile or hide them */
+  .carousel__item[data-pos="-2"] {
+    transform: translateX(-180%) scale(0.6);
+    opacity: 0.3;
+  }
+  
+  .carousel__item[data-pos="2"] {
+    transform: translateX(180%) scale(0.6);
+    opacity: 0.3;
+  }
+  
+  /* Fix text size for mobile */
+  .carousel__item-title {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  
+  /* Reduce blog slider size for mobile */
+  .blog-slider {
+    margin: 50px auto;
+    min-height: 400px;
+    height: auto;
+    padding: 15px;
+  }
+  
+  .blog-slider__img {
+    height: 220px; /* Smaller image height */
+    width: 85%; /* Slightly narrower */
+    transform: translateY(-40%); /* Less translation */
+  }
+  
+  .blog-slider__content {
+    margin-top: -40px; /* Reduced negative margin */
+    padding: 0 15px; /* Less padding */
+  }
+  
+  .blog-slider__title {
+    font-size: 20px; /* Smaller title */
+    margin-bottom: 10px;
+  }
+  
+  .blog-slider__text {
+    margin-bottom: 20px;
+    font-size: 14px; /* Smaller text */
+  }
+  
+  .blog-slider__button {
+    padding: 10px 20px; /* Smaller button */
+    font-size: 14px;
+  }
+  
+  .blog-slider__pagination {
+    top: 170px; /* Adjust pagination location */
+  }
+  
+  /* Hide carousel container completely on mobile */
+  .carousel-container {
+    display: none;
+  }
+}
+
+/* -------------------------------- 
+   Responsive Layout - Small Phones (up to 480px)
+   -------------------------------- */
+@media screen and (max-width: 480px) {
+  /* Even more reduced margins for very small screens */
+  .category-carousel-container {
+    padding: 30px 0 20px;
+    margin-top: 60px;
+  }
+  
+  .cd-intro-block, .container {
+    padding-top: 5px;
+  }
+
+  /* Further compress carousel for very small screens */
+  .carousel-container {
+    margin-top: -15px;
+    height: 200px;
+  }
+  
+  .carousel {
+    height: 180px;
+  }
+  
+  .carousel__list {
+    height: 160px;
+  }
+  
+  .carousel__item {
+    /* Even smaller items for very small screens */
+    --item-width: 120px;
+    --item-height: 120px;
+  }
+  
+  /* Make side items very compact on small phones */
+  .carousel__item[data-pos="-1"] {
+    transform: translateX(-100%) scale(0.7);
+  }
+  
+  .carousel__item[data-pos="1"] {
+    transform: translateX(100%) scale(0.7);
+  }
+  
+  /* Hide outer items on very small screens to focus on main content */
+  .carousel__item[data-pos="-2"] {
+    display: none; /* Remove completely on very small screens */
+  }
+  
+  .carousel__item[data-pos="2"] {
+    display: none; /* Remove completely on very small screens */
+  }
+
+  .carousel__item-title {
+    font-size: 10px;
+  }
+  
+  /* Further reduce blog slider for very small screens */
+  .blog-slider {
+    margin: 30px auto;
+    min-height: 360px;
+    padding: 10px;
+  }
+  
+  .blog-slider__img {
+    height: 180px;
+    width: 90%;
+    transform: translateY(-30%);
+    box-shadow: transparent;
+  }
+  
+  .blog-slider__content {
+    margin-top: -5px;
+    padding: 0 10px;
+  }
+  
+  .blog-slider__title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .blog-slider__text {
+    margin-bottom: 15px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  
+  .blog-slider__button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+  
+  .blog-slider__pagination {
+    top: 150px;
+  }
+}
+
+/* -------------------------------- 
+   Fix for devices with very short height
+   -------------------------------- */
+@media screen and (max-height: 600px) {
+  .category-carousel-container {
+    padding: 30px 0 20px;
+    margin-top: 60px;
+  }
+  
+  .blog-slider {
+    height: 280px;
+    min-height: 280px;
+    padding: 10px 15px;
+    margin: 15px auto;
+  }
+  
+  .blog-slider__img {
+    height: 180px;
+    transform: translateX(-60px);
+  }
+  
+  .blog-slider__title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .blog-slider__text {
+    margin-bottom: 10px;
+    max-height: 80px;
+    overflow-y: auto;
+  }
+  
+  .blog-slider__pagination {
+    display: none; /* Hide pagination for very short screens */
+  }
+}
+
+/* Fix spacing for the components to prevent overlap */
+.blog-slider {
+  margin-top: 35px; /* Increase margin to create space */
+  margin-bottom: 0px;
+}
+
+.carousel-container {
+  margin-top: -30px;
+  margin-bottom: 70px;
+}
+
+/* Category Carousel Styles - Fixed version */
+.category-carousel-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 30px 0;
+  margin: 70px auto 0;
+  position: relative; 
+  z-index: 10;
+  overflow: visible;
+  max-width: 1200px;
+  /* Remove perspective from container to avoid compounding 3D effects */
+}
+
+.category-carousel {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  /* Use more stable transform style */
+  transform-style: flat; 
+}
+
+.category-carousel__list {
+  display: flex;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  justify-content: center;
+  /* Reduced perspective for more stable rendering */
+  perspective: 500px;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  transform-style: preserve-3d;
+}
+
+.category-carousel__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e87464;
+  font-size: 16px;
+  width: 180px;
+  height: 50px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+  position: absolute;
+  /* Slow down transitions for smoother effect */
+  transition: all .5s cubic-bezier(0.33, 1, 0.68, 1);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Ensure pointer events work properly */
+  pointer-events: auto;
+  /* Improved willchange property for performance */
+  will-change: transform, opacity;
+  /* Add X and Y translation for more stability */
+  backface-visibility: hidden;
+}
+
+/* Active item styling - reduce extreme transforms */
+.category-carousel__item.active {
+  z-index: 10;
+  transform: translateZ(10px) !important; /* Reduced from 20px */
+  box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.8);
+  border: 1px solid rgba(232, 116, 100, 0.4);
+}
+
+/* Position items with smoother spacing */
+.category-carousel__item[data-pos="0"] {
+  transform: translateZ(10px); /* Reduced from 20px */
+  z-index: 5;
+}
+
+.category-carousel__item[data-pos="-1"] {
+  transform: translateX(-120%) translateY(5px) translateZ(-5px) scale(0.85);
+  opacity: 0.8;
+  filter: brightness(0.8);
+  z-index: 4;
+}
+
+.category-carousel__item[data-pos="1"] {
+  transform: translateX(120%) translateY(5px) translateZ(-5px) scale(0.85);
+  opacity: 0.8;
+  filter: brightness(0.8);
+  z-index: 4;
+}
+
+/* Simplify transformations for outer elements */
+.category-carousel__item[data-pos="-2"] {
+  transform: translateX(-220%) translateY(10px) translateZ(-10px) scale(0.7);
+  opacity: 0.6;
+  filter: brightness(0.6);
+  z-index: 3;
+}
+
+.category-carousel__item[data-pos="2"] {
+  transform: translateX(220%) translateY(10px) translateZ(-10px) scale(0.7);
+  opacity: 0.6;
+  filter: brightness(0.6);
+  z-index: 3;
+}
+
+/* Reduce extreme transforms for the furthest items */
+.category-carousel__item[data-pos="-3"],
+.category-carousel__item[data-pos="3"] {
+  opacity: 0.2;
+  filter: blur(3px) grayscale(30%);
+  z-index: 1;
+}
+
+.category-carousel__item[data-pos="-3"] {
+  transform: translateX(-300%) scale(0.6);
+}
+
+.category-carousel__item[data-pos="3"] {
+  transform: translateX(300%) scale(0.6);
+}
+
+/* Hover effects to enhance interactivity */
+.category-carousel__item:not(.active):hover {
+  transform: translateY(-5px) translateZ(5px) scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+  filter: brightness(1.1);
+}
+
+/* Responsive adjustments for the enhanced carousel */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .category-carousel__item[data-pos="-1"] {
+    transform: translateX(-120%) translateY(8px) translateZ(-5px) scale(0.85); /* Adjusted for tablet */
+  }
+
+  .category-carousel__item[data-pos="1"] {
+    transform: translateX(120%) translateY(8px) translateZ(-5px) scale(0.85); /* Adjusted for tablet */
+  }
+
+  .category-carousel__item[data-pos="-2"] {
+    transform: translateX(-200%) translateY(18px) translateZ(-20px) scale(0.75); /* Adjusted for tablet */
+  }
+
+  .category-carousel__item[data-pos="2"] {
+    transform: translateX(200%) translateY(18px) translateZ(-20px) scale(0.75); /* Adjusted for tablet */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .category-carousel__item[data-pos="-1"] {
+    transform: translateX(-95%) translateY(6px) translateZ(-5px) scale(0.85);
+  }
+
+  .category-carousel__item[data-pos="1"] {
+    transform: translateX(95%) translateY(6px) translateZ(-5px) scale(0.85);
+  }
+  
+  /* Bring items closer to the center for better visibility */
+  .category-carousel__item[data-pos="-2"],
+  .category-carousel__item[data-pos="2"] {
+    opacity: 0.4;
+    display: none; /* Hide outermost items on smaller screens */
+  }
+}
+
+/* Even more compression for very small screens */
+@media screen and (max-width: 480px) {
+  .category-carousel {
+    max-width: 240px; /* Even smaller container */
+  }
+  
+  .category-carousel__item {
+    width: 130px; /* Smaller width */
+    height: 36px; /* Smaller height */
+    font-size: 12px; /* Even smaller font */
+  }
+  
+  /* Further compress positions */
+  .category-carousel__item[data-pos="-1"] {
+    transform: translateX(-85%) translateY(5px) translateZ(-5px) scale(0.8);
+  }
+  
+  .category-carousel__item[data-pos="1"] {
+    transform: translateX(85%) translateY(5px) translateZ(-5px) scale(0.8);
+  }
+  
+  .category-carousel-container {
+    padding: 60px 0 0px; /* Less padding */
+    margin-top: 40px; /* Less margin */
+  }
+}
+
+/* Very small screens (iPhone SE, etc.) */
+@media screen and (max-width: 375px) {
+  .category-carousel {
+    max-width: 220px;
+  }
+  
+  .category-carousel__item {
+    width: 120px;
+    font-size: 11px;
+  }
+  
+  .category-carousel__item[data-pos="-1"] {
+    transform: translateX(-80%) translateY(5px) translateZ(-5px) scale(0.8);
+  }
+  
+  .category-carousel__item[data-pos="1"] {
+    transform: translateX(80%) translateY(5px) translateZ(-5px) scale(0.8);
+  }
+}
+
+/* Styling for blog slider skills (tag-based style) */
+.blog-slider__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 25px; /* Increased from 15px to add more space after text */
+    margin-bottom: 15px;
+}
+
+.blog-slider__skills span {
+    background-color: var(--accent);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.blog-slider__skills span:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep the existing skills carousel styles for project content wrapper as they are */
+
+/* Skills Carousel in Project Content - Updated for linear, equidistant layout */
+.skills-carousel-container {
+  margin: 20px 0;
+  padding: 10px 0;
+  width: 100%;
+  position: relative; /* Added for positioning context for navigation buttons */
+}
+
+.skills-carousel {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+}
+
+.skills-carousel__list {
+  display: flex;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  justify-content: center;
+  perspective: 300px;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-carousel__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  --item-spacing: 200px; /* Fixed spacing between items */
+}
+
+.skills-carousel__item span {
+  background-color: Transparent;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 2rem;
+  display: block;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+}
+
+/* Center item (active) */
+.skills-carousel__item[data-pos="0"] {
+  z-index: 5;
+  transform: translateX(0) scale(1);
+}
+
+.skills-carousel__item[data-pos="0"] span {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* First items to left and right - exactly equidistant */
+.skills-carousel__item[data-pos="-1"] {
+  transform: translateX(calc(-1 * var(--item-spacing))) scale(0.85);
+  z-index: 4;
+  opacity: 0.7;
+  filter: blur(1px) grayscale(10%);
+}
+
+.skills-carousel__item[data-pos="1"] {
+  transform: translateX(var(--item-spacing)) scale(0.85);
+  z-index: 4;
+  opacity: 0.7;
+  filter: blur(1px) grayscale(10%);
+}
+
+/* Second items to left and right - exactly equidistant */
+.skills-carousel__item[data-pos="-2"] {
+  transform: translateX(calc(-2 * var(--item-spacing))) scale(0.7);
+  z-index: 3;
+  opacity: 0.4;
+  filter: blur(3px) grayscale(20%);
+}
+
+.skills-carousel__item[data-pos="2"] {
+  transform: translateX(calc(2 * var(--item-spacing))) scale(0.7);
+  z-index: 3;
+  opacity: 0.4;
+  filter: blur(3px) grayscale(20%);
+}
+
+/* Third items to left and right - exactly equidistant */
+.skills-carousel__item[data-pos="-3"] {
+  transform: translateX(calc(-3 * var(--item-spacing))) scale(0.6);
+  z-index: 2;
+  opacity: 0.2;
+  filter: blur(5px) grayscale(30%);
+}
+
+.skills-carousel__item[data-pos="3"] {
+  transform: translateX(calc(3 * var(--item-spacing))) scale(0.6);
+  z-index: 2;
+  opacity: 0.2;
+  filter: blur(5px) grayscale(30%);
+}
+
+/* Visual indicators for start/end of carousel */
+.skills-carousel__item.first-item::before {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: rgba(232, 116, 100, 0.5);
+  transform: translateY(-50%);
+}
+
+.skills-carousel__item.last-item::after {
+  content: '';
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: rgba(232, 116, 100, 0.5);
+  transform: translateY(-50%);
+}
+
+/* Navigation buttons for the linear carousel */
+.skills-carousel-nav-prev,
+.skills-carousel-nav-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(232, 116, 100, 0.9);
+  border: none;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.skills-carousel-nav-prev {
+  left: 10px;
+}
+
+.skills-carousel-nav-next {
+  right: 10px;
+}
+
+/* Disabled state for navigation buttons */
+.skills-carousel-nav-prev.disabled,
+.skills-carousel-nav-next.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------------------- 
+
+Lighting Effects - Enhanced Stage Lighting
+
+-------------------------------- */
+
+/* Illuminated Skills Heading with Stage Lighting Effect */
+.skills-heading-illuminated {
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px; /* Increased space for the light effect */
+  color:  #151515 ;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.skills-heading-illuminated span {
+  position: relative;
+  z-index: 5;
+  animation: pulse-glow 3s infinite alternate;
+  filter: drop-shadow(0 0 10px rgba(  215, 145, 125, .8));
+}
+
+/* Stage light container */
+.stage-light {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  left: 0;
+  top: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Enhanced cone-shaped light beam */
+.light-beam {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 255, 255, 0.8) 0%,         /* white hot center */
+    rgba(232, 116, 100, 0.6) 20%,        /* warm peach glow */
+    rgba(232, 116, 100, 0.3) 40%,        /* soft fade */
+    rgba(232, 116, 100, 0.1) 70%,        /* subtle edge */
+    transparent 100%
+  );
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  opacity: 0.8;
+  z-index: 2;
+  filter: blur(3px);
+  animation: beam-flicker 4s infinite alternate;
+}
+
+/* Visible light rays */
+.light-rays {
+  position: absolute;
+  width: 140px;
+  height: 60px;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    to right,
+    rgba(232, 116, 100, 0.05),
+    rgba(232, 116, 100, 0.1) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  opacity: 0.8;
+  z-index: 3;
+  animation: rays-flicker 5s infinite alternate;
+}
+
+/* Illuminated active carousel item with enhanced glow */
+.skills-carousel__item.illuminated span {
+  box-shadow: 
+    8px 15px 15px 8px rgba(232, 116, 100, 0.3),        /* outer soft shadow */
+    0 0 30px 15px rgba(232, 116, 100, 0.3),            /* ambient glow */
+    inset 0 0 15px rgba(232, 116, 100, 0.5),           /* subtle inner glow */
+    inset 0 0 15px rgba(232, 116, 100, 0.3);            /* white hot center core */
+  background-color: transparent;
+  color: #e87464;
+  position: relative;
+  z-index: 6;
+  transform: scale(1.15);
+  transition: all 0.3s ease;
+}
+
+/* Active item highlight effect */
+.skills-carousel__item[data-pos="0"].illuminated::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 140%;
+  height: 150%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(232, 116, 100, 0.3) 0%,
+    rgba(232, 116, 100, 0.2) 40%,
+    transparent 80%
+  );
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 50%;
+  animation: spotlight-pulse 3s infinite alternate;
+}
+
+/* Animations for the lighting effects */
+@keyframes pulse-glow {
+  0%, 80% {
+    text-shadow: 0 0 10px rgba(232, 116, 100, 0.8),
+                 0 0 20px rgba(232, 116, 100, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(232, 116, 100, 1),
+                 0 0 25px rgba(232, 116, 100, 0.8),
+                 0 0 35px rgba(232, 116, 100, 0.6);
+  }
+}
+
+
+@keyframes beam-flicker {
+  0%, 22%, 36%, 75% {
+    opacity: 0.8;
+    filter: blur(3px);
+  }
+  28%, 33%, 90% {
+    opacity: 0.9;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(5px);
+  }
+}
+
+@keyframes rays-flicker {
+  0%, 30%, 70% {
+    opacity: 0.5;
+    width: 140px;
+  }
+  20%, 50%, 100% {
+    opacity: 0.7;
+    width: 150px;
+  }
+}
+
+@keyframes spotlight-pulse {
+  0%, 70% {
+    opacity: 0.8;
+    width: 140%;
+    height: 150%;
+  }
+  100% {
+    opacity: 1;
+    width: 150%;
+    height: 160%;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .skills-heading-illuminated {
+    margin-bottom: 35px;
+  }
+  
+  .stage-light {
+    height: 50px;
+  }
+  
+  .light-beam {
+    width: 70px;
+    height: 50px;
+  }
+  
+  .light-rays {
+    width: 120px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-heading-illuminated {
+    margin-bottom: 30px;
+  }
+  
+  .stage-light {
+    height: 40px;
+  }
+  
+  .light-beam {
+    width: 60px;
+    height: 40px;
+  }
+  
+  .light-rays {
+    width: 100px;
+    height: 40px;
+  }
+}
+
+/* About Me Section Styles - Fixed positioning */
+.about-me-section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 80%;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.92);
+  border-radius: 20px;
+  padding: 25px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s, transform 0.4s ease;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(232, 116, 100, 0.4);
+  z-index: 1000;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.about-me-section.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.about-me-close {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.about-me-close:hover {
+  background-color: rgba(232, 116, 100, 0.2);
+  transform: scale(1.1);
+}
+
+.tooltip-right {
+  left: 45px;
+  top: 50%;
+}
+
+.about-me-section h2 {
+  color: var(--accent);
+  text-align: center;
+  margin: 15px 0 25px;
+  font-size: 2em;
+  border-bottom: 1px solid rgba(232, 116, 100, 0.3);
+  padding-bottom: 10px;
+}
+
+.about-me-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-me-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.about-me-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.about-me-skills span {
+  background-color: rgba(232, 116, 100, 0.2);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 14px;
+  border: 1px solid rgba(232, 116, 100, 0.5);
+  transition: all 0.3s ease;
+}
+
+.about-me-skills span:hover {
+  background-color: rgba(232, 116, 100, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Add a visual separator between About Me and Projects sections */
+.about-me-inline::after {
+  content: '';
+  display: block;
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(232, 116, 100, 0.5), transparent);
+  margin: 40px auto 0;
+  position: relative;
+  bottom: -40px; /* Push it down to create more visual space */
+}
+
+/* Image row styles */
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 2em auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.image-row figure {
+  margin: 0;
+  /* Default fallback if no specific width is set */
+  width: 48%;
+}
+
+.image-row img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive styling for image rows */
+@media screen and (max-width: 768px) {
+  .image-row {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Force 100% width on mobile regardless of inline style */
+  .image-row figure {
+    width: 100% !important; /* Override any inline styles */
+    margin-bottom: 1.5em;
+    max-width: 100%;
+  }
+  
+  /* Handle equal height images on mobile */
+  .image-row figure img {
+    height: auto !important;
+    object-fit: contain;
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 480px) {
+  .image-row figcaption {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    padding: 0 5px;
+  }
+}
+
+/* Skills Carousel Enhancements */
+.circular-skills {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.circular-skills .skills-list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.circular-skills .skill-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px 16px;
+  background-color: rgba(232, 116, 100, 0.8);
+  border-radius: 20px;
+  color: white;
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+  min-width: 80px;
+}
+
+.circular-skills .skill-item.active {
+  background-color: rgba(232, 116, 100, 1);
+  box-shadow: 0 0 15px rgba(232, 116, 100, 0.7);
+  z-index: 110 !important;
+}
+
+/* Adjustments for different numbers of skills */
+.skills-list[data-items="5"] .skill-item,
+.skills-list[data-items="6"] .skill-item {
+  font-size: 0.9em;
+  min-width:  70px;
+}
+
+.skills-list[data-items="7"] .skill-item,
+.skills-list[data-items="8"] .skill-item {
+  font-size: 0.8em;
+  min-width: 60px;
+}
+
+.skills-list.skills-overflow .skill-item {
+  font-size: 0.75em;
+  padding: 6px 12px;
+}
+
+/* Navigation buttons */
+.skills-prev, .skills-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(232, 116, 100, 0.9);
+  border: none;
+  color: white;
+  width: 30px; 
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 120;
+}
+
+/* Resume content styles (used by separate resume page) */
+
+.resume-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.resume-pdf-container {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+    max-width: 850px;  /* Maximum width to maintain readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resume-pdf-container object {
+    width: 100%;
+    min-height: 800px;  /* Minimum height */
+    border: none;
+    display: block;
+}
+
+/* Add responsive adjustments */
+@media screen and (max-width: 768px) {
+    .resume-pdf-container {
+        padding: 10px;
+    }
+    
+    .resume-pdf-container object {
+        min-height: 600px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .resume-pdf-container {
+        padding: 5px;
+    }
+    
+    .resume-pdf-container object {
+        min-height: 500px;
+    }
+}
+
+/* Resume Page Styles */
+.resume-page {
+    min-height: 100vh;
+    padding: 80px 20px 40px;
+    background: rgba(0, 0, 0, 0.9); /* Dark background that matches the site theme */
+    position: relative;
+}
+
+/* Subtle background pattern for resume page */
+.resume-page:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.resume-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.resume-container h1 {
+    background: #333;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    font-size: 2.2em;
+    margin: 0;
+    font-weight: 400;
+}
+
+.resume-content {
+    padding: 0px;
+}
+
+.resume-pdf-container {
+    margin-bottom: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: white;
+    border: 1px solid #eee;
+}
+
+.resume-actions {
+    text-align: center;
+    padding: 15px;
+    background: #000000;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.resume-download-btn, .back-to-home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 10px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.resume-download-btn:hover, .back-to-home-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: #444;
+}
+
+.back-to-home-btn {
+    background: #555;
+}
+
+.back-to-home-btn:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: #666;
+}
+
+@media (max-width: 768px) {
+    .resume-page {
+        padding: 60px 10px 20px;
+    }
+    
+    .resume-container {
+        margin: 10px;
+        border-radius: 5px;
+    }
+    
+    .resume-container h1 {
+        padding: 15px;
+        font-size: 1.8em;
+    }
+    
+    .resume-content {
+        padding: 15px;
+    }
+    
+    .resume-pdf-container object {
+        height: 500px;
+    }
+    
+    .resume-actions {
+        padding: 10px;
+    }
+    
+    .resume-download-btn, .back-to-home-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* 
+ * MODERNIZED STYLES 
+ * These styles are from style-cleaned.css and replace older slider-based styles
+ * They provide a cleaner, more modern design for the portfolio
+ */
+
+/* General Styles - Modernized */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #fff;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 60%;
+  min-height: 100vh;
+  padding: 50px;
+  text-align: left;
+  z-index: 10;
+  float: left;
+}
+
+.text-container, .subtext {
+  z-index: 100;
+  position: relative;
+}
+
+/* Add margin to content to accommodate fixed left container */
+/* Separate rule for about-me to always display below the container_top */
+.about-me-inline {
+  clear: both;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 100px;  /* Increased bottom margin from 60px to 100px */
+}
+
+/* Other content sections stay side-by-side with container_top */
+.category-carousel-container, .projects-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .about-me-inline {
+    margin: 20px auto 80px; /* Increased bottom margin from 60px to 80px for mobile */
+  }
+  
+  .category-carousel-container, .projects-container {
+    float: none;
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto 0; /* Increased top margin for mobile */
+  }
+}
+
+.text-container p, .subtext p {
+  margin: 10px 0;
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+
+.subtext p {
+  font-size: 1.8em;
+  color: #aaa;
+}
+
+.name {
+  color: #e87464;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* About Me Section */
+.about-me-inline {
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  z-index: 100;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-me-inline h2 {
+  font-size: 2.2em;
+  color: #e87464;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-me-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e87464;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.about-me-content p {
+  flex: 1;
+  min-width: 300px;
+  line-height: 1.6;
+}
+
+.about-me-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.about-me-skills span {
+  background: rgba(232, 116, 100, 0.2);
+  border: 1px solid #e87464;
+  color: #e87464;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+/* Category Carousel */
+.category-carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 250px auto 40px; /* Increased top margin from 0 to 80px */
+  z-index: 100;
+}
+
+.category-selector {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.category-selector label {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.category-selector select {
+  padding: 8px 15px;
+  font-size: 1em;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: 1px solid #e87464;
+  border-radius: 5px;
+}
+
+/* Carousel Container */
+.carousel-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  position: relative;
+}
+
+/* Resume Page Styles */
+.resume-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  position: relative;
+  z-index: 100;
+}
+
+.resume-container h1 {
+  font-size: 2.5em;
+  color: #e87464;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.resume-pdf-container {
+  background: #000;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.resume-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.resume-download-btn, .back-to-home-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #e87464;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.resume-download-btn:hover, .back-to-home-btn:hover {
+  background: #d05a4a;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container_top {
+    float: none;
+    width: 100%;
+    min-height: auto;
+    padding: 15vh 20px 30px;
+  }
+  
+  .text-container p, .subtext p {
+    font-size: 1.8em;
+  }
+  
+  .subtext p {
+    font-size: 1.3em;
+  }
+  
+  .about-me-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profile-image {
+    margin-bottom: 20px;
+  }
+  
+  .about-me-skills {
+    justify-content: center;
+  }
+}
+
+/* Divider between container_top and about-me section */
+.about-me-inline::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(to right, transparent, #e87464, transparent);
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-me-inline {
+    margin-top: 40px;
+  }
+  
+  .category-carousel-container, .projects-container {
+    float: right;
+    width: 60%;
+  }
+}
+
+/* Clearfix to handle floats */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Add specific centering rules for content images */
+.cd-project-content .content-image {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Content image centering and alignment */
+.content-image {
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+}
+
+.content-image img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Specific alignment classes */
+.content-image.align-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-image.align-left {
+  text-align: left;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.content-image.align-right {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}

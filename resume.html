@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,400italic' rel='stylesheet' type='text/css'>	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/sidebar.css">
+	<link rel="stylesheet" href="css/particles.css">
+	<script src="js/modernizr.js"></script>
+  	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BR0JGFXCFK"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-BR0JGFXCFK');
+	</script>
+	
+	<title>Resume | Shri Ram Gudipati</title>
+</head>
+<body>
+<div class="social-icons-sidebar">	<a href="index.html#home-section" class="text-button home-link">
+		Home
+	</a>
+	<a href="resume.html" class="text-button resume-link sidebar-resume active">
+		Resume
+	</a>
+	<a href="index.html#projects-section" class="text-button project-link">
+		Projects
+	</a>
+	<a href="mailto:shriram.gudipati@gmail.com" class="icon-with-tooltip">
+		<img width="24" height="24" src="https://img.icons8.com/ios-filled/50/e87464/mail.png" alt="Email" />
+		<span class="tooltip">Email</span>
+	</a>
+	<a href="https://github.com/shriramgudipati" target="_blank" class="icon-with-tooltip">
+		<img width="24" height="24" src="https://img.icons8.com/ios-filled/50/e87464/github.png" alt="GitHub" />
+		<span class="tooltip">GitHub</span>
+	</a>
+	<a href="https://www.linkedin.com/in/shriramgudipati" target="_blank" class="icon-with-tooltip">
+		<img width="24" height="24" src="https://img.icons8.com/ios-filled/50/e87464/linkedin.png" alt="LinkedIn" />
+		<span class="tooltip">LinkedIn</span>
+	</a>
+</div>
+<div id="particles-js" class="particles-container"></div>
+
+<div class="resume-page">
+	<div class="resume-container">
+		<h1>Resume</h1>
+		<div class="resume-content">
+			<div class="resume-pdf-container">
+				<object data="data/Shri Ram_Resume.pdf" type="application/pdf" width="100%" height="600px">
+					<p>It appears your browser doesn't support embedded PDFs.
+					   <a href="data/Shri Ram_Resume.pdf" download>Click here to download the resume</a>.
+					</p>
+				</object>
+			</div>			<div class="resume-actions">
+				<a href="data/Shri Ram_Resume.pdf" download class="resume-download-btn">
+					<img width="20" height="20" src="https://img.icons8.com/ios-filled/50/ffffff/download--v1.png" alt="download" />
+					Download PDF
+				</a>				<a href="index.html#home-section" class="back-to-home-btn">
+					<img width="20" height="20" src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="home" />
+					Back to Home
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+	
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/particles.min.js"></script>
+<script src="js/unified-particles.js"></script>
+<script src="js/particles-fix.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Use unified particle initialization from unified-particles.js
+			if (typeof initializeAllParticles === 'function') {
+				// Let the unified particles initialization handle this
+				setTimeout(initializeAllParticles, 100);
+			}
+			
+			function adjustPdfContainerSize() {
+				var containerWidth = $('.resume-pdf-container').width();
+				var letterRatio = 11 / 8.5;
+				var newHeight = containerWidth * letterRatio;
+				$('.resume-pdf-container object').height(newHeight);
+			}
+			
+			adjustPdfContainerSize();
+			$(window).on('resize', adjustPdfContainerSize);
+		});
+	</script>
+</body>
+</html>
