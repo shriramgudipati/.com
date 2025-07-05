@@ -506,17 +506,17 @@
           "type": "image-row",
           "images": [
             {
-              "src": "/img/Projects/Tubular_chassis/ATV Buggy/Frontal Impact/Frontal Impact-Quality.jpg",
+              "src": "/img/Projects/Tubular_chassis/ATV_Buggy/Frontal_Impact/Frontal Impact-Quality.jpg",
               "alt": "ATV Buggy - Mesh Quality",
               "caption": "ATV Buggy - Mesh Quality"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/ATV Buggy/Frontal Impact/Frontal Impact-Stress.jpg",
+              "src": "/img/Projects/Tubular_chassis/ATV_Buggy/Frontal_Impact/Frontal Impact-Stress.jpg",
               "alt": "ATV Buggy - Stress Distribution",
               "caption": "ATV Buggy - Stress Distribution"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/ATV Buggy/Frontal Impact/Frontal Impact-Displacement.jpg",
+              "src": "/img/Projects/Tubular_chassis/ATV_Buggy/Frontal_Impact/Frontal Impact-Displacement.jpg",
               "alt": "ATV Buggy - Total Displacement",
               "caption": "ATV Buggy - Total Displacement"
             }
@@ -525,7 +525,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/ATV Buggy/Frontal Impact/Frontal_ATV.gif",
+          "src": "/img/Projects/Tubular_chassis/ATV_Buggy/Frontal_Impact/Frontal_ATV.gif",
           "alt": "FEA Analysis for ATV Buggy",
           "caption": "Simulink Plant Model - ATV Buggy"
         },
@@ -537,17 +537,17 @@
           "type": "image-row",
           "images": [
             {
-              "src": "/img/Projects/Tubular_chassis/ATV Buggy/Side Impact/Side Impact-Quality.jpg",
+              "src": "/img/Projects/Tubular_chassis/ATV_Buggy/Side_Impact/Side Impact-Quality.jpg",
               "alt": "ATV Buggy - Mesh Quality",
               "caption": "ATV Buggy - Mesh Quality"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/ATV Buggy/Side Impact/Side Impact-Stress.jpg",
+              "src": "/img/Projects/Tubular_chassis/ATV_Buggy/Side_Impact/Side Impact-Stress.jpg",
               "alt": "ATV Buggy - Stress Distribution",
               "caption": "ATV Buggy - Stress Distribution"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/ATV Buggy/Side Impact/Side Impact-Displacement.jpg",
+              "src": "/img/Projects/Tubular_chassis/ATV_Buggy/Side_Impact/Side Impact-Displacement.jpg",
               "alt": "ATV Buggy - Total Displacement",
               "caption": "ATV Buggy - Total Displacement"
             }
@@ -556,7 +556,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/ATV Buggy/Side Impact/Side_ATV.gif",
+          "src": "/img/Projects/Tubular_chassis/ATV_Buggy/Side_Impact/Side_ATV.gif",
           "alt": "FEA Analysis for ATV Buggy",
           "caption": "Simulink Plant Model - ATV Buggy"
         },
@@ -564,17 +564,17 @@
           "type": "image-row",
           "images": [
             {
-              "src": "/img/Projects/Tubular_chassis/ATV Buggy/Torsional Impact/Torsional Impact-Quality.jpg",
+              "src": "/img/Projects/Tubular_chassis/ATV_Buggy/Torsional_Impact/Torsional Impact-Quality.jpg",
               "alt": "ATV Buggy - Mesh Quality",
               "caption": "ATV Buggy - Mesh Quality"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/ATV Buggy/Torsional Impact/Torsional Impact-Stress.jpg",
+              "src": "/img/Projects/Tubular_chassis/ATV_Buggy/Torsional_Impact/Torsional Impact-Stress.jpg",
               "alt": "ATV Buggy - Stress Distribution",
               "caption": "ATV Buggy - Stress Distribution"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/ATV Buggy/Torsional Impact/Torsional Impact-Displacement.jpg",
+              "src": "/img/Projects/Tubular_chassis/ATV_Buggy/Torsional_Impact/Torsional Impact-Displacement.jpg",
               "alt": "ATV Buggy - Total Displacement",
               "caption": "ATV Buggy - Total Displacement"
             }
@@ -583,7 +583,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/ATV Buggy/Torsional Impact/Torsional_ATV.gif",
+          "src": "/img/Projects/Tubular_chassis/ATV_Buggy/Torsional_Impact/Torsional_ATV.gif",
           "alt": "FEA Analysis for ATV Buggy",
           "caption": "Simulink Plant Model - ATV Buggy"
         },
@@ -595,17 +595,17 @@
           "type": "image-row",
           "images": [
             {
-              "src": "/img/Projects/Tubular_chassis/2 seater buggy/Frontal Impact/Frontal Impact-Quality.jpg",
+              "src": "/img/Projects/Tubular_chassis/2_seater_buggy/Frontal_Impact/Frontal Impact-Quality.jpg",
               "alt": "2-Seater Buggy - Mesh Quality",
               "caption": "2-Seater Buggy - Mesh Quality"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/2 seater buggy/Frontal Impact/Frontal Impact-Stress.jpg",
+              "src": "/img/Projects/Tubular_chassis/2_seater_buggy/Frontal_Impact/Frontal Impact-Stress.jpg",
               "alt": "2-Seater Buggy - Stress Distribution",
               "caption": "2-Seater Buggy - Stress Distribution"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/2 seater buggy/Frontal Impact/Frontal Impact-Displacement.jpg",
+              "src": "/img/Projects/Tubular_chassis/2_seater_buggy/Frontal_Impact/Frontal Impact-Displacement.jpg",
               "alt": "2-Seater Buggy - Total Displacement",
               "caption": "2-Seater Buggy - Total Displacement"
             }
@@ -614,7 +614,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/2 seater buggy/Frontal Impact/Frontal_2seater.gif",
+          "src": "/img/Projects/Tubular_chassis/2_seater_buggy/Frontal_Impact/Frontal_2seater.gif",
           "alt": "FEA Analysis for 2-Seater Buggy",
           "caption": "Simulink Plant Model - 2-Seater Buggy"
         },
@@ -622,17 +622,17 @@
           "type": "image-row",
           "images": [
             {
-              "src": "/img/Projects/Tubular_chassis/2 seater buggy/Side Impact/Side Impact-Quality.jpg",
+              "src": "/img/Projects/Tubular_chassis/2_seater_buggy/Side_Impact/Side Impact-Quality.jpg",
               "alt": "2-Seater Buggy - Mesh Quality",
               "caption": "2-Seater Buggy - Mesh Quality"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/2 seater buggy/Side Impact/Side Impact-Stress.jpg",
+              "src": "/img/Projects/Tubular_chassis/2_seater_buggy/Side_Impact/Side Impact-Stress.jpg",
               "alt": "2-Seater Buggy - Stress Distribution",
               "caption": "2-Seater Buggy - Stress Distribution"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/2 seater buggy/Side Impact/Side Impact-Displacement.jpg",
+              "src": "/img/Projects/Tubular_chassis/2_seater_buggy/Side_Impact/Side Impact-Displacement.jpg",
               "alt": "2-Seater Buggy - Total Displacement",
               "caption": "2-Seater Buggy - Total Displacement"
             }
@@ -641,7 +641,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/2 seater buggy/Side Impact/side_2Seater.gif",
+          "src": "/img/Projects/Tubular_chassis/2_seater_buggy/Side_Impact/Side_2seater.gif",
           "alt": "FEA Analysis for 2-Seater Buggy",
           "caption": "Simulink Plant Model - 2-Seater Buggy"
         },
@@ -653,17 +653,17 @@
           "type": "image-row",
           "images": [
             {
-              "src": "/img/Projects/Tubular_chassis/2 seater buggy/Torsional Impact/Torsional Impact-Quality.jpg",
+              "src": "/img/Projects/Tubular_chassis/2_seater_buggy/Torsional_Impact/Torsional Impact-Quality.jpg",
               "alt": "2-Seater Buggy - Mesh Quality",
               "caption": "2-Seater Buggy - Mesh Quality"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/2 seater buggy/Torsional Impact/Torsional Impact-Stress.jpg",
+              "src": "/img/Projects/Tubular_chassis/2_seater_buggy/Torsional_Impact/Torsional Impact-Stress.jpg",
               "alt": "2-Seater Buggy - Stress Distribution",
               "caption": "2-Seater Buggy - Stress Distribution"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/2 seater buggy/Torsional Impact/Torsional Impact-Displacement.jpg",
+              "src": "/img/Projects/Tubular_chassis/2_seater_buggy/Torsional_Impact/Torsional Impact-Displacement.jpg",
               "alt": "2-Seater Buggy - Total Displacement",
               "caption": "2-Seater Buggy - Total Displacement"
             }
@@ -672,7 +672,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/2 seater buggy/Torsional Impact/Torsional_2seater.gif",
+          "src": "/img/Projects/Tubular_chassis/2_seater_buggy/Torsional_Impact/Torsional_2seater.gif",
           "alt": "FEA Analysis for 2-Seater Buggy",
           "caption": "Simulink Plant Model - 2-Seater Buggy"
         },
@@ -684,17 +684,17 @@
           "type": "image-row",
           "images": [
             {
-              "src": "/img/Projects/Tubular_chassis/Supra/Frontal Impact/Frontal Impact-Quality.jpg",
+              "src": "/img/Projects/Tubular_chassis/Supra/Frontal_Impact/Frontal Impact-Quality.jpg",
               "alt": "Supra Race Car - Mesh Quality",
               "caption": "Supra Race Car - Mesh Quality"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/Supra/Frontal Impact/Frontal Impact-Stress.jpg",
+              "src": "/img/Projects/Tubular_chassis/Supra/Frontal_Impact/Frontal Impact-Stress.jpg",
               "alt": "Supra Race Car - Stress Distribution",
               "caption": "Supra Race Car - Stress Distribution"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/Supra/Frontal Impact/Frontal Impact-Displacement.jpg",
+              "src": "/img/Projects/Tubular_chassis/Supra/Frontal_Impact/Frontal Impact-Displacement.jpg",
               "alt": "Supra Race Car - Total Displacement",
               "caption": "Supra Race Car - Total Displacement"
             }
@@ -703,7 +703,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/Supra/Frontal Impact/Frontal_supra.gif",
+          "src": "/img/Projects/Tubular_chassis/Supra/Frontal_Impact/Frontal_supra.gif",
           "alt": "FEA Analysis for Supra Race Car",
           "caption": "Simulink Plant Model - Supra Race Car"
         },
@@ -711,17 +711,17 @@
           "type": "image-row",
           "images": [
             {
-              "src": "/img/Projects/Tubular_chassis/Supra/Side Impact/Side Impact-Quality.jpg",
+              "src": "/img/Projects/Tubular_chassis/Supra/Side_Impact/Side Impact-Quality.jpg",
               "alt": "Supra Race Car - Mesh Quality",
               "caption": "Supra Race Car - Mesh Quality"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/Supra/Side Impact/Side Impact-Stress.jpg",
+              "src": "/img/Projects/Tubular_chassis/Supra/Side_Impact/Side Impact-Stress.jpg",
               "alt": "Supra Race Car - Stress Distribution",
               "caption": "Supra Race Car - Stress Distribution"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/Supra/Side Impact/Side Impact-Displacement.jpg",
+              "src": "/img/Projects/Tubular_chassis/Supra/Side_Impact/Side Impact-Displacement.jpg",
               "alt": "Supra Race Car - Total Displacement",
               "caption": "Supra Race Car - Total Displacement"
             }
@@ -730,7 +730,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/Supra/Side Impact/Side_supra.gif",
+          "src": "/img/Projects/Tubular_chassis/Supra/Side_Impact/Side_supra.gif",
           "alt": "FEA Analysis for Supra Race Car",
           "caption": "Simulink Plant Model - Supra Race Car"
         },
@@ -738,17 +738,17 @@
           "type": "image-row",
           "images": [
             {
-              "src": "/img/Projects/Tubular_chassis/Supra/Torsional Impact/Torsional Impact-Quality.jpg",
+              "src": "/img/Projects/Tubular_chassis/Supra/Torsional_Impact/Torsional Impact-Quality.jpg",
               "alt": "Supra Race Car - Mesh Quality",
               "caption": "Supra Race Car - Mesh Quality"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/Supra/Torsional Impact/Torsional Impact-Stress.jpg",
+              "src": "/img/Projects/Tubular_chassis/Supra/Torsional_Impact/Torsional Impact-Stress.jpg",
               "alt": "Supra Race Car - Stress Distribution",
               "caption": "Supra Race Car - Stress Distribution"
             },
             {
-              "src": "/img/Projects/Tubular_chassis/Supra/Torsional Impact/Torsional Impact-Displacement.jpg",
+              "src": "/img/Projects/Tubular_chassis/Supra/Torsional_Impact/Torsional Impact-Displacement.jpg",
               "alt": "Supra Race Car - Total Displacement",
               "caption": "Supra Race Car - Total Displacement"
             }
@@ -757,7 +757,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/Supra/Torsional Impact/Torsional_supra.gif",
+          "src": "/img/Projects/Tubular_chassis/Supra/Torsional_Impact/Torsional_supra.gif",
           "alt": "FEA Analysis for Supra Race Car",
           "caption": "Simulink Plant Model - Supra Race Car"
         },
