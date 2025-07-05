@@ -641,7 +641,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/2 seater buggy/Side Impact/Side_2seater.gif",
+          "src": "/img/Projects/Tubular_chassis/2 seater buggy/Side Impact/side_2Seater.gif",
           "alt": "FEA Analysis for 2-Seater Buggy",
           "caption": "Simulink Plant Model - 2-Seater Buggy"
         },
@@ -703,7 +703,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/Supra/Frontal Impact/Frontal_Supra.gif",
+          "src": "/img/Projects/Tubular_chassis/Supra/Frontal Impact/Frontal_supra.gif",
           "alt": "FEA Analysis for Supra Race Car",
           "caption": "Simulink Plant Model - Supra Race Car"
         },
@@ -730,7 +730,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/Supra/Side Impact/Side_Supra.gif",
+          "src": "/img/Projects/Tubular_chassis/Supra/Side Impact/Side_supra.gif",
           "alt": "FEA Analysis for Supra Race Car",
           "caption": "Simulink Plant Model - Supra Race Car"
         },
@@ -757,7 +757,7 @@
         },
         {
           "type": "image",
-          "src": "/img/Projects/Tubular_chassis/Supra/Torsional Impact/Torsional_Supra.gif",
+          "src": "/img/Projects/Tubular_chassis/Supra/Torsional Impact/Torsional_supra.gif",
           "alt": "FEA Analysis for Supra Race Car",
           "caption": "Simulink Plant Model - Supra Race Car"
         },
