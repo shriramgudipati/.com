@@ -17,7 +17,6 @@ jQuery(document).ready(function(){
 			m.fadeBuffer = false;
 			m.messages = [
 				'Robots',
-				'Neural Networks',
 				'Websites',
 				'Drones',
 				'Control Systems',
