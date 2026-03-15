@@ -1,6 +1,22 @@
 [
   {
     "id": 1,
+    "title": "Tilt-Rotor UAV Prototype Development",
+    "skills": ["UAV Design", "Embedded Systems", "ESP32", "CFD", "Aerospace Engineering"],
+    "description": "Design and development of a hybrid VTOL tilt-wing UAV prototype with custom avionics and aerodynamic evaluation.",
+    "image": "/img/Projects/projectTiltRotorDrone.png",
+    "text": "Designed and fabricated a custom 1.1 kg tilt-wing UAV prototype integrating composite airframe fabrication, propulsion system design, and embedded flight control. The vehicle uses 4 × 920 KV motors with 9.5×4.5 propellers and a servo-actuated tilt-wing mechanism enabling transition from vertical hover to wing-borne forward flight. Avionics are built around an ESP32 flight controller with a Yahboom 9-axis IMU, BM390 barometer, and U-blox NEO-6M GPS for navigation. Aerodynamic performance was evaluated using SolidWorks Flow Simulation with rotating propeller regions at 5000 RPM, predicting ~9.73 N of aerodynamic lift at 50 km/h forward velocity."
+  },
+  {
+    "id": 2,
+    "title": "Custom UAV Ground Control Station",
+    "skills": ["Raspberry Pi", "Embedded Systems", "RF Communication", "Telemetry Systems"],
+    "description": "Portable Raspberry-Pi based ground control station for UAV telemetry, flight control, and FPV monitoring.",
+    "image": "/img/Projects/projectGroundStation.png",
+    "text": "Developed a portable UAV ground control station built around a Raspberry Pi with a 7-inch touchscreen interface running a Chromium-based control dashboard developed in HTML, CSS, and JavaScript. The system integrates dual joystick input for manual flight control, NRF24L01 RF modules for low-latency command transmission, and a U-blox NEO-6M GPS module for home-position referencing and navigation support. The station also includes a 5.8 GHz FPV receiver connected to the UAV camera and a custom 2S 3500 mAh Li-ion battery pack with HX-02 BMS and MP1584/XL4015 buck converters to power the system."
+  },
+  {
+    "id": 3,
     "title": "E-Puck Path Planning with RRT",
     "skills": ["Webots", "Python", "Path Planning"],
     "description": "Autonomous robot navigation using Rapidly Exploring Random Trees.",
@@ -8,7 +24,7 @@
     "text": "Implemented RRT with 50% goal bias in Webots to enable goal-oriented navigation for the E-puck robot, using supervisor and controller scripts for path generation and replay."
   },
   {
-    "id": 2,
+    "id": 4,
     "title": "MEMS Electron Microscope Simulation",
     "skills": ["COMSOL Multiphysics", "Beam Optics", "MEMS Design"],
     "description": "Focusing simulation of an electron beam using an Einzel lens in a miniaturized TEM.",
@@ -16,7 +32,7 @@
     "text": "Simulated focusing effects of an Einzel Lens for a MEMS-scale electron microscope in COMSOL, analyzing beta emittance and 1-RMS beam quality."
   },
   {
-    "id": 3,
+    "id": 5,
     "title": "Lagrangian Analysis of IC Engine",
     "skills": ["Dynamics", "Lagrange's Method", "System Modeling"],
     "description": "Dynamic modeling of a 4-stroke IC engine using Lagrange’s equations.",
@@ -24,7 +40,7 @@
     "text": "Performed a comprehensive dynamic analysis of piston, crank, and connecting rod motion using Lagrange’s equations to derive system equations of motion."
   },
   {
-    "id": 4,
+    "id": 6,
     "title": "Quadrotor Dynamics with Wind Gusts",
     "skills": ["Control Systems", "MATLAB Simulink", "MPC", "PID"],
     "description": "Trajectory control system design for quadrotors under wind disturbances.",
@@ -32,7 +48,7 @@
     "text": "Designed and implemented a PID and MPC-based control system for quadrotor drones in MATLAB Simulink, achieving 40% improvement in stability under gust conditions."
   },
   {
-    "id": 5,
+    "id": 7,
     "title": "Pouch Cell Thermal Simulation",
     "skills": ["Ansys Fluent", "Thermal Modeling", "Electrochemical Simulation"],
     "description": "Heat conduction and convection analysis in lithium-ion pouch cells using Ansys and EChem models.",
@@ -40,15 +56,15 @@
     "text": "Thermal simulation of pouch cells under operational load to evaluate heat dissipation, aiding in improved battery pack design."
   },
   {
-    "id": 6,
-    "title": "Ordnance Factory Medak| Ministry of Defence| Govt of India",
+    "id": 8,
+    "title": "Ordnance Factory Medak | Ministry of Defence | Govt of India",
     "skills": ["FEA", "Mechanical Design", "SolidWorks Simulation"],
     "description": "Stress and deformation analysis of tubular chassis for load-bearing efficiency.",
     "image": "/img/Projects/projectOFMK-img1.png",
     "text": "Simulated torsional and bending loads on a tubular chassis to assess structural integrity and optimize material layout."
   },
   {
-    "id": 7,
+    "id": 9,
     "title": "Lotus Shark Steering Wheel Mechanism Analysis",
     "skills": ["Kinematic Modeling", "Mechanical Simulation", "Design Evaluation"],
     "description": "Kinematic analysis of Lotus Shark-style steering to evaluate turning behavior and steering sensitivity.",
@@ -56,7 +72,7 @@
     "text": "Detailed mechanism analysis for the Lotus Shark steering wheel using linkage modeling, to understand its responsiveness and mechanical advantage."
   },
   {
-    "id": 8,
+    "id": 10,
     "title": "Tubular Chassis Stress Analysis",
     "skills": ["FEA", "Mechanical Design", "SolidWorks Simulation"],
     "description": "Stress and deformation analysis of tubular chassis for load-bearing efficiency.",
