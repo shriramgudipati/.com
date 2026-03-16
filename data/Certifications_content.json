@@ -85,17 +85,23 @@
           "alt": "Configuration Driven Design",
           "caption": "Configuration-based model variations for parametric design exploration"
         },
-        {
+         {
           "type": "image",
           "src": "img/Certifications/certcswp_model3.png",
+          "alt": "Configuration Driven Design",
+          "caption": "Configuration-based model variations for parametric design exploration"
+        },
+        {
+          "type": "image",
+          "src": "img/Certifications/certcswp_model4.png",
           "alt": "Complex Feature Model",
           "caption": "Multi-feature component demonstrating advanced feature tree control"
         },
         {
           "type": "image",
-          "src": "img/Certifications/certcswp_model4.png",
-          "alt": "Mass Property Analysis",
-          "caption": "Mass and inertia evaluation after design modifications"
+          "src": "img/Certifications/certcswp_model5.png",
+          "alt": "Assembly Problem set",
+          "caption": "Mass and inertia evaluation after Assembly"
         }
       ]
     }
