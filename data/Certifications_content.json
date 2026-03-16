@@ -1,6 +1,6 @@
 {
   "projects": [
-        {
+    {
       "id": "certification1",
       "title": "CSWA – SolidWorks Associate Certification",
       "subtitle": "Parametric 3D Modelling and Engineering Design Proficiency",
@@ -49,6 +49,53 @@
           "src": "img/Certifications/certcswa-cswa_model5.png",
           "alt": "Mechanical Linkage Assembly",
           "caption": "Fully constrained mechanism with mass and inertia computations"
+        }
+      ]
+    },
+
+    {
+      "id": "certification2",
+      "title": "CSWP – SolidWorks Professional Certification",
+      "subtitle": "Advanced Parametric Design and Configuration Management",
+      "skills": ["Advanced Part Modeling", "Configurations", "Design Intent", "Mass Properties"],
+      "description": [
+        {
+          "type": "image",
+          "src": "img/Certifications/certcswp-cswp_certificate.png",
+          "alt": "CSWP-Certificate",
+          "caption": "CSWP Certificate"
+        },
+        {
+          "type": "paragraph",
+          "content": "The CSWP certification validates advanced proficiency in SolidWorks parametric modeling and engineering design. The examination focuses on building complex parametric parts, applying design modifications, and maintaining design intent under evolving constraints."
+        },
+        {
+          "type": "paragraph",
+          "content": "During the certification tasks, I worked with multi-feature parametric parts requiring rapid dimensional changes, configuration management, and feature hierarchy adjustments. The exercises required recalculating mass properties and validating geometry after iterative design changes within strict time limits."
+        },
+        {
+          "type": "image",
+          "src": "img/Certifications/certcswp_model1.png",
+          "alt": "Parametric Model Modification",
+          "caption": "Advanced parametric part model with feature-driven design updates"
+        },
+        {
+          "type": "image",
+          "src": "img/Certifications/certcswp_model2.png",
+          "alt": "Configuration Driven Design",
+          "caption": "Configuration-based model variations for parametric design exploration"
+        },
+        {
+          "type": "image",
+          "src": "img/Certifications/certcswp_model3.png",
+          "alt": "Complex Feature Model",
+          "caption": "Multi-feature component demonstrating advanced feature tree control"
+        },
+        {
+          "type": "image",
+          "src": "img/Certifications/certcswp_model4.png",
+          "alt": "Mass Property Analysis",
+          "caption": "Mass and inertia evaluation after design modifications"
         }
       ]
     }
