@@ -71,6 +71,23 @@
           ],
           "widthPercentage": 48
         },
+        
+        {
+          "type": "image-row",
+          "images": [
+            {
+              "src": "/img/Projects/Lift_streamlines.gif",
+              "alt": "CFD Streamlines",
+              "caption": "Airflow streamlines around the UAV"
+            },
+            {
+              "src": "/img/Projects/Streamlines.gif",
+              "alt": "Pressure Distribution",
+              "caption": "Pressure distribution across wing surfaces"
+            }
+          ],
+          "widthPercentage": 48
+        },
     
         {
           "type": "paragraph",
