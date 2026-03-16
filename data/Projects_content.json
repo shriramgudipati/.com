@@ -156,6 +156,23 @@
           "type": "paragraph",
           "content": "For real-time visual feedback, the station integrates a 5.8 GHz FPV receiver connected to the UAV camera feed. The aircraft transmits video through a 600 mW video transmitter, enabling real-time monitoring during flight testing."
         },
+        
+        {
+          "type": "image-row",
+          "images": [
+            {
+              "src": "/img/Projects/groundstation_front.png",
+              "alt": "Ground Station Controller",
+              "caption": "Portable Raspberry Pi UAV ground station"
+            },
+            {
+              "src": "/img/Projects/groundstation_back.png",
+              "alt": "Ground Station UI",
+              "caption": "Touchscreen interface for UAV telemetry and control"
+            }
+          ],
+          "widthPercentage": 48
+        },
     
         {
           "type": "paragraph",
