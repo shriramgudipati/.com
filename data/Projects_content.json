@@ -42,7 +42,7 @@
           "type": "image",
           "src": "/img/Projects/Drone_anime.gif",
           "alt": "FPV Video System",
-          "caption": "5.8 GHz FPV video receiver integrated with ground station"
+          "caption": "Prop and Tilt Animation"
         },
     
         {
@@ -61,12 +61,12 @@
             {
               "src": "/img/Projects/drone_cfd_streamlines.png",
               "alt": "CFD Streamlines",
-              "caption": "Airflow streamlines around the UAV"
+              "caption": "Airflow streamlines depicting flow around wing"
             },
             {
               "src": "/img/Projects/drone_cfd_front.png",
               "alt": "Pressure Distribution",
-              "caption": "Pressure distribution across wing surfaces"
+              "caption": "Flow w.r.t AIR speed and Rear prop interaction"
             }
           ],
           "widthPercentage": 48
@@ -82,7 +82,7 @@
             },
             {
               "src": "/img/Projects/Streamlines.gif",
-              "alt": "Pressure Distribution",
+              "alt": "CFD Streamlines",
               "caption": "Pressure distribution across wing surfaces"
             }
           ],
