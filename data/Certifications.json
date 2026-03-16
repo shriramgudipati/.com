@@ -1,10 +1,18 @@
 [
   {
-  "id": 1,
-  "title": "CSWA – SolidWorks Associate Certification",
-  "skills": ["3D Modelling", "Part Design", "Assembly", "Engineering Drawing"],
-  "description": "Industry-recognized certification in parametric 3D modeling and design using SolidWorks.",
-  "image": "/img/Certifications/certcswa-cswa_certificate.png",
-  "text": "Certified SolidWorks Associate credential earned by demonstrating proficiency in creating and modifying 3D models, assemblies, and engineering drawings under timed conditions."
+    "id": 1,
+    "title": "CSWA – SolidWorks Associate Certification",
+    "skills": ["3D Modelling", "Part Design", "Assembly", "Engineering Drawing"],
+    "description": "Industry-recognized certification in parametric 3D modeling and design using SolidWorks.",
+    "image": "/img/Certifications/certcswa-cswa_certificate.png",
+    "text": "Certified SolidWorks Associate credential earned by demonstrating proficiency in creating and modifying 3D models, assemblies, and engineering drawings under timed conditions."
+  },
+  {
+    "id": 2,
+    "title": "CSWP – SolidWorks Professional Certification",
+    "skills": ["Advanced Part Modeling", "Configurations", "Design Intent", "Mass Properties"],
+    "description": "Advanced certification validating professional-level proficiency in SolidWorks parametric design.",
+    "image": "/img/Certifications/certcswp-cswp_certificate.png",
+    "text": "Certified SolidWorks Professional credential earned by demonstrating advanced skills in parametric modeling, design modifications, configurations, and mass property analysis through timed engineering design challenges."
   }
 ]
