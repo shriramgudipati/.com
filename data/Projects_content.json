@@ -39,6 +39,13 @@
         },
     
         {
+          "type": "image",
+          "src": "/img/Projects/Drone_anime.gif",
+          "alt": "FPV Video System",
+          "caption": "5.8 GHz FPV video receiver integrated with ground station"
+        },
+    
+        {
           "type": "paragraph",
           "content": "The propulsion system consists of four 920 KV brushless motors paired with 20 A ESCs and 9.5 × 4.5 propellers. The front propulsion units are mounted on a servo-actuated tilt mechanism allowing thrust vector rotation from vertical lift during hover to forward propulsion during cruise. This configuration behaves closer to a tilt-wing architecture where the wing incidence changes together with the propulsion module."
         },
