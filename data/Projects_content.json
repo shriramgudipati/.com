@@ -211,6 +211,55 @@
     },
     {
       "id": "project3",
+      "title": "LiDAR-Based Obstacle Avoidance System",
+      "subtitle": "Distributed SLAM & Wireless Motor Control",
+      "skills": [
+        "Embedded Systems",
+        "LiDAR",
+        "IoT",
+        "Wireless Communication",
+        "Motor Control",
+        "SLAM"
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "content": "This project focuses on the development of a distributed LiDAR-based obstacle detection and avoidance system using dual Blue Gecko EFR32BG13 2.4 GHz radio boards. The architecture separates sensing, decision-making, and actuation across two embedded systems, enabling real-time environment mapping and remote control execution."
+        },
+    
+        {
+          "type": "paragraph",
+          "content": "The onboard system integrates an RPLidar A1M8 sensor configured to scan a 45-degree forward field. The LiDAR data is processed locally to detect obstacles within a 1 meter range. Upon detection, the system transmits filtered spatial data wirelessly to a remote EFR32BG13 client board using 2.4 GHz communication."
+        },
+    
+        {
+          "type": "paragraph",
+          "content": "The remote client reconstructs a 360-degree environmental model by aggregating incoming scan data and executes decision logic to determine optimal motor responses. These control commands are then transmitted back to the onboard system, enabling closed-loop remote navigation control."
+        },
+    
+        {
+          "type": "paragraph",
+          "content": "Actuation is performed using two TS-25GA370H 12V 150 RPM geared DC motors with encoder feedback for precise motion control. The system incorporates MP1548EN and XL4015 regulators to maintain stable power delivery across sensing, communication, and motor subsystems."
+        },
+    
+        {
+          "type": "paragraph",
+          "content": "In parallel, telemetry data including LiDAR scans and motor RPM is streamed to a mobile device using the Si Connect application, enabling real-time monitoring and debugging of system performance."
+        },
+    
+        {
+          "type": "paragraph",
+          "content": "User interaction is enabled through three onboard buttons on the client EFR32BG13 board. The left and right buttons provide manual steering overrides, while the center button resets the SLAM environment map, allowing dynamic reinitialization during operation."
+        },
+    
+        {
+          "type": "paragraph",
+          "content": "The system demonstrates a scalable IoT robotics architecture where sensing, computation, and actuation are decoupled across wireless nodes, enabling flexible deployment in autonomous navigation and obstacle avoidance applications."
+        }
+      ]
+    }
+    {
+      "id": "project4",
       "title": "E-Puck Path Planning with RRT",
       "subtitle": "Goal-biased Rapid Exploration in Webots",
       "skills": [
@@ -271,7 +320,7 @@
       ]
     },
     {
-      "id": "project4",
+      "id": "project5",
       "title": "MEMS Electron Microscope Simulation",
       "subtitle": "Electron Beam Focusing in COMSOL",
       "skills": [
@@ -351,7 +400,7 @@
       ]
     },
     {
-      "id": "project5",
+      "id": "project6",
       "title": "Lagrangian Analysis of IC Engine",
       "subtitle": "Kinetic & Potential Energy Modeling of Engine Dynamics",
       "skills": [
@@ -388,7 +437,7 @@
       ]
     },
     {
-      "id": "project6",
+      "id": "project7",
       "title": "Quadrotor Dynamics with Wind Gusts",
       "subtitle": "Trajectory Control Using PID and MPC",
       "skills": [
@@ -481,7 +530,7 @@
       ]
     },
     {
-      "id": "project7",
+      "id": "project8",
       "title": "Pouch Cell Thermal Simulation",
       "subtitle": "Thermal Modeling in Ansys Fluent",
       "skills": [
@@ -542,7 +591,7 @@
       ]
     },
     {
-      "id": "project8",
+      "id": "project9",
       "title": "Ordnance Factory Medak| Ministry of Defence| Govt of Indias",
       "subtitle": "FEA for Load Distribution in Race Chassis",
       "skills": [
@@ -640,7 +689,7 @@
       ]
     },
     {
-      "id": "project9",
+      "id": "project10",
       "title": "Lotus Shark Steering Wheel Mechanism Analysis",
       "subtitle": "Kinematic Linkage and Ackermann Behavior",
       "skills": [
@@ -694,7 +743,7 @@
       ]
     },
     {
-      "id": "project10",
+      "id": "project11",
       "title": "Tubular Chassis Stress Analysis",
       "subtitle": "FEA for Load Distribution in Race Chassis",
       "skills": [
