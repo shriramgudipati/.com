@@ -17,6 +17,14 @@
   },
   {
     "id": 3,
+    "title": "LiDAR-Based Obstacle Avoidance Drone",
+    "skills": ["Embedded Systems", "LiDAR", "IoT", "Wireless Communication", "Motor Control", "SLAM"],
+    "description": "Distributed LiDAR-based obstacle detection and remote motor control system using dual Blue Gecko radio boards.",
+    "image": "/img/Projects/projectLidarDrone.png",
+    "text": "Developed an IoT-based obstacle avoidance drone system using Blue Gecko EFR32BG13 2.4 GHz 10 dBm Radio Boards (BRD4104A), an RPLidar A1M8 sensor, and two TS-25GA370H 12V 150 RPM geared DC motors with encoders. The onboard EFR32BG13 collects LiDAR data from a 45-degree field and detects obstacles within a 1 m range, then transmits the data wirelessly to a remote EFR32BG13 client board. The client processes the incoming scan data, maps the surrounding 360-degree environment, determines the appropriate motor commands, and sends the control values back to the onboard board for actuation. The system also streams LiDAR and motor RPM data to the Si Connect mobile app for monitoring. Additional user controls were implemented on the client board using three buttons, where the left and right buttons steer the motors and the center button resets the environment SLAM state. Power management was handled using MP1548EN and XL4015 regulators."
+  },
+  {
+    "id": 4,
     "title": "E-Puck Path Planning with RRT",
     "skills": ["Webots", "Python", "Path Planning"],
     "description": "Autonomous robot navigation using Rapidly Exploring Random Trees.",
@@ -24,7 +32,7 @@
     "text": "Implemented RRT with 50% goal bias in Webots to enable goal-oriented navigation for the E-puck robot, using supervisor and controller scripts for path generation and replay."
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "MEMS Electron Microscope Simulation",
     "skills": ["COMSOL Multiphysics", "Beam Optics", "MEMS Design"],
     "description": "Focusing simulation of an electron beam using an Einzel lens in a miniaturized TEM.",
@@ -32,7 +40,7 @@
     "text": "Simulated focusing effects of an Einzel Lens for a MEMS-scale electron microscope in COMSOL, analyzing beta emittance and 1-RMS beam quality."
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Lagrangian Analysis of IC Engine",
     "skills": ["Dynamics", "Lagrange's Method", "System Modeling"],
     "description": "Dynamic modeling of a 4-stroke IC engine using Lagrange’s equations.",
@@ -40,7 +48,7 @@
     "text": "Performed a comprehensive dynamic analysis of piston, crank, and connecting rod motion using Lagrange’s equations to derive system equations of motion."
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Quadrotor Dynamics with Wind Gusts",
     "skills": ["Control Systems", "MATLAB Simulink", "MPC", "PID"],
     "description": "Trajectory control system design for quadrotors under wind disturbances.",
@@ -48,7 +56,7 @@
     "text": "Designed and implemented a PID and MPC-based control system for quadrotor drones in MATLAB Simulink, achieving 40% improvement in stability under gust conditions."
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Pouch Cell Thermal Simulation",
     "skills": ["Ansys Fluent", "Thermal Modeling", "Electrochemical Simulation"],
     "description": "Heat conduction and convection analysis in lithium-ion pouch cells using Ansys and EChem models.",
@@ -56,7 +64,7 @@
     "text": "Thermal simulation of pouch cells under operational load to evaluate heat dissipation, aiding in improved battery pack design."
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Ordnance Factory Medak | Ministry of Defence | Govt of India",
     "skills": ["FEA", "Mechanical Design", "SolidWorks Simulation"],
     "description": "Stress and deformation analysis of tubular chassis for load-bearing efficiency.",
@@ -64,7 +72,7 @@
     "text": "Simulated torsional and bending loads on a tubular chassis to assess structural integrity and optimize material layout."
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Lotus Shark Steering Wheel Mechanism Analysis",
     "skills": ["Kinematic Modeling", "Mechanical Simulation", "Design Evaluation"],
     "description": "Kinematic analysis of Lotus Shark-style steering to evaluate turning behavior and steering sensitivity.",
@@ -72,7 +80,7 @@
     "text": "Detailed mechanism analysis for the Lotus Shark steering wheel using linkage modeling, to understand its responsiveness and mechanical advantage."
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Tubular Chassis Stress Analysis",
     "skills": ["FEA", "Mechanical Design", "SolidWorks Simulation"],
     "description": "Stress and deformation analysis of tubular chassis for load-bearing efficiency.",
