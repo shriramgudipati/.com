@@ -50,6 +50,12 @@
                                       "content": "The avionics stack is built around a custom ESP32-based flight controller rather than a commercial autopilot system. The onboard sensing system includes a Yahboom 9-axis IMU for attitude estimation, a BM390 barometric altimeter for altitude sensing, and a U-blox NEO-6M GPS module for navigation and homing functionality."
                                     },
                                     {
+                                      "type": "image",
+                                      "src": "/img/Projects/ESP32_Layout.html",
+                                      "alt": "FPV Video System",
+                                      "caption": "Prop and Tilt Animation"
+                                    },
+                                    {
                                       "type": "image-row",
                                       "images": [
                                         {
