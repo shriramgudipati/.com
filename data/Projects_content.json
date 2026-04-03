@@ -208,6 +208,27 @@
                                     "content": "This project focuses on the development of a distributed LiDAR-based obstacle detection and avoidance system using dual Blue Gecko EFR32BG13 2.4 GHz 10 dBm radio boards (BRD4104A). The architecture separates sensing, decision-making, and actuation across two embedded systems, enabling real-time environment mapping and remote control execution."
                                   },
                                   {
+                                    "type": "image-row",
+                                    "images": [
+                                      {
+                                        "src": "/img/Projects/Lidar_drone_iso.png",
+                                        "alt": "Ground Station Controller",
+                                        "caption": "Portable Raspberry Pi UAV ground station"
+                                      },
+                                      {
+                                        "src": "/img/Projects/Lidar_drone_side.png",
+                                        "alt": "Ground Station UI",
+                                        "caption": "Touchscreen interface for UAV telemetry and control"
+                                      },
+                                      {
+                                        "src": "/img/Projects/Lidar_drone_front.png",
+                                        "alt": "Ground Station UI",
+                                        "caption": "Touchscreen interface for UAV telemetry and control"
+                                      }
+                                    ],
+                                    "widthPercentage": 48
+                                  },
+                                  {
                                     "type": "paragraph",
                                     "content": "The onboard system integrates an RPLidar A1M8 sensor configured to scan a 45-degree forward field. LiDAR data is processed to detect obstacles within a 1 meter range, and relevant obstacle information is transmitted wirelessly to a remote EFR32BG13 client board for navigation decision-making."
                                   },
