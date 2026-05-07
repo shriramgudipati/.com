@@ -285,16 +285,63 @@
                                     "type": "image-row",
                                     "images": [
                                       {
-                                        "src": "/img/Projects/projectTicTacToe.png",
-                                        "alt": "Embedded Linux Tic Tac Toe Console",
-                                        "caption": "Portable embedded Linux Tic-Tac-Toe gaming console"
+                                        "src": "/img/Projects/tictac7.png",
+                                        "alt": "Ground Station Controller",
+                                        "caption": "Tic Tac Toe Isometric"
+                                      },
+                                      {
+                                        "src": "/img/Projects/tictac10.png",
+                                        "alt": "Ground Station UI",
+                                        "caption": "Tic Tac Toe Isometric cross-section"
+                                      },
+                                      {
+                                        "src": "/img/Projects/tictac11.png",
+                                        "alt": "Ground Station UI",
+                                        "caption": "Tic Tac Toe Isometric cross-section"
                                       }
                                     ],
-                                    "widthPercentage": 55
+                                    "widthPercentage": 48
+                                  },
+                                  {
+                                    "type": "image-row",
+                                    "images": [
+                                      {
+                                        "src": "/img/Projects/tictac8.png",
+                                        "alt": "Ground Station Controller",
+                                        "caption": "Tic Tac Toe case bottom"
+                                      },
+                                      {
+                                        "src": "/img/Projects/tictac9.png",
+                                        "alt": "Ground Station UI",
+                                        "caption": "Tic Tac Toe case top"
+                                      }
+                                    ],
+                                    "widthPercentage": 48
                                   },
                                   {
                                     "type": "paragraph",
                                     "content": "The software architecture includes joystick event handling, OLED graphics rendering, game-state management, and kernel-level logging services. Input events were processed through an event-driven structure enabling smooth cursor navigation, player switching, game reset functionality, and real-time board updates."
+                                  },
+                                  {
+                                    "type": "image-row",
+                                    "images": [
+                                      {
+                                        "src": "/img/Projects/tictac2.png",
+                                        "alt": "Ground Station Controller",
+                                        "caption": "Tic Tac Toe Internal"
+                                      },
+                                      {
+                                        "src": "/img/Projects/tictac3.png",
+                                        "alt": "Ground Station UI",
+                                        "caption": "Tic Tac Toe Assenbled"
+                                      },
+                                      {
+                                        "src": "/img/Projects/tictac5.png",
+                                        "alt": "Ground Station UI",
+                                        "caption": "Tic Tac Toe Running"
+                                      }
+                                    ],
+                                    "widthPercentage": 48
                                   },
                                   {
                                     "type": "paragraph",
