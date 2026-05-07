@@ -326,17 +326,17 @@
                                     "type": "image-row",
                                     "images": [
                                       {
-                                        "src": "/img/Projects/tictac2.jpg",
+                                        "src": "/img/Projects/tictac2.jpeg",
                                         "alt": "Ground Station Controller",
                                         "caption": "Tic Tac Toe Internal"
                                       },
                                       {
-                                        "src": "/img/Projects/tictac3.jpg",
+                                        "src": "/img/Projects/tictac3.jpeg",
                                         "alt": "Ground Station UI",
                                         "caption": "Tic Tac Toe Assenbled"
                                       },
                                       {
-                                        "src": "/img/Projects/tictac5.jpg",
+                                        "src": "/img/Projects/tictac5.jpeg",
                                         "alt": "Ground Station UI",
                                         "caption": "Tic Tac Toe Running"
                                       }
