@@ -38,8 +38,7 @@
     "description": "Handheld portable 3D scanning system for object digitization and spatial reconstruction.",
     "image": "/img/Projects/3D_gundp.png",
     "text": "Designed and developed a handheld 3D scanner gun prototype capable of capturing object geometry for digital reconstruction and spatial mapping applications. The system integrates depth sensing hardware, embedded processing, and a custom ergonomic enclosure fabricated using 3D printing techniques. The scanner was designed for portable operation with onboard power management and real-time data acquisition. Mechanical design focused on lightweight structural integration, sensor alignment, and handheld usability, while the electronics architecture supported synchronized sensor communication and external visualization interfaces for point cloud generation and object scanning workflows."
-  }
-]
+  },
   {
     "id": 6,
     "title": "E-Puck Path Planning with RRT",
