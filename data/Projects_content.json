@@ -262,6 +262,97 @@
                               },
     {
       "id": "project4",
+                                "title": "Embedded Linux Tic-Tac-Toe System",
+                                "subtitle": "Kernel Driver Based Interactive Gaming Platform",
+                                "skills": [
+                                  "Embedded Linux",
+                                  "Raspberry Pi",
+                                  "Kernel Drivers",
+                                  "SPI",
+                                  "I2C",
+                                  "C Programming"
+                                ],
+                                "description": [
+                                  {
+                                    "type": "paragraph",
+                                    "content": "This project involved the development of an embedded Linux-based Tic-Tac-Toe gaming platform using a Raspberry Pi 4 running a custom Buildroot Linux image. The objective was to create a fully interactive embedded system integrating low-level hardware communication, custom Linux kernel drivers, real-time input handling, and graphical display rendering."
+                                  },
+                                  {
+                                    "type": "paragraph",
+                                    "content": "The system integrates an SSD1306 OLED display over the I2C interface and a joystick module connected through an MCP3002 ADC over SPI for directional input and gameplay control. A custom Linux character driver was implemented to manage communication between user space and kernel space using standard file operations including read, write, ioctl, and llseek."
+                                  },
+                                  {
+                                    "type": "image-row",
+                                    "images": [
+                                      {
+                                        "src": "/img/Projects/projectTicTacToe.png",
+                                        "alt": "Embedded Linux Tic Tac Toe Console",
+                                        "caption": "Portable embedded Linux Tic-Tac-Toe gaming console"
+                                      }
+                                    ],
+                                    "widthPercentage": 55
+                                  },
+                                  {
+                                    "type": "paragraph",
+                                    "content": "The software architecture includes joystick event handling, OLED graphics rendering, game-state management, and kernel-level logging services. Input events were processed through an event-driven structure enabling smooth cursor navigation, player switching, game reset functionality, and real-time board updates."
+                                  },
+                                  {
+                                    "type": "paragraph",
+                                    "content": "Buildroot was used to configure and generate the custom embedded Linux image, including enabling SPI and I2C interfaces through device tree overlays and configuring networking and SSH support for remote access. Additional work involved developing automated startup scripts and a lightweight kiosk-style embedded interface environment."
+                                  },
+                                  {
+                                    "type": "paragraph",
+                                    "content": "The project provided practical experience in embedded Linux development, kernel driver implementation, low-level hardware interfacing, and real-time embedded software design while demonstrating complete integration between Linux kernel modules and interactive user-space applications."
+                                  }
+                                ]
+                              },
+    {
+      "id": "project5",
+                              "title": "Portable 3D Scanner Gun",
+                              "subtitle": "Handheld Spatial Mapping & Object Reconstruction System",
+                              "skills": [
+                                "3D Scanning",
+                                "Computer Vision",
+                                "Embedded Systems",
+                                "Mechanical Design",
+                                "Sensor Integration"
+                              ],
+                              "description": [
+                                {
+                                  "type": "paragraph",
+                                  "content": "This project focused on the design and development of a handheld portable 3D scanner gun intended for object digitization, spatial mapping, and point cloud reconstruction applications. The system combines embedded sensing, ergonomic mechanical design, and portable onboard processing into a compact scanning platform."
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "content": "The scanner enclosure and structural components were designed in CAD and optimized for handheld ergonomics, sensor alignment, and weight distribution. The housing integrates multiple sensing modules within a compact form factor while maintaining accessibility for electronics integration and maintenance."
+                                },
+                                {
+                                  "type": "image-row",
+                                  "images": [
+                                    {
+                                      "src": "/img/Projects/project3DScanner.png",
+                                      "alt": "Portable 3D Scanner Gun",
+                                      "caption": "Custom handheld 3D scanner prototype"
+                                    }
+                                  ],
+                                  "widthPercentage": 45
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "content": "The embedded architecture was designed to support synchronized sensor acquisition and real-time spatial data collection for digital reconstruction workflows. The system was intended to capture object geometry for further visualization and processing into point cloud representations."
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "content": "Mechanical fabrication included the use of additive manufacturing techniques for rapid prototyping and enclosure iteration. Particular focus was placed on maintaining structural rigidity around sensor mounting regions to minimize alignment errors during scanning operations."
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "content": "The project demonstrates multidisciplinary integration across embedded systems, industrial design, mechanical prototyping, and spatial sensing technologies, serving as a foundation for future work in portable mapping and computer vision systems."
+                                }
+                              ]
+                            },
+    {
+      "id": "project6",
                                 "title": "E-Puck Path Planning with RRT",
                                 "subtitle": "Goal-biased Rapid Exploration in Webots",
                                 "skills": [
@@ -320,7 +411,7 @@
                                 ]
                               },
     {
-      "id": "project5",
+      "id": "project7",
                                 "title": "MEMS Electron Microscope Simulation",
                                 "subtitle": "Electron Beam Focusing in COMSOL",
                                 "skills": [
@@ -395,7 +486,7 @@
                                 ]
                               },
     {
-      "id": "project6",
+      "id": "project8",
                                 "title": "Lagrangian Analysis of IC Engine",
                                 "subtitle": "Kinetic & Potential Energy Modeling of Engine Dynamics",
                                 "skills": [
@@ -432,7 +523,7 @@
                                 ]
                               },
     {
-      "id": "project7",
+      "id": "project9",
                                 "title": "Quadrotor Dynamics with Wind Gusts",
                                 "subtitle": "Trajectory Control Using PID and MPC",
                                 "skills": [
@@ -525,7 +616,7 @@
                                 ]
                               },
     {
-      "id": "project8",
+      "id": "project10",
                                 "title": "Pouch Cell Thermal Simulation",
                                 "subtitle": "Thermal Modeling in Ansys Fluent",
                                 "skills": [
@@ -585,7 +676,7 @@
                                 ]
                               },
     {
-      "id": "project9",
+      "id": "project11",
                                 "title": "Ordnance Factory Medak| Ministry of Defence| Govt of Indias",
                                 "subtitle": "FEA for Load Distribution in Race Chassis",
                                 "skills": [
@@ -679,7 +770,7 @@
                                 ]
                               },
     {
-      "id": "project10",
+      "id": "project12",
                                 "title": "Lotus Shark Steering Wheel Mechanism Analysis",
                                 "subtitle": "Kinematic Linkage and Ackermann Behavior",
                                 "skills": [
@@ -733,7 +824,7 @@
                                 ]
                               },
     {
-      "id": "project11",
+      "id": "project13",
                                 "title": "Tubular Chassis Stress Analysis",
                                 "subtitle": "FEA for Load Distribution in Race Chassis",
                                 "skills": [
