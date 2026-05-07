@@ -28,7 +28,7 @@
     "title": "Embedded Linux Tic-Tac-Toe System",
     "skills": ["Embedded Linux", "Raspberry Pi", "Kernel Drivers", "SPI", "I2C", "C Programming"],
     "description": "Interactive embedded Linux Tic-Tac-Toe system using custom kernel drivers, OLED graphics, and joystick input.",
-    "image": "/img/Projects/projectTicTacToe.png",
+    "image": "/img/Projects/tictac_dp.png",
     "text": "Developed an embedded Linux-based interactive Tic-Tac-Toe platform on a Raspberry Pi 4 using Buildroot and custom Linux kernel modules. The system integrates an SSD1306 OLED display over I2C and a joystick interface using an MCP3002 ADC over SPI for real-time game control. A custom character driver was implemented to handle communication between kernel and user space through read, write, ioctl, and llseek operations. The software architecture includes event-driven joystick handling, OLED rendering, game-state management, and logging services. Additional work involved enabling SPI/I2C interfaces through device tree configurations, configuring networking and SSH access in Buildroot, and creating automated startup scripts for a kiosk-style embedded interface."
   },
   {
@@ -36,7 +36,7 @@
     "title": "Portable 3D Scanner Gun",
     "skills": ["3D Scanning", "Computer Vision", "Embedded Systems", "Mechanical Design", "Sensor Integration"],
     "description": "Handheld portable 3D scanning system for object digitization and spatial reconstruction.",
-    "image": "/img/Projects/project3DScanner.png",
+    "image": "/img/Projects/3D_gundp.png",
     "text": "Designed and developed a handheld 3D scanner gun prototype capable of capturing object geometry for digital reconstruction and spatial mapping applications. The system integrates depth sensing hardware, embedded processing, and a custom ergonomic enclosure fabricated using 3D printing techniques. The scanner was designed for portable operation with onboard power management and real-time data acquisition. Mechanical design focused on lightweight structural integration, sensor alignment, and handheld usability, while the electronics architecture supported synchronized sensor communication and external visualization interfaces for point cloud generation and object scanning workflows."
   }
 ]
