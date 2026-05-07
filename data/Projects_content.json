@@ -239,6 +239,12 @@
                                     "content": "The onboard system integrates an RPLidar A1M8 sensor configured to scan a 45-degree forward field. LiDAR data is processed to detect obstacles within a 1 meter range, and relevant obstacle information is transmitted wirelessly to a remote EFR32BG13 client board for navigation decision-making."
                                   },
                                   {
+                                    "type": "image",
+                                    "src": "/img/Projects/Lidar_drone_schematic.jpeg",
+                                    "alt": "FPV Video System",
+                                    "caption": "Lidar Drone Schematic"
+                                  },
+                                  {
                                     "type": "paragraph",
                                     "content": "The remote client board reconstructs the surrounding environment by aggregating scan data into a 360-degree mapped field and determines the appropriate motor commands required for obstacle avoidance. These control values are then sent back to the onboard EFR32BG13, enabling closed-loop wireless navigation control."
                                   },
@@ -323,6 +329,12 @@
                                     "content": "The software architecture includes joystick event handling, OLED graphics rendering, game-state management, and kernel-level logging services. Input events were processed through an event-driven structure enabling smooth cursor navigation, player switching, game reset functionality, and real-time board updates."
                                   },
                                   {
+                                    "type": "image",
+                                    "src": "/img/Projects/tictac_schematic.jpeg",
+                                    "alt": "FPV Video System",
+                                    "caption": "Tic Tac Toe Schematic"
+                                  },
+                                  {
                                     "type": "image-row",
                                     "images": [
                                       {
@@ -377,16 +389,47 @@
                                   "type": "image-row",
                                   "images": [
                                     {
-                                      "src": "/img/Projects/project3DScanner.png",
-                                      "alt": "Portable 3D Scanner Gun",
-                                      "caption": "Custom handheld 3D scanner prototype"
+                                      "src": "/img/Projects/3D_gun2.png",
+                                      "alt": "Ground Station Controller",
+                                      "caption": "Scanning Gun Iso View"
+                                    },
+                                    {
+                                      "src": "/img/Projects/3D_gun3.png",
+                                      "alt": "Ground Station UI",
+                                      "caption": "Scanning Gun Top View"
+                                    },
+                                    {
+                                      "src": "/img/Projects/3D_gun4.png",
+                                      "alt": "Ground Station UI",
+                                      "caption": "Scanning Gun Side View"
+                                    },
+                                    {
+                                      "src": "/img/Projects/3D_gun5.png",
+                                      "alt": "Ground Station UI",
+                                      "caption": "Scanning Gun Back View"
                                     }
                                   ],
-                                  "widthPercentage": 45
+                                  "widthPercentage": 48
                                 },
                                 {
                                   "type": "paragraph",
                                   "content": "The embedded architecture was designed to support synchronized sensor acquisition and real-time spatial data collection for digital reconstruction workflows. The system was intended to capture object geometry for further visualization and processing into point cloud representations."
+                                },
+                                {
+                                  "type": "image-row",
+                                  "images": [
+                                    {
+                                      "src": "/img/Projects/3D_gun.jpeg",
+                                      "alt": "Ground Station Controller",
+                                      "caption": "Scanning Gun Printed"
+                                    },
+                                    {
+                                      "src": "/img/Projects/3D_gun1.jpeg",
+                                      "alt": "Ground Station UI",
+                                      "caption": "Scanning Gun Printed"
+                                    }
+                                  ],
+                                  "widthPercentage": 48
                                 },
                                 {
                                   "type": "paragraph",
