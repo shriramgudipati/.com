@@ -25,6 +25,23 @@
   },
   {
     "id": 4,
+    "title": "Embedded Linux Tic-Tac-Toe System",
+    "skills": ["Embedded Linux", "Raspberry Pi", "Kernel Drivers", "SPI", "I2C", "C Programming"],
+    "description": "Interactive embedded Linux Tic-Tac-Toe system using custom kernel drivers, OLED graphics, and joystick input.",
+    "image": "/img/Projects/projectTicTacToe.png",
+    "text": "Developed an embedded Linux-based interactive Tic-Tac-Toe platform on a Raspberry Pi 4 using Buildroot and custom Linux kernel modules. The system integrates an SSD1306 OLED display over I2C and a joystick interface using an MCP3002 ADC over SPI for real-time game control. A custom character driver was implemented to handle communication between kernel and user space through read, write, ioctl, and llseek operations. The software architecture includes event-driven joystick handling, OLED rendering, game-state management, and logging services. Additional work involved enabling SPI/I2C interfaces through device tree configurations, configuring networking and SSH access in Buildroot, and creating automated startup scripts for a kiosk-style embedded interface."
+  },
+  {
+    "id": 5,
+    "title": "Portable 3D Scanner Gun",
+    "skills": ["3D Scanning", "Computer Vision", "Embedded Systems", "Mechanical Design", "Sensor Integration"],
+    "description": "Handheld portable 3D scanning system for object digitization and spatial reconstruction.",
+    "image": "/img/Projects/project3DScanner.png",
+    "text": "Designed and developed a handheld 3D scanner gun prototype capable of capturing object geometry for digital reconstruction and spatial mapping applications. The system integrates depth sensing hardware, embedded processing, and a custom ergonomic enclosure fabricated using 3D printing techniques. The scanner was designed for portable operation with onboard power management and real-time data acquisition. Mechanical design focused on lightweight structural integration, sensor alignment, and handheld usability, while the electronics architecture supported synchronized sensor communication and external visualization interfaces for point cloud generation and object scanning workflows."
+  }
+]
+  {
+    "id": 6,
     "title": "E-Puck Path Planning with RRT",
     "skills": ["Webots", "Python", "Path Planning"],
     "description": "Autonomous robot navigation using Rapidly Exploring Random Trees.",
@@ -32,7 +49,7 @@
     "text": "Implemented RRT with 50% goal bias in Webots to enable goal-oriented navigation for the E-puck robot, using supervisor and controller scripts for path generation and replay."
   },
   {
-    "id": 5,
+    "id": 7,
     "title": "MEMS Electron Microscope Simulation",
     "skills": ["COMSOL Multiphysics", "Beam Optics", "MEMS Design"],
     "description": "Focusing simulation of an electron beam using an Einzel lens in a miniaturized TEM.",
@@ -40,7 +57,7 @@
     "text": "Simulated focusing effects of an Einzel Lens for a MEMS-scale electron microscope in COMSOL, analyzing beta emittance and 1-RMS beam quality."
   },
   {
-    "id": 6,
+    "id": 8,
     "title": "Lagrangian Analysis of IC Engine",
     "skills": ["Dynamics", "Lagrange's Method", "System Modeling"],
     "description": "Dynamic modeling of a 4-stroke IC engine using Lagrange’s equations.",
@@ -48,7 +65,7 @@
     "text": "Performed a comprehensive dynamic analysis of piston, crank, and connecting rod motion using Lagrange’s equations to derive system equations of motion."
   },
   {
-    "id": 7,
+    "id": 9,
     "title": "Quadrotor Dynamics with Wind Gusts",
     "skills": ["Control Systems", "MATLAB Simulink", "MPC", "PID"],
     "description": "Trajectory control system design for quadrotors under wind disturbances.",
@@ -56,7 +73,7 @@
     "text": "Designed and implemented a PID and MPC-based control system for quadrotor drones in MATLAB Simulink, achieving 40% improvement in stability under gust conditions."
   },
   {
-    "id": 8,
+    "id": 10,
     "title": "Pouch Cell Thermal Simulation",
     "skills": ["Ansys Fluent", "Thermal Modeling", "Electrochemical Simulation"],
     "description": "Heat conduction and convection analysis in lithium-ion pouch cells using Ansys and EChem models.",
@@ -64,7 +81,7 @@
     "text": "Thermal simulation of pouch cells under operational load to evaluate heat dissipation, aiding in improved battery pack design."
   },
   {
-    "id": 9,
+    "id": 11,
     "title": "Ordnance Factory Medak | Ministry of Defence | Govt of India",
     "skills": ["FEA", "Mechanical Design", "SolidWorks Simulation"],
     "description": "Stress and deformation analysis of tubular chassis for load-bearing efficiency.",
@@ -72,7 +89,7 @@
     "text": "Simulated torsional and bending loads on a tubular chassis to assess structural integrity and optimize material layout."
   },
   {
-    "id": 10,
+    "id": 12,
     "title": "Lotus Shark Steering Wheel Mechanism Analysis",
     "skills": ["Kinematic Modeling", "Mechanical Simulation", "Design Evaluation"],
     "description": "Kinematic analysis of Lotus Shark-style steering to evaluate turning behavior and steering sensitivity.",
@@ -80,7 +97,7 @@
     "text": "Detailed mechanism analysis for the Lotus Shark steering wheel using linkage modeling, to understand its responsiveness and mechanical advantage."
   },
   {
-    "id": 11,
+    "id": 13,
     "title": "Tubular Chassis Stress Analysis",
     "skills": ["FEA", "Mechanical Design", "SolidWorks Simulation"],
     "description": "Stress and deformation analysis of tubular chassis for load-bearing efficiency.",
